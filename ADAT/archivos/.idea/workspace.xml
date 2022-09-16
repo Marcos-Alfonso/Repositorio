@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="" />
+    <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/direc/test/in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/direc/test/test2/out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/direc/test/test2/t.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej4_rec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ej3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej3.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +40,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ej3">
+  <component name="RunManager" selected="Application.ej4_rec">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="archivos" />
@@ -48,8 +55,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ej4_rec" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ej4_rec" />
+      <module name="archivos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ej4_rec" />
         <item itemvalue="Application.ej3" />
         <item itemvalue="Application.Main" />
       </list>
@@ -65,6 +80,7 @@
       <updated>1663313212484</updated>
       <workItem from="1663313213724" duration="2359000" />
       <workItem from="1663316549542" duration="1396000" />
+      <workItem from="1663322856253" duration="3780000" />
     </task>
     <servers />
   </component>
