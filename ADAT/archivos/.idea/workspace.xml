@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/direc/test/in.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/direc/test/test2/out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/direc/test/test2/t.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ej4_rec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fichero.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej7.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ej3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +39,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ej4_rec">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="archivos" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ej7">
     <configuration name="ej3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ej3" />
       <module name="archivos" />
@@ -62,11 +54,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ej5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ej5" />
+      <module name="archivos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ej6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ej6" />
+      <module name="archivos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ej7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ej7" />
+      <module name="archivos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ej7" />
+        <item itemvalue="Application.ej6" />
+        <item itemvalue="Application.ej5" />
         <item itemvalue="Application.ej4_rec" />
         <item itemvalue="Application.ej3" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -81,6 +96,8 @@
       <workItem from="1663313213724" duration="2359000" />
       <workItem from="1663316549542" duration="1396000" />
       <workItem from="1663322856253" duration="3780000" />
+      <workItem from="1663573830552" duration="2751000" />
+      <workItem from="1663584002958" duration="2232000" />
     </task>
     <servers />
   </component>
