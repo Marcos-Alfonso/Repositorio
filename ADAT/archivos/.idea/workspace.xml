@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ej8.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUEVODIR/file1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NUEVODIR/file1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fichero.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fichero.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ej5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +111,7 @@
       <workItem from="1663573830552" duration="2751000" />
       <workItem from="1663584002958" duration="4607000" />
       <workItem from="1663658095512" duration="2277000" />
-      <workItem from="1663661551014" duration="2778000" />
+      <workItem from="1663661551014" duration="4047000" />
     </task>
     <servers />
   </component>
