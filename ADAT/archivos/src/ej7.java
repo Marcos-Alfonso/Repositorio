@@ -11,9 +11,9 @@ public class ej7 {
             BufferedWriter bw = new BufferedWriter(new FileWriter("primos.txt"));
             int i = 0;
             int g = 0;
-            while(i<20){
+            while(i<1000){
                 if(esPrimo(g)) {
-                    bw.write("\n"+g);
+                    bw.write((i%10 == 0)?("\n"):("")+"\t"+g);
                     i++;
                 }
                 g++;
