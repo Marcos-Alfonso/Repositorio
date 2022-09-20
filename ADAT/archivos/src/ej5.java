@@ -6,7 +6,7 @@ import java.io.IOException;
 public class ej5 {
     public static void main(String[] args) {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("fichero.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("NUEVODIR/file1.txt"));
         String line;
         while((line = reader.readLine()) != null)
             System.out.println(line);
