@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/direc/datos.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MULTI/1Trimestre/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MULTI/Test/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MULTI/Test/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MULTI/Test/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MULTI/Test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MULTI/Test/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.2.txt(copy)" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NUEVODIR/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NUEVODIR/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/archivos/ej8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/archivos/ej8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ej8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +49,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Repositorio/ADAT/archivos&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ej8">
+  <component name="RunManager">
     <configuration name="E01_Notepad" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -115,6 +126,8 @@
       <workItem from="1663658095512" duration="2277000" />
       <workItem from="1663661551014" duration="4047000" />
       <workItem from="1663668619523" duration="2710000" />
+      <workItem from="1663673639881" duration="12000" />
+      <workItem from="1663740693580" duration="6764000" />
     </task>
     <servers />
   </component>
