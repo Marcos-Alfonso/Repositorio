@@ -16,7 +16,7 @@ namespace Proyecto1
         private void screenClick(object sender, EventArgs e)
         {
             count++;
-            label1.Text = "Cuenta"+count;
+            label1.Text = "Cuenta: "+count;
         }
     }
 }
