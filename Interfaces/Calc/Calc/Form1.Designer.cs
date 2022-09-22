@@ -148,6 +148,7 @@
             this.bt0.TabIndex = 9;
             this.bt0.Text = "0";
             this.bt0.UseVisualStyleBackColor = true;
+            this.bt0.Click += new System.EventHandler(this.bt0_Click);
             // 
             // btC
             // 

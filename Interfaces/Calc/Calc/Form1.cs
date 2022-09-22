@@ -53,7 +53,10 @@ namespace Calc
         {
             screen.Text += "9";
         }
-
+        private void bt0_Click(object sender, EventArgs e)
+        {
+            screen.Text += "0";
+        }
         private void btBack_Click(object sender, EventArgs e)
         {
             if(screen.Text != "")
@@ -104,6 +107,13 @@ namespace Calc
                 else if (s[i] =='-')
                 {
                     resta(i);
+                }else if (s[i] == 'x')
+                {
+                    multi(i);
+                }
+                else if (s[i] == '/')
+                {
+                    div(i);
                 }
             }
             
@@ -111,15 +121,28 @@ namespace Calc
         private void suma(int i)
         {
             double a = Double.Parse(screen.Text.Substring(0,i));
-            double b = Double.Parse(screen.Text.Substring(i));
+            double b = Double.Parse(screen.Text.Substring(i+1));
             screen.Text = (a + b).ToString();label1.Visible = true;
         }
         private void resta(int i)
         {
-            
             double a = Double.Parse(screen.Text.Substring(0, i));
             double b = Double.Parse(screen.Text.Substring(i+1));
             screen.Text = (a-b).ToString();
         }
+        private void multi(int i)
+        {
+            double a = Double.Parse(screen.Text.Substring(0, i));
+            double b = Double.Parse(screen.Text.Substring(i + 1));
+            screen.Text = (a * b).ToString();
+        }
+        private void div(int i)
+        {
+            double a = Double.Parse(screen.Text.Substring(0, i));
+            double b = Double.Parse(screen.Text.Substring(i + 1));
+            screen.Text = (Math.Round(a/b, 5)).ToString();
+        }
+
+        
     }
 }
