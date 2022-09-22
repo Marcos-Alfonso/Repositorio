@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/FileContentIndex/777906be-903e-4c48-b4fb-081cc0de6356.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/FileContentIndex/ef8a1f6a-d2c0-413b-b137-5c03da060b7c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/v17/.suo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +44,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Repositorio/ADAT/archivos&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.E01_Notepad">
     <configuration name="E01_Notepad" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -115,6 +123,8 @@
       <workItem from="1663668619523" duration="2710000" />
       <workItem from="1663673639881" duration="12000" />
       <workItem from="1663740693580" duration="8301000" />
+      <workItem from="1663840236740" duration="85000" />
+      <workItem from="1663840517710" duration="14000" />
     </task>
     <servers />
   </component>

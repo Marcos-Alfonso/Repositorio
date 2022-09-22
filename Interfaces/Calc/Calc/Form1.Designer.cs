@@ -46,7 +46,7 @@
             this.btSuma = new System.Windows.Forms.Button();
             this.btBack = new System.Windows.Forms.Button();
             this.btIgual = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.screen = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bt1
@@ -57,6 +57,7 @@
             this.bt1.TabIndex = 0;
             this.bt1.Text = "1";
             this.bt1.UseVisualStyleBackColor = true;
+            this.bt1.Click += new System.EventHandler(this.bt1_Click);
             // 
             // bt2
             // 
@@ -66,6 +67,7 @@
             this.bt2.TabIndex = 1;
             this.bt2.Text = "2";
             this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
             // 
             // bt3
             // 
@@ -75,6 +77,7 @@
             this.bt3.TabIndex = 2;
             this.bt3.Text = "3";
             this.bt3.UseVisualStyleBackColor = true;
+            this.bt3.Click += new System.EventHandler(this.bt3_Click);
             // 
             // bt6
             // 
@@ -84,6 +87,7 @@
             this.bt6.TabIndex = 5;
             this.bt6.Text = "6";
             this.bt6.UseVisualStyleBackColor = true;
+            this.bt6.Click += new System.EventHandler(this.bt6_Click);
             // 
             // bt5
             // 
@@ -93,6 +97,7 @@
             this.bt5.TabIndex = 4;
             this.bt5.Text = "5";
             this.bt5.UseVisualStyleBackColor = true;
+            this.bt5.Click += new System.EventHandler(this.bt5_Click);
             // 
             // bt4
             // 
@@ -102,6 +107,7 @@
             this.bt4.TabIndex = 3;
             this.bt4.Text = "4";
             this.bt4.UseVisualStyleBackColor = true;
+            this.bt4.Click += new System.EventHandler(this.bt4_Click);
             // 
             // bt9
             // 
@@ -111,6 +117,7 @@
             this.bt9.TabIndex = 8;
             this.bt9.Text = "9";
             this.bt9.UseVisualStyleBackColor = true;
+            this.bt9.Click += new System.EventHandler(this.bt9_Click);
             // 
             // bt8
             // 
@@ -120,6 +127,7 @@
             this.bt8.TabIndex = 7;
             this.bt8.Text = "8";
             this.bt8.UseVisualStyleBackColor = true;
+            this.bt8.Click += new System.EventHandler(this.bt8_Click);
             // 
             // bt7
             // 
@@ -129,6 +137,7 @@
             this.bt7.TabIndex = 6;
             this.bt7.Text = "7";
             this.bt7.UseVisualStyleBackColor = true;
+            this.bt7.Click += new System.EventHandler(this.bt7_Click);
             // 
             // bt0
             // 
@@ -147,6 +156,7 @@
             this.btC.TabIndex = 10;
             this.btC.Text = "C";
             this.btC.UseVisualStyleBackColor = true;
+            this.btC.Click += new System.EventHandler(this.btC_Click);
             // 
             // btComma
             // 
@@ -156,6 +166,7 @@
             this.btComma.TabIndex = 11;
             this.btComma.Text = ",";
             this.btComma.UseVisualStyleBackColor = true;
+            this.btComma.Click += new System.EventHandler(this.btComma_Click);
             // 
             // btDiv
             // 
@@ -165,6 +176,7 @@
             this.btDiv.TabIndex = 15;
             this.btDiv.Text = "/";
             this.btDiv.UseVisualStyleBackColor = true;
+            this.btDiv.Click += new System.EventHandler(this.btDiv_Click);
             // 
             // btMulti
             // 
@@ -174,6 +186,7 @@
             this.btMulti.TabIndex = 14;
             this.btMulti.Text = "x";
             this.btMulti.UseVisualStyleBackColor = true;
+            this.btMulti.Click += new System.EventHandler(this.btMulti_Click);
             // 
             // btResta
             // 
@@ -183,6 +196,7 @@
             this.btResta.TabIndex = 13;
             this.btResta.Text = "-";
             this.btResta.UseVisualStyleBackColor = true;
+            this.btResta.Click += new System.EventHandler(this.btResta_Click);
             // 
             // btSuma
             // 
@@ -192,6 +206,7 @@
             this.btSuma.TabIndex = 12;
             this.btSuma.Text = "+";
             this.btSuma.UseVisualStyleBackColor = true;
+            this.btSuma.Click += new System.EventHandler(this.btSuma_Click);
             // 
             // btBack
             // 
@@ -201,6 +216,7 @@
             this.btBack.TabIndex = 16;
             this.btBack.Text = "←";
             this.btBack.UseVisualStyleBackColor = true;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
             // 
             // btIgual
             // 
@@ -210,21 +226,22 @@
             this.btIgual.TabIndex = 17;
             this.btIgual.Text = "=";
             this.btIgual.UseVisualStyleBackColor = true;
+            this.btIgual.Click += new System.EventHandler(this.btIgual_Click);
             // 
-            // textBox1
+            // screen
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 23);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 38);
-            this.textBox1.TabIndex = 18;
+            this.screen.Location = new System.Drawing.Point(38, 23);
+            this.screen.Multiline = true;
+            this.screen.Name = "screen";
+            this.screen.Size = new System.Drawing.Size(225, 38);
+            this.screen.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 305);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.screen);
             this.Controls.Add(this.btIgual);
             this.Controls.Add(this.btBack);
             this.Controls.Add(this.btDiv);
@@ -270,6 +287,6 @@
         private Button btSuma;
         private Button btBack;
         private Button btIgual;
-        private TextBox textBox1;
+        private TextBox screen;
     }
 }

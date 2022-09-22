@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\Calc\Calc\bin\Debug\net6.0-windows\Calc.exe
+C:\Repositorio\Interfaces\Calc\Calc\bin\Debug\net6.0-windows\Calc.deps.json
+C:\Repositorio\Interfaces\Calc\Calc\bin\Debug\net6.0-windows\Calc.runtimeconfig.json
+C:\Repositorio\Interfaces\Calc\Calc\bin\Debug\net6.0-windows\Calc.dll
+C:\Repositorio\Interfaces\Calc\Calc\bin\Debug\net6.0-windows\Calc.pdb
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.Form1.resources
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.AssemblyInfo.cs
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.dll
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\refint\Calc.dll
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.pdb
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\Calc.genruntimeconfig.cache
+C:\Repositorio\Interfaces\Calc\Calc\obj\Debug\net6.0-windows\ref\Calc.dll
