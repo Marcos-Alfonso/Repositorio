@@ -97,8 +97,14 @@ namespace Calc
             String s = screen.Text;
             for (int i = 0; i < screen.Text.Length; i++)
             {
-                if (s[i] == '+') suma(i);
-                else if (s[i] == '-') resta(i);
+                if (s[i] == '+')
+                {
+                    suma(i);
+                }
+                else if (s[i] =='-')
+                {
+                    resta(i);
+                }
             }
             
         }
@@ -106,13 +112,14 @@ namespace Calc
         {
             double a = Double.Parse(screen.Text.Substring(0,i));
             double b = Double.Parse(screen.Text.Substring(i));
-            screen.Text = (a + b).ToString();
+            screen.Text = (a + b).ToString();label1.Visible = true;
         }
         private void resta(int i)
         {
+            
             double a = Double.Parse(screen.Text.Substring(0, i));
-            double b = Double.Parse(screen.Text.Substring(i));
-            screen.Text = (a - b).ToString();
+            double b = Double.Parse(screen.Text.Substring(i+1));
+            screen.Text = (a-b).ToString();
         }
     }
 }
