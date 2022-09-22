@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace Calc
 {
@@ -143,6 +144,24 @@ namespace Calc
             screen.Text = (Math.Round(a/b, 5)).ToString();
         }
 
-        
+        private void updateText(object sender, EventArgs e)
+        {
+            char c = screen.Text[screen.Text.Length - 1];
+            if (c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' ||
+                c != '8' || c != '9' || c != '0' || c != '+' || c != '-' || c != 'x' || c != '/' ||
+                c != ',' || c != '.' ) 
+            {
+                screen.Text = screen.Text.Substring(0, screen.Text.Length - 1);
+            }
+            //if (screen.Text[screen.Text.Length-1].)
+            /*
+            Regex regex = new Regex(@"[^0-9^+^\-^\/^\*^\(^\)]");
+            MatchCollection matches = regex.Matches(screen.Text);
+            if (matches.Count > 0)
+            {
+                //tell the user
+            }
+            */
+        }
     }
 }

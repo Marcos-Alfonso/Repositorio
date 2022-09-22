@@ -237,6 +237,7 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(225, 38);
             this.screen.TabIndex = 18;
+            this.screen.TextChanged += new System.EventHandler(this.updateText);
             // 
             // label1
             // 
