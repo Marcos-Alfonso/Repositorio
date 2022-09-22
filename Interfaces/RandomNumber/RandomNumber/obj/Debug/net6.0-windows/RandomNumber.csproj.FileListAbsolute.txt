@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\bin\Debug\net6.0-windows\RandomNumber.exe
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\bin\Debug\net6.0-windows\RandomNumber.deps.json
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\bin\Debug\net6.0-windows\RandomNumber.runtimeconfig.json
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\bin\Debug\net6.0-windows\RandomNumber.dll
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\bin\Debug\net6.0-windows\RandomNumber.pdb
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.Form1.resources
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.AssemblyInfo.cs
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.dll
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\refint\RandomNumber.dll
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.pdb
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\RandomNumber.genruntimeconfig.cache
+C:\Repositorio\Interfaces\RandomNumber\RandomNumber\obj\Debug\net6.0-windows\ref\RandomNumber.dll
