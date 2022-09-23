@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/foto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej13.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/FileContentIndex/777906be-903e-4c48-b4fb-081cc0de6356.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/FileContentIndex/ef8a1f6a-d2c0-413b-b137-5c03da060b7c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/direc/array.dat" beforeDir="false" afterPath="$PROJECT_DIR$/direc/array.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/direc/datos.dat" beforeDir="false" afterPath="$PROJECT_DIR$/direc/datos.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/archivos/ej10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/archivos/ej10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/archivos/ej9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/archivos/ej9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ej10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ej9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/FileContentIndex/5ae19694-504b-4241-bf6d-22be80097865.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/FileContentIndex/e3a5ca3b-035d-4f64-8ff7-7d7eb9aefc01.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/Calc/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/Calc/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/RandomNumber/.vs/RandomNumber/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/ProjectEvaluation/calc.metadata.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/ProjectEvaluation/calc.metadata.v5.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/ProjectEvaluation/calc.projects.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Calc/.vs/ProjectEvaluation/calc.projects.v5.1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,15 +42,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Repositorio/ADAT/archivos&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Repositorio/ADAT/archivos"
   }
-}</component>
-  <component name="RunManager" selected="Application.E01_Notepad">
+}]]></component>
+  <component name="RunManager" selected="Application.ej13">
     <configuration name="E01_Notepad" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -67,6 +74,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ej13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ej13" />
+      <module name="archivos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ej4_rec" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ej4_rec" />
       <module name="archivos" />
@@ -81,13 +95,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ej7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ej7" />
-      <module name="archivos" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ej8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ej8" />
       <module name="archivos" />
@@ -97,11 +104,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ej13" />
         <item itemvalue="Application.ej8" />
         <item itemvalue="Application.ej5" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ej4_rec" />
-        <item itemvalue="Application.ej7" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +132,7 @@
       <workItem from="1663740693580" duration="8301000" />
       <workItem from="1663840236740" duration="85000" />
       <workItem from="1663840517710" duration="14000" />
+      <workItem from="1663913854171" duration="2332000" />
     </task>
     <servers />
   </component>

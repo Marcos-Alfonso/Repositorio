@@ -10,10 +10,11 @@ public class ej10 {
             Double[][] array = new Double[sc.nextInt()][sc.nextInt()];
             File f = new File("direc/array.dat");
             FileOutputStream fos = new FileOutputStream(f);
-             fos.write(array.length);
-             fos.write(array[0].length);
-            DataOutputStream dos = new DataOutputStream(fos);
 
+            DataOutputStream dos = new DataOutputStream(fos);
+            dos.writeInt(array.length);
+            dos.writeInt(array[0].length);
+            System.out.println("Inserta los valores del array: ");
             for(int i=0; i< array.length; i++) {
                 for(int j=0; j< array[i].length; j++) {
                     array[i][j] = sc.nextDouble();
@@ -41,9 +42,14 @@ public class ej10 {
     private static void printArray() {
         try {
             FileInputStream fis = new FileInputStream(new File("direc/array.dat"));
-            int i;
-            while ((i = fis.read())!=-1) {
-                System.out.println(i);
+            DataInputStream dis = new DataInputStream(fis);
+            Double[][] array = new Double[dis.readInt()][dis.readInt()];
+            for(int i=0; i< array.length; i++) {
+                for(int j=0; j< array[i].length; j++) {
+                    array[i][j] = dis.readDouble();
+                    System.out.print(array[i][j]+"\t");
+                }
+                System.out.println(" ");
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
