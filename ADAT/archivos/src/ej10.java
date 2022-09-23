@@ -44,6 +44,7 @@ public class ej10 {
             FileInputStream fis = new FileInputStream(new File("direc/array.dat"));
             DataInputStream dis = new DataInputStream(fis);
             Double[][] array = new Double[dis.readInt()][dis.readInt()];
+
             for(int i=0; i< array.length; i++) {
                 for(int j=0; j< array[i].length; j++) {
                     array[i][j] = dis.readDouble();

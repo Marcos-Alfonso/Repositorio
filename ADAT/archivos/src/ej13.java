@@ -1,8 +1,9 @@
 import java.io.*;
+import java.nio.Buffer;
 
 public class ej13 {
     public static void main(String[] args) {
-
+/*
         InputStream is = null;
         OutputStream os = null;
         try {
@@ -19,6 +20,21 @@ public class ej13 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+      */
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(new File("img/foto.png")));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("NUEVODIR/copy.png")));
 
+            String line;
+            while((line = br.readLine()) != null){
+                bw.write(line+"\n");
+            }
+            br.close();
+            bw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
+
 }
