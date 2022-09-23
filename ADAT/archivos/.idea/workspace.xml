@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NUEVODIR/copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/direc/array.dat" beforeDir="false" afterPath="$PROJECT_DIR$/direc/array.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/direc/datos.dat" beforeDir="false" afterPath="$PROJECT_DIR$/direc/datos.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/archivos/ej10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/archivos/ej10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/archivos/ej13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/archivos/ej13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ej10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ej13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej13.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,8 @@
       <workItem from="1663840236740" duration="85000" />
       <workItem from="1663840517710" duration="14000" />
       <workItem from="1663913854171" duration="2637000" />
-      <workItem from="1663918189145" duration="1413000" />
+      <workItem from="1663918189145" duration="2972000" />
+      <workItem from="1663922600279" duration="398000" />
     </task>
     <servers />
   </component>
