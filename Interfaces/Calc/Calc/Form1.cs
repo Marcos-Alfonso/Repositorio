@@ -145,8 +145,8 @@ namespace Calc
         }
 
         private void updateText(object sender, EventArgs e)
-        {
-            char c = screen.Text[screen.Text.Length - 1];
+        {/*
+            char c = screen.Text.Substring(screen.Text.Length - 1)[0];
             if (c != '1' || c != '2' || c != '3' || c != '4' || c != '5' || c != '6' || c != '7' ||
                 c != '8' || c != '9' || c != '0' || c != '+' || c != '-' || c != 'x' || c != '/' ||
                 c != ',' || c != '.' ) 

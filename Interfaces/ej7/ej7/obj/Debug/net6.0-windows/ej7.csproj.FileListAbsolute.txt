@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\ej7\ej7\bin\Debug\net6.0-windows\ej7.exe
+C:\Repositorio\Interfaces\ej7\ej7\bin\Debug\net6.0-windows\ej7.deps.json
+C:\Repositorio\Interfaces\ej7\ej7\bin\Debug\net6.0-windows\ej7.runtimeconfig.json
+C:\Repositorio\Interfaces\ej7\ej7\bin\Debug\net6.0-windows\ej7.dll
+C:\Repositorio\Interfaces\ej7\ej7\bin\Debug\net6.0-windows\ej7.pdb
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.Form1.resources
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.AssemblyInfo.cs
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.dll
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\refint\ej7.dll
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.pdb
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ej7.genruntimeconfig.cache
+C:\Repositorio\Interfaces\ej7\ej7\obj\Debug\net6.0-windows\ref\ej7.dll
