@@ -172,6 +172,7 @@
             this.Borra.TabIndex = 8;
             this.Borra.Text = "Borrar";
             this.Borra.UseVisualStyleBackColor = true;
+            this.Borra.Click += new System.EventHandler(this.Borra_Click);
             // 
             // lbAnswer
             // 

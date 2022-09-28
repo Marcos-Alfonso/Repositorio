@@ -51,5 +51,14 @@ namespace ej7
         {
             lbAnswer.Text += "\n-División: " + Math.Round(Double.Parse(a.Text) / Double.Parse(b.Text) / Double.Parse(c.Text), 5);
         }
+
+        private void Borra_Click(object sender, EventArgs e)
+        {
+            lbAnswer.Text = "Los resultados son: ";
+            lbError.Visible = false;
+            a.Text = "";
+            c.Text = "";
+            b.Text = "";
+        }
     }
 }
