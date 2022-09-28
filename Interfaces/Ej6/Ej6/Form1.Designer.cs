@@ -35,12 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.modoPago = new System.Windows.Forms.ComboBox();
             this.paneTarjeta = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.modoPago = new System.Windows.Forms.ComboBox();
             this.paneEfectivo.SuspendLayout();
             this.paneTarjeta.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,6 @@
             // paneEfectivo
             // 
             this.paneEfectivo.BackColor = System.Drawing.Color.Silver;
-            this.paneEfectivo.Controls.Add(this.paneTarjeta);
             this.paneEfectivo.Controls.Add(this.textBox3);
             this.paneEfectivo.Controls.Add(this.textBox2);
             this.paneEfectivo.Controls.Add(this.textBox1);
@@ -64,6 +63,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(128, 61);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 23);
             this.textBox3.TabIndex = 4;
             // 
@@ -73,6 +73,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.cambio);
             // 
             // textBox1
             // 
@@ -80,6 +81,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.cambio);
             // 
             // label3
             // 
@@ -109,18 +111,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Total";
             // 
-            // modoPago
-            // 
-            this.modoPago.FormattingEnabled = true;
-            this.modoPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Con tarjeta"});
-            this.modoPago.Location = new System.Drawing.Point(52, 44);
-            this.modoPago.Name = "modoPago";
-            this.modoPago.Size = new System.Drawing.Size(121, 23);
-            this.modoPago.TabIndex = 2;
-            this.modoPago.SelectedIndexChanged += new System.EventHandler(this.modoPago_SelectedIndexChanged);
-            // 
             // paneTarjeta
             // 
             this.paneTarjeta.BackColor = System.Drawing.Color.Silver;
@@ -128,7 +118,7 @@
             this.paneTarjeta.Controls.Add(this.textBox6);
             this.paneTarjeta.Controls.Add(this.label5);
             this.paneTarjeta.Controls.Add(this.label6);
-            this.paneTarjeta.Location = new System.Drawing.Point(0, 0);
+            this.paneTarjeta.Location = new System.Drawing.Point(52, 83);
             this.paneTarjeta.Name = "paneTarjeta";
             this.paneTarjeta.Size = new System.Drawing.Size(238, 100);
             this.paneTarjeta.TabIndex = 5;
@@ -165,12 +155,25 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "NºTarjeta";
             // 
+            // modoPago
+            // 
+            this.modoPago.FormattingEnabled = true;
+            this.modoPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Con tarjeta"});
+            this.modoPago.Location = new System.Drawing.Point(52, 44);
+            this.modoPago.Name = "modoPago";
+            this.modoPago.Size = new System.Drawing.Size(121, 23);
+            this.modoPago.TabIndex = 2;
+            this.modoPago.SelectedIndexChanged += new System.EventHandler(this.modoPago_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(324, 222);
+            this.Controls.Add(this.paneTarjeta);
             this.Controls.Add(this.modoPago);
             this.Controls.Add(this.paneEfectivo);
             this.Name = "Form1";

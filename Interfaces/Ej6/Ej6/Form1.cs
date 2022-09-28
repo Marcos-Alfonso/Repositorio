@@ -11,11 +11,16 @@ namespace Ej6
         {
             if(modoPago.SelectedIndex == 1)
             {
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
                 paneTarjeta.Visible = true;
                 paneEfectivo.Visible = false;
             }
             else
             {
+                textBox6.Text = "";
+                textBox5.Text = "";
                 paneTarjeta.Visible = false;
                 paneEfectivo.Visible = true;
             }
@@ -24,6 +29,14 @@ namespace Ej6
         private void Form1_Load(object sender, EventArgs e)
         {
             modoPago.SelectedIndex = 1;
+        }
+
+        private void cambio(object sender, EventArgs e)
+        {
+            if(textBox1.Text !="" && textBox2.Text != "")
+            {
+                textBox3.Text = (Double.Parse(textBox2.Text) - Double.Parse(textBox1.Text)).ToString();
+            }
         }
     }
 }
