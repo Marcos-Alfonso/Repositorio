@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\Ej12\Ej12\bin\Debug\net6.0-windows\Ej12.exe
+C:\Repositorio\Interfaces\Ej12\Ej12\bin\Debug\net6.0-windows\Ej12.deps.json
+C:\Repositorio\Interfaces\Ej12\Ej12\bin\Debug\net6.0-windows\Ej12.runtimeconfig.json
+C:\Repositorio\Interfaces\Ej12\Ej12\bin\Debug\net6.0-windows\Ej12.dll
+C:\Repositorio\Interfaces\Ej12\Ej12\bin\Debug\net6.0-windows\Ej12.pdb
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.Form1.resources
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.AssemblyInfo.cs
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.dll
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\refint\Ej12.dll
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.pdb
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\Ej12.genruntimeconfig.cache
+C:\Repositorio\Interfaces\Ej12\Ej12\obj\Debug\net6.0-windows\ref\Ej12.dll
