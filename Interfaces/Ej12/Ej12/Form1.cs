@@ -57,5 +57,19 @@ namespace Ej12
             }
             return count.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            lbPalabras.Font = fontDialog1.Font;
+            lbPalabras.ForeColor = fontDialog1.Color;
+        }
+
+        private void apply(object sender, EventArgs e)
+        {
+            
+            lbPalabras.Font = fontDialog1.Font;
+            lbPalabras.ForeColor = fontDialog1.Color;
+        }
     }
 }

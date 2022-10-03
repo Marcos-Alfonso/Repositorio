@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\EjFich\EjFich\bin\Debug\net6.0-windows\EjFich.exe
+C:\Repositorio\Interfaces\EjFich\EjFich\bin\Debug\net6.0-windows\EjFich.deps.json
+C:\Repositorio\Interfaces\EjFich\EjFich\bin\Debug\net6.0-windows\EjFich.runtimeconfig.json
+C:\Repositorio\Interfaces\EjFich\EjFich\bin\Debug\net6.0-windows\EjFich.dll
+C:\Repositorio\Interfaces\EjFich\EjFich\bin\Debug\net6.0-windows\EjFich.pdb
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.Form1.resources
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.AssemblyInfo.cs
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.dll
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\refint\EjFich.dll
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.pdb
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.genruntimeconfig.cache
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\ref\EjFich.dll
