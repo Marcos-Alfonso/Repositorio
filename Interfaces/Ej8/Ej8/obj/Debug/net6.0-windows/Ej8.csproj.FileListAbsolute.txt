@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\Ej8\Ej8\bin\Debug\net6.0-windows\Ej8.exe
+C:\Repositorio\Interfaces\Ej8\Ej8\bin\Debug\net6.0-windows\Ej8.deps.json
+C:\Repositorio\Interfaces\Ej8\Ej8\bin\Debug\net6.0-windows\Ej8.runtimeconfig.json
+C:\Repositorio\Interfaces\Ej8\Ej8\bin\Debug\net6.0-windows\Ej8.dll
+C:\Repositorio\Interfaces\Ej8\Ej8\bin\Debug\net6.0-windows\Ej8.pdb
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.Form1.resources
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.AssemblyInfo.cs
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.dll
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\refint\Ej8.dll
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.pdb
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\Ej8.genruntimeconfig.cache
+C:\Repositorio\Interfaces\Ej8\Ej8\obj\Debug\net6.0-windows\ref\Ej8.dll

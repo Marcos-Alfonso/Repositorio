@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\Ej9\Ej9\bin\Debug\net6.0-windows\Ej9.exe
+C:\Repositorio\Interfaces\Ej9\Ej9\bin\Debug\net6.0-windows\Ej9.deps.json
+C:\Repositorio\Interfaces\Ej9\Ej9\bin\Debug\net6.0-windows\Ej9.runtimeconfig.json
+C:\Repositorio\Interfaces\Ej9\Ej9\bin\Debug\net6.0-windows\Ej9.dll
+C:\Repositorio\Interfaces\Ej9\Ej9\bin\Debug\net6.0-windows\Ej9.pdb
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.Form1.resources
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.AssemblyInfo.cs
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.dll
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\refint\Ej9.dll
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.pdb
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\Ej9.genruntimeconfig.cache
+C:\Repositorio\Interfaces\Ej9\Ej9\obj\Debug\net6.0-windows\ref\Ej9.dll

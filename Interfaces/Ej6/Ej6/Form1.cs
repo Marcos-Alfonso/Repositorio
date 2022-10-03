@@ -37,6 +37,10 @@ namespace Ej6
             {
                 textBox3.Text = (Double.Parse(textBox2.Text) - Double.Parse(textBox1.Text)).ToString();
             }
+            else 
+            {
+                textBox3.Text = "";
+            }
         }
     }
 }

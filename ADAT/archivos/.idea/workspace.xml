@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04357aa2-95f3-4bf0-958e-28d939b61494" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Agenda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ej16.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ej15.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/Ej6/FileContentIndex/a3fe077b-b107-44e6-b868-9ffeb5a0fb6c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/Ej6/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/Ej6/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/Ej6/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/Ej6/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/ProjectEvaluation/ej6.metadata.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/ProjectEvaluation/ej6.metadata.v5.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/ProjectEvaluation/ej6.projects.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/.vs/ProjectEvaluation/ej6.projects.v5.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/bin/Debug/net6.0-windows/Ej6.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/bin/Debug/net6.0-windows/Ej6.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/bin/Debug/net6.0-windows/Ej6.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/bin/Debug/net6.0-windows/Ej6.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/obj/Debug/net6.0-windows/Ej6.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/obj/Debug/net6.0-windows/Ej6.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/obj/Debug/net6.0-windows/Ej6.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/obj/Debug/net6.0-windows/Ej6.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/obj/Debug/net6.0-windows/Ej6.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej6/Ej6/obj/Debug/net6.0-windows/Ej6.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/ej6/.vs/ej6/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/ej6/.vs/ej6/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MULTI/Test/app/src/main/java/com/example/test/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MULTI/Test/app/src/main/java/com/example/test/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MULTI/Test/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MULTI/Test/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +56,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Repositorio/ADAT/archivos&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ej13">
+  <component name="RunManager">
     <configuration name="E01_Notepad" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-18.0.2.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -121,6 +140,8 @@
       <workItem from="1663913854171" duration="2637000" />
       <workItem from="1663918189145" duration="2972000" />
       <workItem from="1663922600279" duration="398000" />
+      <workItem from="1664444879855" duration="194000" />
+      <workItem from="1664518263968" duration="3009000" />
     </task>
     <servers />
   </component>
