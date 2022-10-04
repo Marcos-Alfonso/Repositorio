@@ -2,55 +2,80 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btComprueba"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="173dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="168dp"
-        android:ems="10"
-        android:hint="Primer número"
-        android:inputType="number"
-        android:textSize="16sp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="317dp"
+        android:layout_height="202dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.481"
+        app:srcCompat="@drawable/images" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/nbMates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textSize="34sp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Matematicas"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="173dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/nbLengua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="88dp"
         android:ems="10"
-        android:hint="Segundo número"
+        android:hint="Lengua"
         android:inputType="number"
-        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/nbHistoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="144dp"
+        android:ems="10"
+        android:hint="Historia"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="56dp"
+        android:text="Nota del Alumno"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="20dp"
-        android:text="Sumar"
+        android:layout_marginStart="52dp"
+        android:onClick="checkStatus"
+        android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/nbHistoria"
+        tools:text="Comprueba" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
