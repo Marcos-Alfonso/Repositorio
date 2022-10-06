@@ -31,5 +31,9 @@ namespace timerTest
             label2.Text = ((double)sum/(dataGridView1.RowCount-1)).ToString();
 
         }
+        public static void AddPersona(Persona p)
+        {
+            p.
+        }
     }
 }
