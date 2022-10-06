@@ -15,3 +15,4 @@ C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\refint\EjFich.d
 C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.pdb
 C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.genruntimeconfig.cache
 C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\ref\EjFich.dll
+C:\Repositorio\Interfaces\EjFich\EjFich\obj\Debug\net6.0-windows\EjFich.Form2.resources

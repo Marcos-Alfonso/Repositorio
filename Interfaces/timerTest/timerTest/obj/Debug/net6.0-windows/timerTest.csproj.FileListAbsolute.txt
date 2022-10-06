@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\timerTest\timerTest\bin\Debug\net6.0-windows\timerTest.exe
+C:\Repositorio\Interfaces\timerTest\timerTest\bin\Debug\net6.0-windows\timerTest.deps.json
+C:\Repositorio\Interfaces\timerTest\timerTest\bin\Debug\net6.0-windows\timerTest.runtimeconfig.json
+C:\Repositorio\Interfaces\timerTest\timerTest\bin\Debug\net6.0-windows\timerTest.dll
+C:\Repositorio\Interfaces\timerTest\timerTest\bin\Debug\net6.0-windows\timerTest.pdb
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.Form1.resources
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.AssemblyInfo.cs
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.dll
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\refint\timerTest.dll
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.pdb
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.genruntimeconfig.cache
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\ref\timerTest.dll
