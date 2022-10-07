@@ -11,12 +11,7 @@ namespace timerTest
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = System.DateTime.Now.ToString().Substring(10);
-           
-            DataGridViewColumn d = dataGridView1.Columns[3];
-           
-            
-            
-            
+ 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,11 +24,15 @@ namespace timerTest
                 
             }
             label2.Text = ((double)sum/(dataGridView1.RowCount-1)).ToString();
+            AddPersona();
 
         }
-        public static void AddPersona(Persona p)
-        {
-            p.
+        Form2 f = new Form2();
+        public void AddPersona()
+        {  
+
+            f.setForm(this, dataGridView1);
+            f.Show();
         }
     }
 }
