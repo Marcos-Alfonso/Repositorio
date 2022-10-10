@@ -37,13 +37,21 @@ namespace timerTest
 
         private void btMod_Click(object sender, EventArgs e)
         {
-            if(dg.SelectedRows.Count == 1)
-            {
+
+                foreach (DataGridViewRow item in this.dg.SelectedRows)
+                {
+                    item.Cells[0].Value = txNombre.Text;
+                    item.Cells[1].Value = txApellidos.Text;
+                    item.Cells[2].Value = txNota.Text;
+                    item.Cells[3].Value = txTelf.Text;
+                }
+                /*
                 dg.SelectedRows[0].Cells[0].Value = txNombre.Text;
                 dg.SelectedRows[0].Cells[1].Value = txApellidos.Text;
                 dg.SelectedRows[0].Cells[2].Value = txNota.Text;
                 dg.SelectedRows[0].Cells[3].Value = txTelf.Text;
-            }
+                */
+            
         }
 
         private void btDelete_Click(object sender, EventArgs e)
