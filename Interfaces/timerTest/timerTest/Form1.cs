@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace timerTest
 {
     public partial class Form1 : Form
@@ -5,8 +7,8 @@ namespace timerTest
         public Form1()
         {
             InitializeComponent();
+   
         }
-        private static int count=0;
         
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -45,6 +47,22 @@ namespace timerTest
             f.cambio();
 
             // Calculate amount code goes here
+        }
+ 
+        private void update(object sender, EventArgs e)
+        {
+         
+            /*
+            if (filtro.Text != "")
+                dt.DefaultView.RowFilter = string.Format("id LIKE '%0%'", filtro.Text);
+            else dt.DefaultView.RowFilter = "";
+            */
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+    
         }
     }
 }
