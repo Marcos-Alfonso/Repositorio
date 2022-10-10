@@ -20,19 +20,31 @@ namespace timerTest
             for (int i = 0; i < dataGridView1.RowCount-1; i++)
             {
                 //if ((string)dataGridView1[3, i].Value !=null)
-                    sum += Int32.Parse(dataGridView1[3, i].Value.ToString());
+                    //sum += Int32.Parse(dataGridView1[3, i].Value.ToString());
                 
             }
-            label2.Text = ((double)sum/(dataGridView1.RowCount-1)).ToString();
+            //label2.Text = ((double)sum/(dataGridView1.RowCount-1)).ToString();
             AddPersona();
 
         }
         Form2 f = new Form2();
         public void AddPersona()
-        {  
+        {
+            f = new Form2();
 
             f.setForm(this, dataGridView1);
-            f.Show();
+            if (dataGridView1.SelectedRows.Count == 1)
+                f.cambio();
+                f.Show();
+        }
+
+        private void cambio(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            // For any other operation except, StateChanged, do nothing
+            if (e.StateChanged != DataGridViewElementStates.Selected) return;
+            f.cambio();
+
+            // Calculate amount code goes here
         }
     }
 }
