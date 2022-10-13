@@ -34,3 +34,4 @@ E:\Repositorio\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windo
 E:\Repositorio\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.pdb
 E:\Repositorio\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.genruntimeconfig.cache
 E:\Repositorio\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\ref\timerTest.dll
+C:\Repositorio\Interfaces\timerTest\timerTest\obj\Debug\net6.0-windows\timerTest.Properties.Resources.resources

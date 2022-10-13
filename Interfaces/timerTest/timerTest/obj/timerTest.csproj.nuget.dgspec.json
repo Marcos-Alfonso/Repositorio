@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Repositorio\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj": {}
+    "C:\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj": {}
   },
   "projects": {
-    "E:\\Repositorio\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj": {
+    "C:\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Repositorio\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj",
+        "projectUniqueName": "C:\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj",
         "projectName": "timerTest",
-        "projectPath": "E:\\Repositorio\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj",
-        "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
-        "outputPath": "E:\\Repositorio\\Repositorio\\Interfaces\\timerTest\\timerTest\\obj\\",
+        "projectPath": "C:\\Repositorio\\Interfaces\\timerTest\\timerTest\\timerTest.csproj",
+        "packagesPath": "C:\\Users\\manana\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorio\\Interfaces\\timerTest\\timerTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\manana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

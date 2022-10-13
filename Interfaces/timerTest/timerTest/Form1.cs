@@ -1,4 +1,5 @@
 using System.Data;
+using System.Windows.Forms;
 
 namespace timerTest
 {
@@ -51,13 +52,30 @@ namespace timerTest
  
         private void update(object sender, EventArgs e)
         {
-         
             /*
+            DataTable dt = new DataTable();
             if (filtro.Text != "")
-                dt.DefaultView.RowFilter = string.Format("id LIKE '%0%'", filtro.Text);
+                dt.DefaultView.RowFilter = string.Format("nombre = '%0%'", filtro.Text);
             else dt.DefaultView.RowFilter = "";
+            dataGridView1.DataSource = dt;
             */
-
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if(filtro.Text != "")
+                {
+                    try
+                    {
+                     
+                        if (!row.Cells["Apellidos"].Value.ToString().Contains(filtro.Text)) row.Visible = false;
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                    }
+                }
+                else row.Visible = true;
+                
+               
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
