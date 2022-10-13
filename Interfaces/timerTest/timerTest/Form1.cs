@@ -14,7 +14,7 @@ namespace timerTest
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = System.DateTime.Now.ToString().Substring(10);
- 
+            recalcula_Click(sender, e);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,6 +81,33 @@ namespace timerTest
         private void Form1_Load(object sender, EventArgs e)
         {
     
+        }
+
+        private void recalcula_Click(object sender, EventArgs e) 
+        {
+            try
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    String s = row.Cells["Nombre"].Value.ToString();
+                    double totalNota = 0;
+                    int count = 0;
+                    foreach (DataGridViewRow row2 in dataGridView2.Rows)
+                    {
+                        try
+                        {
+                            if (s.Equals(row2.Cells["nPersona"].Value.ToString()))
+                            {
+                                totalNota += Double.Parse(row2.Cells["Nota"].Value.ToString());
+                                count++;
+                            }
+                        }
+                        catch (NullReferenceException exe){}
+                    }
+                    row.Cells["Notas"].Value = totalNota / count;
+                }
+            }
+            catch (NullReferenceException ex){}
         }
     }
 }
