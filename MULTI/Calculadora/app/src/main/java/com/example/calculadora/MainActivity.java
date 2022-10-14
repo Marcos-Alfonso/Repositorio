@@ -89,6 +89,41 @@ public class MainActivity extends AppCompatActivity {
         txControl.setText(String.valueOf(n1)+"\n"+operation);
         txOutput.setText("0");
     }
+    public void masmenosCLick(View view){
+        String s = txOutput.getText().toString();
+        if(s.charAt(0) == '-')
+            txOutput.setText(s.substring(1));
+        else
+            txOutput.setText("-"+s);
+    }
+    public void igualCLick(View view){
+        double n2 = Double.parseDouble(txOutput.getText().toString());
+        String s = "";
+        switch(operation){
+            case"+":
+                s = String.valueOf(n1+n2);
+                break;
+            case"-":
+                s = String.valueOf(n1-n2);
+                break;
+            case"x":
+                s = String.valueOf(n1*n2);
+                break;
+            case"/":
+                s = String.valueOf(n1/n2);
+                break;
+            case"%":
+                s = String.valueOf(n1%n2);
+                break;
+            case"":
+                s = String.valueOf(n2);
+                break;
+        }
+        txOutput.setText(s);
+        txControl.setText("");
+        operation = "";
+        n1=0;
+    }
 
 
 }
