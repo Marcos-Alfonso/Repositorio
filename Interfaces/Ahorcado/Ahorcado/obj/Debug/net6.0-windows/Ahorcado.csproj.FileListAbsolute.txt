@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\bin\Debug\net6.0-windows\Ahorcado.exe
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\bin\Debug\net6.0-windows\Ahorcado.deps.json
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\bin\Debug\net6.0-windows\Ahorcado.runtimeconfig.json
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\bin\Debug\net6.0-windows\Ahorcado.dll
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\bin\Debug\net6.0-windows\Ahorcado.pdb
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.Form1.resources
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.AssemblyInfo.cs
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.dll
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\refint\Ahorcado.dll
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.pdb
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.genruntimeconfig.cache
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\ref\Ahorcado.dll

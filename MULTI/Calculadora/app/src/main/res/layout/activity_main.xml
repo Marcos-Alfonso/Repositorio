@@ -314,7 +314,7 @@
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#f5f6ee"
-        android:maxLength="8"
+        android:maxLength="10"
         android:text="0"
         android:textColor="#202020"
         android:textSize="60sp"
@@ -326,7 +326,6 @@
         android:layout_width="87dp"
         android:layout_height="80dp"
         android:maxLines="2"
-        android:text="-"
         android:textColor="#575757"
         android:textSize="24sp"
         app:autoSizeTextType="uniform"
@@ -357,7 +356,7 @@
         android:layout_marginBottom="20dp"
         android:background="#C12121"
         android:onClick="masmenosCLick"
-        android:text="Button"
+        android:text="±"
         android:textColor="#000000"
         android:textSize="48sp"
         app:backgroundTint="#bb97a3"
@@ -366,7 +365,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#8C5050"
         app:strokeColor="#009C27B0"
-        app:strokeWidth="0px"
-        tools:text="±" />
+        app:strokeWidth="0px" />
+
+    <Switch
+        android:id="@+id/swBinary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:onClick="changeSwitch"
+        android:text="Binario"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

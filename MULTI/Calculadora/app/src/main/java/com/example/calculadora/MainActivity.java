@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txOutput;
     TextView txControl;
 
+    Switch swBinary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         btResta= findViewById(R.id.btMenos);
         btDiv= findViewById(R.id.btDiv);
         btMulti= findViewById(R.id.btMulti);
+
+        swBinary=findViewById(R.id.swBinary);
     }
     public void numberCLick(View view){
         Button b = (Button)view;
@@ -69,7 +73,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }else if(!operation.equals("")){
             operation = "";
-            txOutput.setText(String.valueOf(n1));
+            if(n1%1 !=0)
+                txOutput.setText(String.valueOf(n1));
+            else
+                txOutput.setText(String.valueOf((int)n1));
             n1 = 0;
             txControl.setText("");
         }
@@ -95,35 +102,56 @@ public class MainActivity extends AppCompatActivity {
             txOutput.setText(s.substring(1));
         else
             txOutput.setText("-"+s);
+
+    }
+    public void changeSwitch(View view){
+        Switch s = (Switch) view;
+        txControl.setText("");
+        operation="";
+        n1 = 0;
+        if(s.isChecked()){
+            int i = Integer.parseInt(txOutput.getText().toString());
+            txOutput.setText(Integer.toString(i, 2));
+        }else{
+            int i = Integer.parseInt(txOutput.getText().toString(), 2);
+            txOutput.setText(String.valueOf(i));
+        }
     }
     public void igualCLick(View view){
         double n2 = Double.parseDouble(txOutput.getText().toString());
         String s = "";
+        double resu = 0;
         switch(operation){
             case"+":
-                s = String.valueOf(n1+n2);
+                resu = n1+n2;
                 break;
             case"-":
-                s = String.valueOf(n1-n2);
+                resu = n1-n2;
                 break;
             case"x":
-                s = String.valueOf(n1*n2);
+                resu = n1*n2;
                 break;
             case"/":
-                s = String.valueOf(n1/n2);
+                resu = n1/n2;
                 break;
             case"%":
-                s = String.valueOf(n1%n2);
+                resu = n1%n2;
                 break;
             case"":
-                s = String.valueOf(n2);
+                resu = n2;
                 break;
         }
-        txOutput.setText(s);
+
+        if(resu%1 !=0)
+            txOutput.setText(String.valueOf(resu));
+        else
+            txOutput.setText(String.valueOf((int)resu));
+
         txControl.setText("");
         operation = "";
         n1=0;
     }
+
 
 
 }
