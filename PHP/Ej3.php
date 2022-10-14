@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+th{
+    background-color: #9fc5e8;
+}
+td:nth-child(even) {
+  background-color: #bcbcbc;
+}
+</style>
 <body>
 <?php
 //3. Crea un array multidimensional de evaluación de Alumnos de 1º de DAW. En cadafila debe aparecer: Nombre del Alumno, Nota 1º Eval, Nota 2º Eval y Nota final
@@ -72,7 +84,7 @@ function getSorted($array){
 }
 print_r(getSorted($daw));
 //• Especifica por pantalla los alumnos que obtuvieron mejores calificaciones en la primera y segunda evaluación
-function getBetter($array, $term){//pido por parámetro si es del primer o segundo trimestre
+function getBest($array, $term){//pido por parámetro si es del primer o segundo trimestre
     $maxIndex = 0;
     $maxNota = 0;
     for($i = 0; $i<count($array);$i++){
@@ -83,11 +95,36 @@ function getBetter($array, $term){//pido por parámetro si es del primer o segun
     }
     return $maxIndex;
 }
+echo "<br/>Mejor de primer trimestre: ".$daw[getBest($daw, 1)][0];
+echo "<br/>Mejor de segundo trimestre: ".$daw[getBest($daw, 2)][0];
 /*• Presenta dicha lista en una tabla HTML con las cabeceras Nombre del Alumno,
 Nota 1º Eval, Nota 2º Eval y Nota final. Dibuja la cabecera en color Azul Claro y
 las columnas pares en tono Gris. Debajo de la columna Nota Final incluye la nota
 media del Curso
 */
+function getNotaMedia($array){
+    $total = 0;
+    foreach($array as $alumno){
+        $total += $alumno[3];
+    }
+    return $total/count($array);
+}
+echo "<table>";
+echo "<tr>
+<th>Nombre</th>
+<th>Nota 1ªEv</th>
+<th>Nota 2ªEv</th>
+<th>Nota Final</th>
+</tr>";
+foreach($daw as $alumno) {
+    echo "<tr>";
+    foreach($alumno as $dato){
+        echo "<td>$dato</td>";
+    }
+    echo "</tr>";
+  }
+  echo "<tr><td colspan='3'></td><td>".round( getNotaMedia($daw), 2)."</td></tr>";
+echo "</table>";
 ?>
 
 </body>
