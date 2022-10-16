@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     Button btResta;
     Button btDiv;
     Button btMulti;
+    Button btComa;
+    Button btResto;
 
     TextView txOutput;
     TextView txControl;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         bt8= findViewById(R.id.bt8);
         bt9= findViewById(R.id.bt9);
 
+        btComa= findViewById(R.id.btComa);
         txOutput= findViewById(R.id.txOutput);
         txControl= findViewById(R.id.txControl);
 
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         btResta= findViewById(R.id.btMenos);
         btDiv= findViewById(R.id.btDiv);
         btMulti= findViewById(R.id.btMulti);
+        btResto= findViewById(R.id.btResto);
 
         swBinary=findViewById(R.id.swBinary);
     }
@@ -91,9 +95,20 @@ public class MainActivity extends AppCompatActivity {
     double n1 = 0;
     public void operationCLick(View view){
         Button b = (Button)view;
+        if(operation != "")
+            igualCLick(view);
         operation = b.getText().toString();
-        n1 = Double.parseDouble(txOutput.getText().toString());
-        txControl.setText(String.valueOf(n1)+"\n"+operation);
+
+        String s = "";
+        if(swBinary.isChecked()){
+            n1 = Integer.parseInt(txOutput.getText().toString(), 2);
+            s= txOutput.getText().toString();
+        }else{
+            n1 = Double.parseDouble(txOutput.getText().toString());
+            s=String.valueOf(n1);
+        }
+
+        txControl.setText(s+"\n"+operation);
         txOutput.setText("0");
     }
     public void masmenosCLick(View view){
@@ -116,9 +131,39 @@ public class MainActivity extends AppCompatActivity {
             int i = Integer.parseInt(txOutput.getText().toString(), 2);
             txOutput.setText(String.valueOf(i));
         }
+        sw();
+    }
+    private void sw(){
+        Button[] btArray = new Button[]{
+                bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, btComa, btResto
+        };
+        for (Button bt:btArray) {
+            bt.setEnabled(!bt.isEnabled());
+            bt.getBackground().setAlpha(255-((swBinary.isChecked())?(155):(0)));
+        }
+        /*
+        bt2.setEnabled(!bt2.isEnabled());
+        bt3.setEnabled(!bt3.isEnabled());
+        bt4.setEnabled(!bt4.isEnabled());
+        bt5.setEnabled(!bt5.isEnabled());
+        bt6.setEnabled(!bt6.isEnabled());
+        bt7.setEnabled(!bt7.isEnabled());
+        bt8.setEnabled(!bt8.isEnabled());
+        bt9.setEnabled(!bt9.isEnabled());
+        btComa.setEnabled(!btComa.isEnabled());
+        btResto.setEnabled(!btResto.isEnabled());
+        */
+
     }
     public void igualCLick(View view){
-        double n2 = Double.parseDouble(txOutput.getText().toString());
+        double n2=0;
+        if(swBinary.isChecked()){
+            n2 = Integer.parseInt(txOutput.getText().toString(), 2);
+        }else{
+            n2 = Double.parseDouble(txOutput.getText().toString());
+        }
+
+
         String s = "";
         double resu = 0;
         switch(operation){
@@ -141,11 +186,15 @@ public class MainActivity extends AppCompatActivity {
                 resu = n2;
                 break;
         }
+        if(swBinary.isChecked()){
+            txOutput.setText(Integer.toString((int)resu, 2));
+        }else{
+            if(resu%1 !=0)
+                txOutput.setText(String.valueOf(resu));
+            else
+                txOutput.setText(String.valueOf((int)resu));
+        }
 
-        if(resu%1 !=0)
-            txOutput.setText(String.valueOf(resu));
-        else
-            txOutput.setText(String.valueOf((int)resu));
 
         txControl.setText("");
         operation = "";
