@@ -9,13 +9,14 @@ namespace Ahorcado
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void startGame(object sender, EventArgs e)
         {
+            
             Form2 f = new Form2();
-            f.init();
+            f.init(txNombre.Text, cbCategoria.SelectedText, "palabra");
             f.ShowDialog();
         }
     }

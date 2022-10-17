@@ -57,14 +57,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="txNombre.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOgAAAA3CAIAAACJo5HVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAABJlJREFUeF7t0sFu41gMBMD5/5+evRSCXoh4pqkocAasm9HNthTnz1prrbXWWmut
+        vAAADrwBlbxySQAABJlJREFUeF7t0sFu41gMBMD5/5+evRSCXoh4pqkocAasm9HNthTnz1prrbXWWmut
         tdZa63/+vsNNRSMI1q/lhwyCT+CJetxUNIJg/Vp+yCD4BJ6ox01FIwjWr+WHDIJP4Il63FQ0gmD9Wn7I
         IPgEnqjHTUUjCNav5YcMgk/giXrcVDSCYP1afsgg+Hm+Pwh63ATB/uP+i/yQQfDzfH8Q9LgJgv3H/Rf5
         IYPg5/n+IOhxEwT7j/sv8kMGwc/z/UHQ4yYIfuQl7R6pVjSC4LiscaTa46aiMWWlx82bHFc0jlQHDARB

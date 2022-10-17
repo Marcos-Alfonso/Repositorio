@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TextBox txNombre;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            txNombre = new System.Windows.Forms.TextBox();
+            this.txNombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -65,16 +64,6 @@
             this.cbCategoria.Size = new System.Drawing.Size(121, 23);
             this.cbCategoria.TabIndex = 1;
             // 
-            // txNombre
-            // 
-            txNombre.BackColor = System.Drawing.SystemColors.MenuText;
-            txNombre.ForeColor = System.Drawing.SystemColors.MenuBar;
-            txNombre.Location = new System.Drawing.Point(134, 112);
-            txNombre.Name = "txNombre";
-            txNombre.PlaceholderText = "Nombre";
-            txNombre.Size = new System.Drawing.Size(121, 23);
-            txNombre.TabIndex = 2;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -94,15 +83,23 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
+            // txNombre
+            // 
+            this.txNombre.BackColor = System.Drawing.SystemColors.InfoText;
+            this.txNombre.Location = new System.Drawing.Point(134, 112);
+            this.txNombre.Name = "txNombre";
+            this.txNombre.Size = new System.Drawing.Size(100, 23);
+            this.txNombre.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.txNombre);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(txNombre);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -122,5 +119,6 @@
         private ComboBox cbCategoria;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private TextBox txNombre;
     }
 }
