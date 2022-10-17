@@ -86,9 +86,10 @@
             // txNombre
             // 
             this.txNombre.BackColor = System.Drawing.SystemColors.InfoText;
+            this.txNombre.ForeColor = System.Drawing.SystemColors.Menu;
             this.txNombre.Location = new System.Drawing.Point(134, 112);
             this.txNombre.Name = "txNombre";
-            this.txNombre.Size = new System.Drawing.Size(100, 23);
+            this.txNombre.Size = new System.Drawing.Size(121, 23);
             this.txNombre.TabIndex = 5;
             // 
             // Form1

@@ -21,7 +21,9 @@ namespace Ahorcado
         private void Form2_Load(object sender, EventArgs e)
         {
             start = System.DateTime.Now;
+            txErrorCount.Focus();
         }
+
         String palabra;
         String categoria;
         String nombre;
@@ -50,6 +52,7 @@ namespace Ahorcado
         int nErrores = 0;
         private void buttonClick(object sender, EventArgs e)
         {
+            
             Button b = (Button)sender;
             if (palabra.ToLower().Contains(b.Text))
             {
@@ -65,7 +68,11 @@ namespace Ahorcado
             else{
                 b.BackColor = Color.Red;
                 txErrorChars.Text += b.Text + "/";
+                
+                txErrorCount.Text = "Número de errores: "+(++nErrores)+"/20";
+               
             }
+            b.Enabled = false;
         }
 
         private void recodify(char c)
@@ -87,6 +94,7 @@ namespace Ahorcado
             String s = (System.DateTime.Now - start).ToString();
             txPlaytime.Text = s.Substring(0,8);
             //label1.Text = System.DateTime.Now.ToString().Substring(10);
+           
         }
     }
 }
