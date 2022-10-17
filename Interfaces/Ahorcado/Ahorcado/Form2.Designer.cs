@@ -493,7 +493,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Ahorcado.Properties.Resources._7__1_;
+            this.pictureBox1.Image = global::Ahorcado.Properties.Resources._7__7_;
             this.pictureBox1.Location = new System.Drawing.Point(34, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 182);
