@@ -11,5 +11,12 @@ namespace Ahorcado
         {
 
         }
+
+        private void startGame(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.init();
+            f.ShowDialog();
+        }
     }
 }

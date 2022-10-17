@@ -15,3 +15,5 @@ C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\refint\Ahor
 C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.pdb
 C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.genruntimeconfig.cache
 C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\ref\Ahorcado.dll
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.Form2.resources
+C:\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.Properties.Resources.resources
