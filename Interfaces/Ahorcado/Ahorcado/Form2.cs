@@ -22,6 +22,12 @@ namespace Ahorcado
         {
             start = System.DateTime.Now;
             txErrorCount.Focus();
+            sq1.Visible = false;
+            sq2.Visible = false;
+            sq3.Visible = false;
+            sq4.Visible = false;
+            sq5.Visible = false;
+            sq6.Visible = false;
         }
 
         String palabra;

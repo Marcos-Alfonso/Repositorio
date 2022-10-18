@@ -64,7 +64,19 @@
             this.txUserName = new System.Windows.Forms.TextBox();
             this.txCategoria = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sq1 = new System.Windows.Forms.PictureBox();
+            this.sq2 = new System.Windows.Forms.PictureBox();
+            this.sq3 = new System.Windows.Forms.PictureBox();
+            this.sq4 = new System.Windows.Forms.PictureBox();
+            this.sq5 = new System.Windows.Forms.PictureBox();
+            this.sq6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq6)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -494,11 +506,7 @@
             // 
             // pictureBox1
             // 
-<<<<<<< HEAD
-            
-=======
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
->>>>>>> parent of 1834826 (n)
             this.pictureBox1.Location = new System.Drawing.Point(34, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 182);
@@ -506,12 +514,72 @@
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
+            // sq1
+            // 
+            this.sq1.Location = new System.Drawing.Point(165, 125);
+            this.sq1.Name = "sq1";
+            this.sq1.Size = new System.Drawing.Size(22, 35);
+            this.sq1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sq1.TabIndex = 35;
+            this.sq1.TabStop = false;
+            // 
+            // sq2
+            // 
+            this.sq2.Location = new System.Drawing.Point(146, 125);
+            this.sq2.Name = "sq2";
+            this.sq2.Size = new System.Drawing.Size(22, 35);
+            this.sq2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sq2.TabIndex = 36;
+            this.sq2.TabStop = false;
+            // 
+            // sq3
+            // 
+            this.sq3.Location = new System.Drawing.Point(165, 101);
+            this.sq3.Name = "sq3";
+            this.sq3.Size = new System.Drawing.Size(22, 35);
+            this.sq3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sq3.TabIndex = 37;
+            this.sq3.TabStop = false;
+            // 
+            // sq4
+            // 
+            this.sq4.Location = new System.Drawing.Point(137, 88);
+            this.sq4.Name = "sq4";
+            this.sq4.Size = new System.Drawing.Size(22, 48);
+            this.sq4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sq4.TabIndex = 38;
+            this.sq4.TabStop = false;
+            // 
+            // sq5
+            // 
+            this.sq5.Location = new System.Drawing.Point(137, 88);
+            this.sq5.Name = "sq5";
+            this.sq5.Size = new System.Drawing.Size(31, 48);
+            this.sq5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sq5.TabIndex = 39;
+            this.sq5.TabStop = false;
+            // 
+            // sq6
+            // 
+            this.sq6.Location = new System.Drawing.Point(156, 61);
+            this.sq6.Name = "sq6";
+            this.sq6.Size = new System.Drawing.Size(44, 48);
+            this.sq6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sq6.TabIndex = 40;
+            this.sq6.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(685, 319);
+            this.Controls.Add(this.sq6);
+            this.Controls.Add(this.sq5);
+            this.Controls.Add(this.sq4);
+            this.Controls.Add(this.sq3);
+            this.Controls.Add(this.sq2);
+            this.Controls.Add(this.sq1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txCategoria);
             this.Controls.Add(this.txUserName);
@@ -549,6 +617,12 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sq6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,5 +664,11 @@
         private TextBox txUserName;
         private TextBox txCategoria;
         private PictureBox pictureBox1;
+        private PictureBox sq1;
+        private PictureBox sq2;
+        private PictureBox sq3;
+        private PictureBox sq4;
+        private PictureBox sq5;
+        private PictureBox sq6;
     }
 }
