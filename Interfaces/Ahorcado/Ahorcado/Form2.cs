@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,23 +20,30 @@ namespace Ahorcado
         {
             InitializeComponent();
         }
-
+        List<PictureBox> lista = new List<PictureBox>();
         private void Form2_Load(object sender, EventArgs e)
         {
+            lista.AddRange(new Collection<PictureBox> {sq6, sq5, sq4,sq3,sq2,sq1 });
             start = System.DateTime.Now;
             txErrorCount.Focus();
+            foreach (PictureBox p in lista)
+            {
+                p.Visible = true;
+            }/*
             sq1.Visible = false;
             sq2.Visible = false;
             sq3.Visible = false;
             sq4.Visible = false;
             sq5.Visible = false;
             sq6.Visible = false;
+            */
         }
 
         String palabra;
         String categoria;
         String nombre;
         DateTime start;
+
         public void init(String nombre, String categoria, String palabra) {
             txUserName.Text = "Usuario: " + nombre; 
             this.nombre = nombre;
@@ -75,8 +85,15 @@ namespace Ahorcado
                 b.BackColor = Color.Red;
                 txErrorChars.Text += b.Text + "/";
                 
-                txErrorCount.Text = "Número de errores: "+(++nErrores)+"/20";
-               
+                txErrorCount.Text = "Número de errores: "+(++nErrores)+"6";
+                foreach (PictureBox p in lista)
+                {
+                    if (p.Visible)
+                    {
+                        p.Visible = false;
+                        break;
+                    }
+                }
             }
             b.Enabled = false;
         }

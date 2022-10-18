@@ -16,8 +16,19 @@ namespace Ahorcado
         {
             
             Form2 f = new Form2();
-            f.init(txNombre.Text, cbCategoria.SelectedText, "palabra");
-            f.ShowDialog();
+            
+                try
+                {
+                    f.init(txNombre.Text, cbCategoria.SelectedItem.ToString(), "palabra");
+                }catch(NullReferenceException ex)
+                {
+                    f.init(txNombre.Text, "categoría", "palabra");
+                }
+            //f.ShowDialog();
+            this.Hide();
+            f.Closed += (s, args) => this.Show();
+            f.Show();
         }
+        
     }
 }
