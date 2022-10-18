@@ -84,8 +84,7 @@ namespace Ahorcado
             else{
                 b.BackColor = Color.Red;
                 txErrorChars.Text += b.Text + "/";
-                
-                txErrorCount.Text = "Número de errores: "+(++nErrores)+"6";
+                txErrorCount.Text = "Número de errores: "+(++nErrores)+"/6";
                 foreach (PictureBox p in lista)
                 {
                     if (p.Visible)
@@ -96,6 +95,11 @@ namespace Ahorcado
                 }
             }
             b.Enabled = false;
+            int i = 0;
+            switch (i)
+            {
+                case 0: 
+            }
         }
 
         private void recodify(char c)

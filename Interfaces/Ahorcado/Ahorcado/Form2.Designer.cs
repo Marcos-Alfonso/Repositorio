@@ -443,7 +443,7 @@
             this.txErrorCount.ReadOnly = true;
             this.txErrorCount.Size = new System.Drawing.Size(241, 34);
             this.txErrorCount.TabIndex = 29;
-            this.txErrorCount.Text = "Número de errores: 0/20";
+            this.txErrorCount.Text = "Número de errores: 0/6";
             // 
             // txErrorChars
             // 

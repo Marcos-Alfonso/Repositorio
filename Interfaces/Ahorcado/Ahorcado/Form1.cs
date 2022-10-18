@@ -22,6 +22,7 @@ namespace Ahorcado
                     f.init(txNombre.Text, cbCategoria.SelectedItem.ToString(), "palabra");
                 }catch(NullReferenceException ex)
                 {
+                
                     f.init(txNombre.Text, "categoría", "palabra");
                 }
             //f.ShowDialog();
