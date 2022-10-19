@@ -73,11 +73,6 @@ namespace Ahorcado
             if (palabra.ToLower().Contains(b.Text))
             {
                 char c = b.Text.ToCharArray()[0];
-                /*
-                StringBuilder sb = new StringBuilder(txPalabra.Text);
-                sb[palabra.IndexOf(c)*2] =c;
-                txPalabra.Text = sb.ToString();
-                */
                 recodify(c);
                 b.BackColor = Color.Green;
             }

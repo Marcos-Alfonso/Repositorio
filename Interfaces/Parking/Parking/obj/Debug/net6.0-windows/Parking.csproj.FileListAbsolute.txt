@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\Parking\Parking\bin\Debug\net6.0-windows\Parking.exe
+C:\Repositorio\Interfaces\Parking\Parking\bin\Debug\net6.0-windows\Parking.deps.json
+C:\Repositorio\Interfaces\Parking\Parking\bin\Debug\net6.0-windows\Parking.runtimeconfig.json
+C:\Repositorio\Interfaces\Parking\Parking\bin\Debug\net6.0-windows\Parking.dll
+C:\Repositorio\Interfaces\Parking\Parking\bin\Debug\net6.0-windows\Parking.pdb
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.Form1.resources
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.AssemblyInfo.cs
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.dll
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\refint\Parking.dll
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.pdb
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\Parking.genruntimeconfig.cache
+C:\Repositorio\Interfaces\Parking\Parking\obj\Debug\net6.0-windows\ref\Parking.dll

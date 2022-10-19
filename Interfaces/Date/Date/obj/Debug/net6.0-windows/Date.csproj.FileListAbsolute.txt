@@ -1,0 +1,17 @@
+C:\Repositorio\Interfaces\Date\Date\bin\Debug\net6.0-windows\Date.exe
+C:\Repositorio\Interfaces\Date\Date\bin\Debug\net6.0-windows\Date.deps.json
+C:\Repositorio\Interfaces\Date\Date\bin\Debug\net6.0-windows\Date.runtimeconfig.json
+C:\Repositorio\Interfaces\Date\Date\bin\Debug\net6.0-windows\Date.dll
+C:\Repositorio\Interfaces\Date\Date\bin\Debug\net6.0-windows\Date.pdb
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.csproj.AssemblyReference.cache
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.Form1.resources
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.csproj.GenerateResource.cache
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.AssemblyInfoInputs.cache
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.AssemblyInfo.cs
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.csproj.CoreCompileInputs.cache
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.dll
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\refint\Date.dll
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.pdb
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\Date.genruntimeconfig.cache
+C:\Repositorio\Interfaces\Date\Date\obj\Debug\net6.0-windows\ref\Date.dll
