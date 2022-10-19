@@ -53,7 +53,7 @@ public class Lanzador {
             while ((line = br.readLine()) != null) {
                 sb.append(line + System.getProperty("line.separator"));
             }
-        } finally {
+        } finally{
             br.close();
         }
         return sb.toString();
