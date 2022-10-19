@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Cadenas {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int nCadenas = sc.nextInt();
-        for (int i = 0; i < nCadenas; i++) {
+        for (int i = 0; i < Integer.parseInt(args[0]); i++){
+
             System.out.println(generaCadena());
+
         }
     }
 
