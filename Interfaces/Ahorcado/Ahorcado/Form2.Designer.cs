@@ -543,7 +543,7 @@
             // 
             // sq4
             // 
-            this.sq4.Location = new System.Drawing.Point(137, 88);
+            this.sq4.Location = new System.Drawing.Point(138, 88);
             this.sq4.Name = "sq4";
             this.sq4.Size = new System.Drawing.Size(22, 48);
             this.sq4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -552,16 +552,16 @@
             // 
             // sq5
             // 
-            this.sq5.Location = new System.Drawing.Point(137, 88);
+            this.sq5.Location = new System.Drawing.Point(146, 97);
             this.sq5.Name = "sq5";
-            this.sq5.Size = new System.Drawing.Size(31, 48);
+            this.sq5.Size = new System.Drawing.Size(23, 48);
             this.sq5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sq5.TabIndex = 39;
             this.sq5.TabStop = false;
             // 
             // sq6
             // 
-            this.sq6.Location = new System.Drawing.Point(156, 61);
+            this.sq6.Location = new System.Drawing.Point(146, 66);
             this.sq6.Name = "sq6";
             this.sq6.Size = new System.Drawing.Size(44, 48);
             this.sq6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

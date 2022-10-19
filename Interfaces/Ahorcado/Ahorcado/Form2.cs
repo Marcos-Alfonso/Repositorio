@@ -93,13 +93,11 @@ namespace Ahorcado
                         break;
                     }
                 }
+
             }
             b.Enabled = false;
-            int i = 0;
-            switch (i)
-            {
-                case 0: 
-            }
+            
+           
         }
 
         private void recodify(char c)
