@@ -24,22 +24,19 @@ public class Lanzador {
         String[] command = {
                 "java",
                 "-classpath",
-                ".\\out\\production\\psp",
-                "Ejer3."+CLASE_EJECUTAR, cad};
+                "C:\\Repositorio\\ADAT\\psp\\out\\production\\psp",
+                "Ej3."+CLASE_EJECUTAR, cad};
 
         System.out.println("Ejecutando ... \n" + String.join(" ", command));
         ProcessBuilder pb = new ProcessBuilder(command);
-
+        //.\out\production\psp
         System.out.println("\nDirectorio trabajo: " + ".\\out\\production\\psp");
         pb.directory(new File(".\\out\\production\\psp"));
 
         System.out.println("Comando lanzado");
         Process process = pb.start();
         System.out.println("Esperando resultado ...");
-        //quitando el waitFor se intercala la salida de los procesos
 
-        //int errCode = process.waitFor();
-        //System.out.println("Ejecutada aplicación. Código error (valor devuelto) = " + errCode);
 
         System.out.println("SALIDA:\n" + output(process.getInputStream()));
     }
