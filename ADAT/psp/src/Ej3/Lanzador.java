@@ -24,7 +24,7 @@ public class Lanzador {
         String[] command = {
                 "java",
                 "-classpath",
-                "C:\\Repositorio\\ADAT\\psp\\out\\production\\psp",
+                "E:\\Repositorio\\Repositorio\\ADAT\\psp\\out\\production\\psp",
                 "Ej3."+CLASE_EJECUTAR, cad};
 
         System.out.println("Ejecutando ... \n" + String.join(" ", command));
