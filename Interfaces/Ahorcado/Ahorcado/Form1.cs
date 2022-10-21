@@ -16,7 +16,7 @@ namespace Ahorcado
         {
             
             Form2 f = new Form2();
-            f.Fo Style = FormBorderStyle.FixedSingle;
+            f.FormBorderStyle Style = FormBorderStyle.FixedSingle;
                 try
                 {
                     f.init(txNombre.Text, cbCategoria.SelectedItem.ToString(), "palabra");

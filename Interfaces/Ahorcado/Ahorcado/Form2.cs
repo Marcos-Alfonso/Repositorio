@@ -88,7 +88,10 @@ namespace Ahorcado
                         break;
                     }
                 }
-
+                if (nErrores >= 6)
+                {
+                    this.Close();
+                }
             }
             b.Enabled = false;
             
@@ -106,7 +109,6 @@ namespace Ahorcado
                     txPalabra.Text = sb.ToString();
                 }
             }
-            
         }
 
         private void tick(object sender, EventArgs e)
@@ -114,7 +116,6 @@ namespace Ahorcado
             String s = (System.DateTime.Now - start).ToString();
             txPlaytime.Text = s.Substring(0,8);
             //label1.Text = System.DateTime.Now.ToString().Substring(10);
-           
         }
     }
 }
