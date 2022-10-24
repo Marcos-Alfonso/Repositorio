@@ -27,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
     Button btMulti;
     Button btComa;
     Button btResto;
+    Button btMasMenos;
+
+    Button btAnd;
+    Button btOr;
+    Button btXor;
+    Button btNot;
 
     TextView txOutput;
     TextView txControl;
@@ -58,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
         btDiv= findViewById(R.id.btDiv);
         btMulti= findViewById(R.id.btMulti);
         btResto= findViewById(R.id.btResto);
+        btMasMenos= findViewById(R.id.btMasMenos);
+
+        btAnd= findViewById(R.id.btAnd);
+        btOr= findViewById(R.id.btOr);
+        btXor= findViewById(R.id.btXor);
+        btNot= findViewById(R.id.btNot);
 
         swBinary=findViewById(R.id.swBinary);
     }
@@ -133,13 +145,26 @@ public class MainActivity extends AppCompatActivity {
         }
         sw();
     }
+    public void not(View view){
+        String s = txOutput.getText().toString();
+        String resu = "";
+        for (char c:s.toCharArray()) {
+            if(c =='0'){
+                resu = "1"+resu;
+            }else{
+                resu = "0"+resu;
+            }
+        }
+        txOutput.setText(resu);
+    }
     private void sw(){
         Button[] btArray = new Button[]{
-                bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, btComa, btResto
+                bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, btComa, btResto, btMasMenos, btAnd, btNot, btXor, btOr
         };
         for (Button bt:btArray) {
             bt.setEnabled(!bt.isEnabled());
             bt.getBackground().setAlpha(255-((swBinary.isChecked())?(155):(0)));
+
         }
         /*
         bt2.setEnabled(!bt2.isEnabled());
@@ -157,6 +182,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void igualCLick(View view){
         double n2=0;
+
+        if(operation =="AND" || operation =="OR"||operation =="XOR"){
+            operaBinaria();
+            return;
+        }
         if(swBinary.isChecked()){
             n2 = Integer.parseInt(txOutput.getText().toString(), 2);
         }else{
@@ -201,6 +231,26 @@ public class MainActivity extends AppCompatActivity {
         n1=0;
     }
 
+    private void operaBinaria() {
+        int n2 = Integer.parseInt(txOutput.getText().toString());
+        int n1 = Integer.parseInt(Integer.toString((int)this.n1, 2));
+        int resu;
+        switch(operation){
+            case"AND":
+                resu = n1 & n2;
+                break;
+            case"OR":
+                resu = n1 | n2;
+                break;
+            case"XOR":
+                resu = n1 ^ n2;
+                break;
+            default :
+                resu = n2;
+                break;
+        }
+        txOutput.setText(String.valueOf(resu));
+    }
 
 
 }
