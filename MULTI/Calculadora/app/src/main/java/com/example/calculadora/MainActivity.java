@@ -183,46 +183,48 @@ public class MainActivity extends AppCompatActivity {
     public void igualCLick(View view){
         double n2=0;
 
-        if(operation =="AND" || operation =="OR"||operation =="XOR"){
+        if(operation.equals("AND") || operation.equals("OR")||operation.equals("XOR")){
             operaBinaria();
-            return;
-        }
-        if(swBinary.isChecked()){
-            n2 = Integer.parseInt(txOutput.getText().toString(), 2);
+
         }else{
-            n2 = Double.parseDouble(txOutput.getText().toString());
-        }
+            if(swBinary.isChecked()){
+                n2 = Integer.parseInt(txOutput.getText().toString(), 2);
+            }else{
+                n2 = Double.parseDouble(txOutput.getText().toString());
+            }
 
 
-        String s = "";
-        double resu = 0;
-        switch(operation){
-            case"+":
-                resu = n1+n2;
-                break;
-            case"-":
-                resu = n1-n2;
-                break;
-            case"x":
-                resu = n1*n2;
-                break;
-            case"/":
-                resu = n1/n2;
-                break;
-            case"%":
-                resu = n1%n2;
-                break;
-            case"":
-                resu = n2;
-                break;
-        }
-        if(swBinary.isChecked()){
-            txOutput.setText(Integer.toString((int)resu, 2));
-        }else{
-            if(resu%1 !=0)
-                txOutput.setText(String.valueOf(resu));
-            else
-                txOutput.setText(String.valueOf((int)resu));
+            String s = "";
+            double resu = 0;
+            switch(operation){
+                case"+":
+                    resu = n1+n2;
+                    break;
+                case"-":
+                    resu = n1-n2;
+                    break;
+                case"x":
+                    resu = n1*n2;
+                    break;
+                case"/":
+                    resu = n1/n2;
+                    break;
+                case"%":
+                    resu = n1%n2;
+                    break;
+                case"":
+                    resu = n2;
+                    break;
+            }
+            if(swBinary.isChecked()){
+                txOutput.setText(Integer.toString((int)resu, 2));
+            }else{
+                if(resu%1 !=0)
+                    txOutput.setText(String.valueOf(resu));
+                else
+                    txOutput.setText(String.valueOf((int)resu));
+            }
+
         }
 
 
@@ -232,9 +234,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void operaBinaria() {
-        int n2 = Integer.parseInt(txOutput.getText().toString());
-        int n1 = Integer.parseInt(Integer.toString((int)this.n1, 2));
-        int resu;
+        String s1 = txOutput.getText().toString();
+        String s2 = Integer.toString((int)this.n1, 2);
+        int diff = s1.length()-s2.length();
+
+        if(diff>0){
+            for (int i = 0; i < Math.abs(diff); i++) {
+                s2 = "0"+s2;
+            }
+        }else if(diff<0){
+            for (int i = 0; i < Math.abs(diff); i++) {
+                s1 = "0"+s1;
+            }
+        }
+
+        int n2 = Integer.parseInt(s2);
+        int n1 = Integer.parseInt(s1);
+
+        int resu = 0;
         switch(operation){
             case"AND":
                 resu = n1 & n2;
