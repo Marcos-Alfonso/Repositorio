@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,16 +68,22 @@ public class MainActivity extends AppCompatActivity {
         btMasMenos= findViewById(R.id.btMasMenos);
 
         btAnd= findViewById(R.id.btAnd);
+        btAnd.getBackground().setAlpha(100);
         btOr= findViewById(R.id.btOr);
+        btOr.getBackground().setAlpha(100);
         btXor= findViewById(R.id.btXor);
+        btXor.getBackground().setAlpha(100);
         btNot= findViewById(R.id.btNot);
+        btNot.getBackground().setAlpha(100);
 
         swBinary=findViewById(R.id.swBinary);
     }
     public void numberCLick(View view){
         Button b = (Button)view;
-        if(Double.parseDouble(txOutput.getText().toString())==0){
+        if(b.getText().equals(".") && txOutput.getText().toString().contains("."))return;
+        if(txOutput.getText().toString().equals("0")){
             txOutput.setText("");
+            if(b.getText().equals("."))  txOutput.setText("0");
         }
         txOutput.setText(txOutput.getText().toString()+b.getText().toString());
     }
@@ -136,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         txControl.setText("");
         operation="";
         n1 = 0;
+        if(txOutput.getText().toString().contains(".")) txOutput.setText("0");
         if(s.isChecked()){
             int i = Integer.parseInt(txOutput.getText().toString());
             txOutput.setText(Integer.toString(i, 2));
@@ -150,9 +158,9 @@ public class MainActivity extends AppCompatActivity {
         String resu = "";
         for (char c:s.toCharArray()) {
             if(c =='0'){
-                resu = "1"+resu;
+                resu = resu+"1";
             }else{
-                resu = "0"+resu;
+                resu = resu+"0";
             }
         }
         txOutput.setText(resu);
@@ -165,6 +173,9 @@ public class MainActivity extends AppCompatActivity {
             bt.setEnabled(!bt.isEnabled());
             bt.getBackground().setAlpha(255-((swBinary.isChecked())?(155):(0)));
 
+        }
+        for (int i = 11; i < 15; i++) {
+            btArray[i].getBackground().setAlpha(255-((swBinary.isChecked())?(0):(155)));
         }
         /*
         bt2.setEnabled(!bt2.isEnabled());
@@ -208,6 +219,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case"/":
                     resu = n1/n2;
+                    if(n2 == 0){
+                        Toast.makeText(this, "Operacion no valida", Toast.LENGTH_LONG).show();
+                    }
+                        resu=0;
                     break;
                 case"%":
                     resu = n1%n2;
@@ -236,6 +251,7 @@ public class MainActivity extends AppCompatActivity {
     private void operaBinaria() {
         String s1 = txOutput.getText().toString();
         String s2 = Integer.toString((int)this.n1, 2);
+        /*
         int diff = s1.length()-s2.length();
 
         if(diff>0){
@@ -247,9 +263,9 @@ public class MainActivity extends AppCompatActivity {
                 s1 = "0"+s1;
             }
         }
-
-        int n2 = Integer.parseInt(s2);
-        int n1 = Integer.parseInt(s1);
+        */
+        int n2 = Integer.parseInt(s2,2);
+        int n1 = Integer.parseInt(s1,2);
 
         int resu = 0;
         switch(operation){
@@ -266,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
                 resu = n2;
                 break;
         }
-        txOutput.setText(String.valueOf(resu));
+        txOutput.setText(Integer.toBinaryString(resu));
     }
 
 
