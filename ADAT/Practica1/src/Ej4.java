@@ -42,13 +42,14 @@ public class Ej4 {
         for(String s: rows){
 
             System.out.println("----------------------------");
-            for(String st: s.split("td")){
+            String[] lineas = s.split("td");
+            for(String st: lineas){
                 if(!st.contains("primera")){
                     String x = st.replaceAll(".*\\>|\\<.*", "");
                     //System.out.println(x);
                     st=x;
                 }
-                System.out.println(st);
+
             }
                 /*
                 if(!s.contains("primera")){
