@@ -66,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         btMulti= findViewById(R.id.btMulti);
         btResto= findViewById(R.id.btResto);
         btMasMenos= findViewById(R.id.btMasMenos);
-
+        //declaro los botones de los operadores binarios y le declaro el alpha cambiados para que parezcan desactivados
+        //desde el xml estan desactivados
         btAnd= findViewById(R.id.btAnd);
         btAnd.getBackground().setAlpha(100);
         btOr= findViewById(R.id.btOr);
@@ -80,14 +81,19 @@ public class MainActivity extends AppCompatActivity {
     }
     public void numberCLick(View view){
         Button b = (Button)view;
+        //caso de que intente poner un punto habiendo ya uno sale del evento
         if(b.getText().equals(".") && txOutput.getText().toString().contains("."))return;
+        //veo si el texto tiene es un 0 para quitarlo y que empiece el númeero del usuario
         if(txOutput.getText().toString().equals("0")){
             txOutput.setText("");
+            //si por el contrario es un . el boton, escribo otra vez el 0, para que se puedan escribir números entre 1 y 0
             if(b.getText().equals("."))  txOutput.setText("0");
         }
         txOutput.setText(txOutput.getText().toString()+b.getText().toString());
     }
     public void backCLick(View view){
+        //en este método compruebo si solo hay un 0 en el texto para no permitir que quite un carácter
+        //si por el contrario hay un 0 y ya se habia seleccionado operador pongo lo anterior para que el usuario pueda seleccionar otro operador
         if(!txOutput.getText().toString().equals("0")){
             String s = txOutput.getText().toString();
             txOutput.setText(s.substring(0,s.length()-1));
@@ -105,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void acCLick(View view){
+            //reset
         txOutput.setText("0");
         operation = "";
         n1= 0;
@@ -113,11 +120,14 @@ public class MainActivity extends AppCompatActivity {
     String operation = "";
     double n1 = 0;
     public void operationCLick(View view){
+        //selecciono el carácter del boton y seteo la operación a este mismo
         Button b = (Button)view;
+        //si ya hay un operador seleccionado, hago la operación anterior y me guardo el resultado como nuevo operador
         if(operation != "")
             igualCLick(view);
         operation = b.getText().toString();
 
+        //compruebo en que modo estamos, para saber como guardar el número
         String s = "";
         if(swBinary.isChecked()){
             n1 = Integer.parseInt(txOutput.getText().toString(), 2);
@@ -131,18 +141,20 @@ public class MainActivity extends AppCompatActivity {
         txOutput.setText("0");
     }
     public void masmenosCLick(View view){
+        //cambio entre positivo y negativo
         String s = txOutput.getText().toString();
         if(s.charAt(0) == '-')
             txOutput.setText(s.substring(1));
         else
             txOutput.setText("-"+s);
-
     }
     public void changeSwitch(View view){
+        //cambio de modo, borro los el número operador y parseo el número en del texto
         Switch s = (Switch) view;
         txControl.setText("");
         operation="";
         n1 = 0;
+        // si el número tiene parte no entera lo borro, menos errores
         if(txOutput.getText().toString().contains(".")) txOutput.setText("0");
         if(s.isChecked()){
             int i = Integer.parseInt(txOutput.getText().toString());
@@ -154,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
         sw();
     }
     public void not(View view){
+        //boton not, cambio los 1 a 0 y viceversa
         String s = txOutput.getText().toString();
         String resu = "";
         for (char c:s.toCharArray()) {
@@ -166,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
         txOutput.setText(resu);
     }
     private void sw(){
+        //activo y desactivo los botones que quiera en el cambio de modo
         Button[] btArray = new Button[]{
                 bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, btComa, btResto, btMasMenos, btAnd, btNot, btXor, btOr
         };
@@ -195,9 +209,11 @@ public class MainActivity extends AppCompatActivity {
         double n2=0;
 
         if(operation.equals("AND") || operation.equals("OR")||operation.equals("XOR")){
+            //en el caso de que el operando sea binario hago este método
             operaBinaria();
 
         }else{
+            // si no hago las operaciones normales
             if(swBinary.isChecked()){
                 n2 = Integer.parseInt(txOutput.getText().toString(), 2);
             }else{
@@ -221,8 +237,9 @@ public class MainActivity extends AppCompatActivity {
                     resu = n1/n2;
                     if(n2 == 0){
                         Toast.makeText(this, "Operacion no valida", Toast.LENGTH_LONG).show();
-                    }
                         resu=0;
+                    }
+
                     break;
                 case"%":
                     resu = n1%n2;
@@ -251,19 +268,7 @@ public class MainActivity extends AppCompatActivity {
     private void operaBinaria() {
         String s1 = txOutput.getText().toString();
         String s2 = Integer.toString((int)this.n1, 2);
-        /*
-        int diff = s1.length()-s2.length();
 
-        if(diff>0){
-            for (int i = 0; i < Math.abs(diff); i++) {
-                s2 = "0"+s2;
-            }
-        }else if(diff<0){
-            for (int i = 0; i < Math.abs(diff); i++) {
-                s1 = "0"+s1;
-            }
-        }
-        */
         int n2 = Integer.parseInt(s2,2);
         int n1 = Integer.parseInt(s1,2);
 
