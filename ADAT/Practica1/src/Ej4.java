@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class Ej4 {
-    static HashMap<String, String> cotizaciones = new HashMap<String, String>();
+    private static HashMap<String, String> cotizaciones = new HashMap<String, String>();
     public static void main(String[] args) throws IOException {
 
         try {
