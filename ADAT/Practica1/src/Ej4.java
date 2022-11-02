@@ -9,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class Ej4 {
+    static HashMap<String, String> cotizaciones = new HashMap<String, String>();
     public static void main(String[] args) throws IOException {
 
         try {
@@ -29,8 +30,8 @@ public class Ej4 {
                     texto+=System.lineSeparator();
             }
             String [] rows = getRow(texto);
-            HashMap<String, String> cotizaciones = new HashMap<String, String>();
-             rellenaHash(cotizaciones, rows);
+
+             rellenaHash( rows);
 
             //recorro el HashMap viendo que información tiene
             for(String key : cotizaciones.keySet()) {
@@ -42,8 +43,7 @@ public class Ej4 {
 
 
     }
-
-    private static String[] rellenaHash(HashMap<String, String> map, String[] rows) {
+    private static String[] rellenaHash(String[] rows) {
         for(String s: rows){
             String[] lineas = s.split("td");
             try{
@@ -61,7 +61,7 @@ public class Ej4 {
                 String valor = lineas[3].replaceAll(".*\\>|\\<.*", "");
                 String hora = lineas[19].replaceAll(".*\\>|\\<.*", "");
 
-                map.put(nombre, fecha+"-"+hora+"-"+valor);
+                cotizaciones.put(nombre, fecha+"-"+hora+"-"+valor);
             }catch(Exception e){// por tema de html había rows que estaban vacías, al intentar acceder a un idex de la mismada error y no introduce nada en el HashMap
 
             }

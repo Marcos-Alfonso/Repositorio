@@ -70,6 +70,7 @@
             this.sq4 = new System.Windows.Forms.PictureBox();
             this.sq5 = new System.Windows.Forms.PictureBox();
             this.sq6 = new System.Windows.Forms.PictureBox();
+            this.txPuntos = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sq1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sq2)).BeginInit();
@@ -568,12 +569,27 @@
             this.sq6.TabIndex = 40;
             this.sq6.TabStop = false;
             // 
+            // txPuntos
+            // 
+            this.txPuntos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txPuntos.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txPuntos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txPuntos.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txPuntos.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txPuntos.Location = new System.Drawing.Point(314, 32);
+            this.txPuntos.Name = "txPuntos";
+            this.txPuntos.ReadOnly = true;
+            this.txPuntos.Size = new System.Drawing.Size(274, 18);
+            this.txPuntos.TabIndex = 41;
+            this.txPuntos.Text = "Puntos: ";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(685, 319);
+            this.Controls.Add(this.txPuntos);
             this.Controls.Add(this.sq6);
             this.Controls.Add(this.sq5);
             this.Controls.Add(this.sq4);
@@ -670,5 +686,6 @@
         private PictureBox sq4;
         private PictureBox sq5;
         private PictureBox sq6;
+        private TextBox txPuntos;
     }
 }

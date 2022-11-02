@@ -42,6 +42,7 @@ namespace Ahorcado
         String palabra;
         String categoria;
         String nombre;
+        int puntos = 0;
         DateTime start;
 
         public void init(String nombre, String categoria, String palabra) {
@@ -53,6 +54,8 @@ namespace Ahorcado
 
             txPalabra.Text = getCodified(palabra) ;
             this.palabra = palabra;
+
+            txPuntos.Text = "Puntos: "+puntos;
         }
 
         private string getCodified(string p)
@@ -72,11 +75,13 @@ namespace Ahorcado
             Button b = (Button)sender;
             if (palabra.ToLower().Contains(b.Text))
             {
+                puntos+=2;
                 char c = b.Text.ToCharArray()[0];
                 recodify(c);
                 b.BackColor = Color.Green;
             }
             else{
+                puntos --;
                 b.BackColor = Color.Red;
                 txErrorChars.Text += b.Text + "/";
                 txErrorCount.Text = "Número de errores: "+(++nErrores)+"/6";
@@ -90,12 +95,32 @@ namespace Ahorcado
                 }
                 if (nErrores >= 6)
                 {
-                    this.Close();
+                    launchEnding();
+                    
                 }
             }
             b.Enabled = false;
             
            
+        }
+
+        private void launchEnding()
+        {
+            Persona p = new Persona();
+            p.nombre = nombre;
+            p.puntos = puntos;
+            List<Persona> parts = new List<Persona>();
+
+            System.Xml.Serialization.XmlSerializer writer =
+            new System.Xml.Serialization.XmlSerializer(typeof(Persona));
+
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml";
+            System.IO.FileStream file = System.IO.File.Create(path);
+
+            writer.Serialize(file, p);
+            file.Close();
+
+            throw new NotImplementedException();
         }
 
         private void recodify(char c)
@@ -115,7 +140,15 @@ namespace Ahorcado
         {
             String s = (System.DateTime.Now - start).ToString();
             txPlaytime.Text = s.Substring(0,8);
+            txPuntos.Text = "Puntos: " + (puntos);
             //label1.Text = System.DateTime.Now.ToString().Substring(10);
         }
+    }
+
+    [Serializable]
+    public partial class Persona
+    {
+        public string nombre { get; set; }
+        public int puntos{ get; set; }
     }
 }
