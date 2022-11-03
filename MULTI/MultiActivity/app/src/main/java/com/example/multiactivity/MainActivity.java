@@ -1,0 +1,27 @@
+package com.example.multiactivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+
+public class MainActivity extends AppCompatActivity {
+
+    RadioButton rbAlumno;
+    EditText etNombre;
+    EditText etEdad;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        rbAlumno = (RadioButton)findViewById(R.id.rbAlumno);
+        etNombre = (EditText) findViewById(R.id.etNombre);
+        etEdad = (EditText) findViewById(R.id.etEdad);
+    }
+    public void cambia(View view){
+
+    }
+}
