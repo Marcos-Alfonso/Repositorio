@@ -7,43 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d39adc34-4cbe-43e5-a5c1-76c6380b1f0e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Ej1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Ej2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Ej3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practica1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/departamentos.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej1/Ej1.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej1/Ej1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej1/f1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej1/f2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej2/Ej2.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej2/Ej2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej2/bitmap.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej3/Ej3.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Ej3/Ej3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/Cotizacion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/Ej1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/Ej2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/Ej3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/Ej4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/Ej5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica1/MiObjectOutputStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cotizacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ej1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ej2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ej3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ej4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ej5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MiObjectOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
