@@ -16,5 +16,30 @@ namespace Ahorcado
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        String nombre;
+        int puntos = 0;
+        DateTime start;
+
+        public void init(String nombre)
+        {
+            this.nombre = nombre;
+            /*
+            List<Persona> list = Form2.loadArray();
+
+            foreach (Persona persona in list)
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[0].Value = persona.nombre;
+                row.Cells[1].Value = persona.puntos;
+                row.Cells[2].Value = persona.gameTime.ToString().Substring(0, 8);
+            }
+            */
+        }
     }
 }

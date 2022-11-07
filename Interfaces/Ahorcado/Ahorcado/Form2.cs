@@ -16,6 +16,7 @@ using System.Text.Json;
 using static System.Windows.Forms.LinkLabel;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Ahorcado
 {
@@ -30,7 +31,6 @@ namespace Ahorcado
         {
             lista.AddRange(new Collection<PictureBox> {sq6, sq5, sq4,sq3,sq2,sq1 });
             start = System.DateTime.Now;
-            txErrorCount.Focus();
             foreach (PictureBox p in lista)
             {
                 p.Visible = true;
@@ -114,50 +114,60 @@ namespace Ahorcado
             Persona p = new Persona();
             p.nombre = nombre;
             p.puntos = puntos;
-            List<Persona> parts = new List<Persona>();
-            parts.Add(p);
+            p.gameTime = System.DateTime.Now - start;
+           
+            List<Persona> parts = loadArray();
+
+            bool tiene = false;
+            foreach (Persona part in parts)
+            {
+                if(part.nombre == p.nombre)
+                {
+                    part.puntos += p.puntos;
+                    part.gameTime += System.DateTime.Now - start;
+                    tiene = true;
+                }
+            }
+            if(!tiene)parts.Add(p);
             System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(List<Persona>));
 
-
             var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml";
-            System.IO.FileStream file = System.IO.File.Create(path);
-
-            Stream reader = new FileStream(path, FileMode.Open);
-            List<Persona> l =(List<Persona>)writer.Deserialize(reader);
-
-            //writer.Serialize(file, parts);
-            file.Close();
             
+            System.IO.FileStream file = System.IO.File.Create(path);
+            writer.Serialize(file, parts);
+            file.Close();
 
             /*
-            XmlTextWriter textWriter = new XmlTextWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml", null);
-            // Opens the document
-            textWriter.WriteStartDocument();
-            textWriter.WriteStartElement("Student");
+            Form3 f = new Form3();
+            f.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            textWriter.WriteStartElement("r", "RECORD", "urn:record");
-            // Write next element
-            textWriter.WriteStartElement("Name", "");
-            textWriter.WriteString("Student");
-            textWriter.WriteEndElement();
-            // Write one more element
-            textWriter.WriteStartElement("Address", "");
-            textWriter.WriteString("Colony");
-            textWriter.WriteEndElement();
-            // WriteChars
-            char[] ch = new char[3];
-            ch[0] = 'a';
-            ch[1] = 'r';
-            ch[2] = 'c';
-            textWriter.WriteStartElement("Char");
-            textWriter.WriteChars(ch, 0, ch.Length);
+            f.init(nombre);
 
-            textWriter.WriteEndElement();
-            // Ends the document.
-            textWriter.WriteEndDocument();
-            textWriter.Close();
+            //f.ShowDialog();
+            f.Show();
             */
+        }
+
+        public static  List<Persona> loadArray()
+        {
+            try
+            {
+                var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml";
+                var serializer = new XmlSerializer(typeof(List<Persona>));
+                using (var reader = XmlReader.Create(path))
+                {
+                    var lista = (List<Persona>)serializer.Deserialize(reader);
+                    reader.Close();
+                    return lista;
+                }
+                
+            }catch(Exception ex)
+            {
+                
+                return new List<Persona>();
+            }
+            
         }
 
         private void recodify(char c)
@@ -187,6 +197,8 @@ namespace Ahorcado
     public partial class Persona
     {
         public string nombre { get; set; }
-        public int puntos{ get; set; }
+        public int puntos { get; set; }
+
+        public TimeSpan gameTime { get; set; }
     }
 }
