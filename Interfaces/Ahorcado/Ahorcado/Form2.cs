@@ -84,6 +84,11 @@ namespace Ahorcado
                 char c = b.Text.ToCharArray()[0];
                 recodify(c);
                 b.BackColor = Color.Green;
+                if (!txPalabra.Text.Contains("_")) {
+                    MessageBox.Show("Correcto! La palabra era: "+palabra, "Has ganado!");
+                    puntos += 10;
+                    launchEnding();
+                }
             }
             else{
                 puntos --;
@@ -100,6 +105,8 @@ namespace Ahorcado
                 }
                 if (nErrores >= 6)
                 {
+                    MessageBox.Show("Número de errores máximos alcanzado. F", "FFFF");
+                    puntos -= 5;
                     launchEnding();
                     
                 }
@@ -143,7 +150,8 @@ namespace Ahorcado
             f.FormBorderStyle = FormBorderStyle.FixedSingle;
 
             f.init(nombre, puntos);
-
+            this.Hide();
+            f.Closed += (s, args) => this.Close();
             //f.ShowDialog();
             f.Show();
             

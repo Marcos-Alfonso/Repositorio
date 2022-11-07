@@ -34,6 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txNombre = new System.Windows.Forms.TextBox();
+            this.btLeaderBoard = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -92,12 +93,27 @@
             this.txNombre.Size = new System.Drawing.Size(121, 23);
             this.txNombre.TabIndex = 5;
             // 
+            // btLeaderBoard
+            // 
+            this.btLeaderBoard.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btLeaderBoard.BackgroundImage = global::Ahorcado.Properties.Resources._1;
+            this.btLeaderBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btLeaderBoard.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btLeaderBoard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btLeaderBoard.Location = new System.Drawing.Point(342, 219);
+            this.btLeaderBoard.Name = "btLeaderBoard";
+            this.btLeaderBoard.Size = new System.Drawing.Size(30, 30);
+            this.btLeaderBoard.TabIndex = 6;
+            this.btLeaderBoard.UseVisualStyleBackColor = false;
+            this.btLeaderBoard.Click += new System.EventHandler(this.btLeaderBoard_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.btLeaderBoard);
             this.Controls.Add(this.txNombre);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -121,5 +137,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private TextBox txNombre;
+        private Button btLeaderBoard;
     }
 }

@@ -30,6 +30,17 @@ namespace Ahorcado
             f.Closed += (s, args) => this.Show();
             f.Show();
         }
-        
+
+        private void btLeaderBoard_Click(object sender, EventArgs e)
+        {
+
+            Form3 f = new Form3();
+            f.FormBorderStyle = FormBorderStyle.FixedSingle;
+         
+            //f.ShowDialog();
+            this.Hide();
+            f.Closed += (s, args) => this.Show();
+            f.Show();
+        }
     }
 }
