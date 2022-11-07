@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+4Ur2I3VTZ9qQsonM7y1e8schaJbt/gsjDSebi1At3vQihyC2ovrxack84RV74z3D4A1EeAYUX4+HqISHIcuvw==",
+  "dgSpecHash": "eCc4CiBLmMztKG1SLIik4O4HDgDzLuUulkomd6uc9fcUjdScqjAj2WgsoER6NUdnSE7Ep2ACE91B2rtE/dMrdg==",
   "success": true,
-  "projectFilePath": "C:\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\manana\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {}
+    "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {}
   },
   "projects": {
-    "C:\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {
+    "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
+        "projectUniqueName": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
         "projectName": "Ahorcado",
-        "projectPath": "C:\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
+        "projectPath": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
         "packagesPath": "C:\\Users\\manana\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\obj\\",
+        "outputPath": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manana\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

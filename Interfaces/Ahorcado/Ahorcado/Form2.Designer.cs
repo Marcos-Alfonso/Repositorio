@@ -422,7 +422,7 @@
             // 
             this.txPalabra.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txPalabra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txPalabra.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txPalabra.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txPalabra.ForeColor = System.Drawing.SystemColors.Menu;
             this.txPalabra.Location = new System.Drawing.Point(349, 88);
             this.txPalabra.Multiline = true;

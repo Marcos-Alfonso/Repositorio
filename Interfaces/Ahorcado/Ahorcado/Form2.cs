@@ -11,6 +11,11 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Text.Json;
+using static System.Windows.Forms.LinkLabel;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Ahorcado
 {
@@ -110,17 +115,49 @@ namespace Ahorcado
             p.nombre = nombre;
             p.puntos = puntos;
             List<Persona> parts = new List<Persona>();
-
+            parts.Add(p);
             System.Xml.Serialization.XmlSerializer writer =
-            new System.Xml.Serialization.XmlSerializer(typeof(Persona));
+            new System.Xml.Serialization.XmlSerializer(typeof(List<Persona>));
+
 
             var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml";
             System.IO.FileStream file = System.IO.File.Create(path);
 
-            writer.Serialize(file, p);
-            file.Close();
+            Stream reader = new FileStream(path, FileMode.Open);
+            List<Persona> l =(List<Persona>)writer.Deserialize(reader);
 
-            throw new NotImplementedException();
+            //writer.Serialize(file, parts);
+            file.Close();
+            
+
+            /*
+            XmlTextWriter textWriter = new XmlTextWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml", null);
+            // Opens the document
+            textWriter.WriteStartDocument();
+            textWriter.WriteStartElement("Student");
+
+            textWriter.WriteStartElement("r", "RECORD", "urn:record");
+            // Write next element
+            textWriter.WriteStartElement("Name", "");
+            textWriter.WriteString("Student");
+            textWriter.WriteEndElement();
+            // Write one more element
+            textWriter.WriteStartElement("Address", "");
+            textWriter.WriteString("Colony");
+            textWriter.WriteEndElement();
+            // WriteChars
+            char[] ch = new char[3];
+            ch[0] = 'a';
+            ch[1] = 'r';
+            ch[2] = 'c';
+            textWriter.WriteStartElement("Char");
+            textWriter.WriteChars(ch, 0, ch.Length);
+
+            textWriter.WriteEndElement();
+            // Ends the document.
+            textWriter.WriteEndDocument();
+            textWriter.Close();
+            */
         }
 
         private void recodify(char c)
@@ -146,6 +183,7 @@ namespace Ahorcado
     }
 
     [Serializable]
+    [XmlRoot("Persona")]
     public partial class Persona
     {
         public string nombre { get; set; }
