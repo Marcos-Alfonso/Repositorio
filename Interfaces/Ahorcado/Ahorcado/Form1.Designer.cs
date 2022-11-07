@@ -35,6 +35,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txNombre = new System.Windows.Forms.TextBox();
             this.btLeaderBoard = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -57,9 +58,6 @@
             this.cbCategoria.BackColor = System.Drawing.SystemColors.InfoText;
             this.cbCategoria.ForeColor = System.Drawing.Color.Ivory;
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Items.AddRange(new object[] {
-            "Prueba",
-            "pr"});
             this.cbCategoria.Location = new System.Drawing.Point(134, 141);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 23);
@@ -92,6 +90,7 @@
             this.txNombre.Name = "txNombre";
             this.txNombre.Size = new System.Drawing.Size(121, 23);
             this.txNombre.TabIndex = 5;
+            this.txNombre.TextChanged += new System.EventHandler(this.txNombre_TextChanged);
             // 
             // btLeaderBoard
             // 
@@ -107,12 +106,23 @@
             this.btLeaderBoard.UseVisualStyleBackColor = false;
             this.btLeaderBoard.Click += new System.EventHandler(this.btLeaderBoard_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(261, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Nuevo Usuario";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btLeaderBoard);
             this.Controls.Add(this.txNombre);
             this.Controls.Add(this.pictureBox2);
@@ -138,5 +148,6 @@
         private PictureBox pictureBox2;
         private TextBox txNombre;
         private Button btLeaderBoard;
+        private Label label1;
     }
 }

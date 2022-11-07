@@ -71,6 +71,7 @@
             this.sq5 = new System.Windows.Forms.PictureBox();
             this.sq6 = new System.Windows.Forms.PictureBox();
             this.txPuntos = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sq1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sq2)).BeginInit();
@@ -583,12 +584,23 @@
             this.txPuntos.TabIndex = 41;
             this.txPuntos.Text = "Puntos: ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(155, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "label1";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(685, 319);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txPuntos);
             this.Controls.Add(this.sq6);
             this.Controls.Add(this.sq5);
@@ -687,5 +699,6 @@
         private PictureBox sq5;
         private PictureBox sq6;
         private TextBox txPuntos;
+        private Label label1;
     }
 }

@@ -57,7 +57,9 @@ namespace Ahorcado
             txCategoria.Text = "Categoría: "+categoria;
             this.categoria = categoria;
 
-            txPalabra.Text = getCodified(palabra) ;
+            //txPalabra.Text = getCodified(palabra) ;
+           
+            txPalabra.Text = getCodified(palabra);
             this.palabra = palabra;
 
             txPuntos.Text = "Puntos: "+puntos;
@@ -139,8 +141,9 @@ namespace Ahorcado
             System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(List<Persona>));
 
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml";
-            
+            //var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml";
+            String path = "../../../Resources/" + "//leaderBoards.xml";
+
             System.IO.FileStream file = System.IO.File.Create(path);
             writer.Serialize(file, parts);
             file.Close();
@@ -161,7 +164,7 @@ namespace Ahorcado
         {
             try
             {
-                var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//leaderBoards.xml";
+                String path = "../../../Resources/" + "//leaderBoards.xml";
                 var serializer = new XmlSerializer(typeof(List<Persona>));
                 using (var reader = XmlReader.Create(path))
                 {
@@ -180,15 +183,17 @@ namespace Ahorcado
 
         private void recodify(char c)
         {
+            c = Char.ToUpper(c);
             for(int i = 0; i<palabra.Length; i++)
             {
-                if(palabra.ToCharArray()[i] == c)
+                if(palabra.ToUpper().ToCharArray()[i] == c)
                 {
                     StringBuilder sb = new StringBuilder(txPalabra.Text);
                     sb[i * 2] = c;
                     txPalabra.Text = sb.ToString();
                 }
             }
+            
         }
 
         private void tick(object sender, EventArgs e)

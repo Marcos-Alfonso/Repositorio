@@ -48,7 +48,7 @@
             this.tx.Multiline = true;
             this.tx.Name = "tx";
             this.tx.ReadOnly = true;
-            this.tx.Size = new System.Drawing.Size(274, 23);
+            this.tx.Size = new System.Drawing.Size(395, 23);
             this.tx.TabIndex = 33;
             // 
             // dataGridView1
@@ -61,7 +61,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(28, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(305, 165);
+            this.dataGridView1.Size = new System.Drawing.Size(284, 165);
             this.dataGridView1.TabIndex = 34;
             // 
             // Nombre
@@ -86,7 +86,7 @@
             this.Tiempo.HeaderText = "Tiempo";
             this.Tiempo.Name = "Tiempo";
             this.Tiempo.ReadOnly = true;
-            this.Tiempo.Width = 73;
+            this.Tiempo.Width = 72;
             // 
             // btBack
             // 

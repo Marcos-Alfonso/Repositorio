@@ -59,3 +59,6 @@ C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\De
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\ref\Ahorcado.dll
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorcado\Ahorcado\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.csproj.CopyComplete
+E:\Repositorio\Repositorio\Interfaces\Ahorcado\Ahorcado\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+E:\Repositorio\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.Form3.resources
+E:\Repositorio\Repositorio\Interfaces\Ahorcado\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.csproj.CopyComplete

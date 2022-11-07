@@ -39,7 +39,7 @@ namespace Ahorcado
         {
             this.nombre = nombre;
             this.puntos = puntos;
-            tx.Text = $"Nombre: {nombre},\tPuntos: {puntos}";
+            tx.Text = $"Nombre: {nombre}, Puntos: {puntos}";
         }
 
         private void button26_Click(object sender, EventArgs e)
