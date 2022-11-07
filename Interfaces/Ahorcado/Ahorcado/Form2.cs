@@ -138,15 +138,15 @@ namespace Ahorcado
             writer.Serialize(file, parts);
             file.Close();
 
-            /*
+            
             Form3 f = new Form3();
             f.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            f.init(nombre);
+            f.init(nombre, puntos);
 
             //f.ShowDialog();
             f.Show();
-            */
+            
         }
 
         public static  List<Persona> loadArray()

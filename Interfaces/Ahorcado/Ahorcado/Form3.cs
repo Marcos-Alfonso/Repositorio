@@ -26,10 +26,11 @@ namespace Ahorcado
         int puntos = 0;
         DateTime start;
 
-        public void init(String nombre)
+        public void init(String nombre, int puntos)
         {
             this.nombre = nombre;
-            /*
+            this.puntos = puntos;
+            tx.Text = $"Nombre: {nombre}, Puntos: {puntos}";
             List<Persona> list = Form2.loadArray();
 
             foreach (Persona persona in list)
@@ -38,8 +39,9 @@ namespace Ahorcado
                 row.Cells[0].Value = persona.nombre;
                 row.Cells[1].Value = persona.puntos;
                 row.Cells[2].Value = persona.gameTime.ToString().Substring(0, 8);
+                dataGridView1.Rows.Add(row);
             }
-            */
+            
         }
     }
 }
