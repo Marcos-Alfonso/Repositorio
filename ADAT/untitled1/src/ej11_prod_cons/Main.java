@@ -28,6 +28,7 @@ public class Main {
     public static void main(String[] args) {
         Almacen almacen = new Almacen();
         (new Thread(new Productor(almacen))).start();
+        (new Thread(new Productor(almacen))).start();
         (new Thread(new Consumidor(almacen))).start();
     }
 }
