@@ -8,6 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="json-20220924" level="project" />
-    <orderEntry type="library" name="googlecode.json.simple" level="project" />
+    <orderEntry type="library" name="swing-layout-1.0.2" level="project" />
+    <orderEntry type="library" name="jtransc-rt-core-0.5.0-ALPHA3" level="project" />
+    <orderEntry type="library" name="jtransc-rt-0.5.0-ALPHA3" level="project" />
   </component>
 </module>

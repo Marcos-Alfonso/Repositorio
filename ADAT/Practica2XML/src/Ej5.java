@@ -1,36 +1,33 @@
-import org.json.*;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Ej5 {
-    public static void main(String[] args) {
-        JSONParser parser = new JSONParser();
-
+    public static void main(String[] args) throws FileNotFoundException {
+        BufferedReader br = new BufferedReader(new FileReader("trail.json"));
+        String nombre = "";
+        ArrayList<TrackPoint> lista= new ArrayList<TrackPoint>();
         try {
-            Object obj = parser.parse(new FileReader("trail.json"));
 
-            JSONObject jsonObject =  (JSONObject) obj;
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
 
-            String name = (String) jsonObject.get("name");
-            System.out.println(name);
+            while (line != null) {
+                if(line.contains("name")){
+                    sb.append(line.substring(13,29));
+                    sb.append(System.lineSeparator());
+                    nombre = line;
+                }
+                if(line.contains("name"))
+                line = br.readLine();
+            }
+            String everything = sb.toString();
+            System.out.println(everything);
+            br.close();
+        }catch (IOException e){
 
-            String city = (String) jsonObject.get("city");
-            System.out.println(city);
-
-            String job = (String) jsonObject.get("job");
-            System.out.println(job);
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
         }
     }
 }
