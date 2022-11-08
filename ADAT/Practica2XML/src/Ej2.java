@@ -11,8 +11,9 @@ public class Ej2 {
         XMLReader  procesadorXML = XMLReaderFactory.createXMLReader();
         GestionContenido gestor= new GestionContenido();
         procesadorXML.setContentHandler(gestor);
-        InputSource fileXML = new InputSource("alumnos.xml");
+        InputSource fileXML = new InputSource("https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAE_wah_RSS.xml");
         procesadorXML.parse(fileXML);
+
     }
 }
 class GestionContenido extends DefaultHandler {
@@ -27,17 +28,31 @@ class GestionContenido extends DefaultHandler {
     }
     public void startElement(String uri, String nombre,
                              String nombreC, Attributes atts) {
-        System.out.printf("\t Principio Elemento: %s %n",nombre);
+
+        if(nombre.contains("title") || nombre.contains("pubDate")){
+            System.out.printf("\t Principio Elemento: %s %n",nombre);
+            b = true;
+        }
+        if(nombre.contains("item")) System.out.println("---------------");
+
+
     }
+
+    private boolean b = false;
+
     public void endElement(String uri, String nombre,
                            String nombreC) {
+        if(nombre.contains("title")|| nombre.contains("pubDate"))
         System.out.printf("\tFin Elemento: %s %n", nombre);
+        if(nombre.contains("item")) System.out.println("---------------");
     }
     public void characters(char[] ch, int inicio, int longitud)
             throws SAXException {
+        if (!b)return;
         String car=new String(ch, inicio, longitud);
         //quitar saltos de l�nea
         car = car.replaceAll("[\t\n]","");
         System.out.printf ("\t Caracteres: %s %n", car);
+        b = false;
     }
 }
