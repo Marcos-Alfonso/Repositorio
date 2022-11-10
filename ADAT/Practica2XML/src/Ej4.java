@@ -29,10 +29,10 @@ public class Ej4 {
             Document dom = builder.newDocument();
             dom.setXmlVersion("1.0");
 
-            Element rootEle = dom.createElement("cotizaciones");
+            Element rootEle = dom.createElement("empresas");
 
             for (Cotizacion c: lista) {
-                Element ep = dom.createElement("cotizacion");
+                Element ep = dom.createElement("empresa");
 
                 Element nombre = dom.createElement("nombre");
                 nombre.appendChild(dom.createTextNode(c.nombre));
