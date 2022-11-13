@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Ej5" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad6ad080-e691-4d1d-b17b-b57c05a7761d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20220924.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jtransc_rt_0_5_0_ALPHA3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jtransc_rt_core_0_5_0_ALPHA3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/swing_layout_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cotizaciones.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica2XML.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotizaciones.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Practica2XML/Ej4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Practica2XML/Ej5_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Practica2XML/Ej5_1_1$MyPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Practica2XML/Ej5_1_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/peliculas.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cotizacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ej1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ej2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ej3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ej4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ej5_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ej5_1_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MiObjectOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trail.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HBKSQ2sZZKM980qCfdSTNUHOBP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "E:/Repositorio/Repositorio/json-20220924.jar",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2505747",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\temp\Practica2XML" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad6ad080-e691-4d1d-b17b-b57c05a7761d" name="Changes" comment="" />
+      <created>1667753038388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667753038388</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
