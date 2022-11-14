@@ -1,0 +1,13 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\bin\Debug\19_CustomComponent.exe.config
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\bin\Debug\19_CustomComponent.exe
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\bin\Debug\19_CustomComponent.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\bin\Debug\ButtonValue_19.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\bin\Debug\ButtonValue_19.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\19_CustomComponent.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\_19_CustomComponent.Form1.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\_19_CustomComponent.Properties.Resources.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\19_CustomComponent.csproj.GenerateResource.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\19_CustomComponent.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\19_CustomComponent.csproj.CopyComplete
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\19_CustomComponent.exe
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\19_CustomComponent\19_CustomComponent\obj\Debug\19_CustomComponent.pdb

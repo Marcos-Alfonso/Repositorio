@@ -1,0 +1,6 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\ButtonValue_19\ButtonValue_19\obj\Debug\ButtonValue_19.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\ButtonValue_19\ButtonValue_19\obj\Debug\ButtonValue_19.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\ButtonValue_19\ButtonValue_19\bin\Debug\ButtonValue_19.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\ButtonValue_19\ButtonValue_19\bin\Debug\ButtonValue_19.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\ButtonValue_19\ButtonValue_19\obj\Debug\ButtonValue_19.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\WPF\ButtonValue_19\ButtonValue_19\obj\Debug\ButtonValue_19.pdb
