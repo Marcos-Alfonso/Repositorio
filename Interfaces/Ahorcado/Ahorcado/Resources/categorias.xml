@@ -159,4 +159,97 @@
 		<palabra>LISBOA</palabra>
 		<palabra>CARACAS</palabra>
 	</categoria>
+	<categoria id="Provincias Españolas">
+		<palabra>ASTURIAS</palabra>
+		<palabra>CANTABRIA</palabra>
+		<palabra>BADAJOZ</palabra>
+		<palabra>HUELVA</palabra>
+		<palabra>SEVILLA</palabra>
+		<palabra>MADRID</palabra>
+		<palabra>BARCELONA</palabra>
+		<palabra>BURGOS</palabra>
+		<palabra>CADIZ</palabra>
+		<palabra>CORDOBA</palabra>
+		<palabra>GUADALAJARA</palabra>
+		<palabra>GRANADA</palabra>
+		<palabra>VIZCAYA</palabra>
+		<palabra>ZARAGOZA</palabra>
+		<palabra>SEGOVIA</palabra>
+		<palabra>SALAMANCA</palabra>
+		<palabra>HUESCA</palabra>
+		<palabra>BALEARES</palabra>
+		<palabra>PALENCIA</palabra>
+		<palabra>ORENSE</palabra>
+		<palabra>NAVARRA</palabra>
+	</categoria>
+	<categoria id="Peces">
+		<palabra>ANGUILA</palabra>
+		<palabra>RABALO</palabra>
+		<palabra>CHANQUETE</palabra>
+		<palabra>SARDINA</palabra>
+		<palabra>ATUN</palabra>
+		<palabra>SALMON</palabra>
+		<palabra>BOQUERON</palabra>
+		<palabra>GOBIO</palabra>
+		<palabra>PERCA</palabra>
+		<palabra>LUBINA</palabra>
+		<palabra>MOJARRA</palabra>
+		<palabra>DORADA</palabra>
+		<palabra>CARPA</palabra>
+		<palabra>PAYASO</palabra>
+		<palabra>NAPOLEON</palabra>
+		<palabra>AROWANA</palabra>
+		<palabra>ESPERLANO</palabra>
+		<palabra>KOI</palabra>
+		<palabra>CIRUJANO</palabra>
+		<palabra>SILURO</palabra>
+		<palabra>GLOBO</palabra>
+	</categoria>
+	<categoria id="Utensilios de Cocina">
+		<palabra>PLATO</palabra>
+		<palabra>CUCHARA</palabra>
+		<palabra>TENEDOR</palabra>
+		<palabra>CUCHILLO</palabra>
+		<palabra>VASO</palabra>
+		<palabra>SARTEN</palabra>
+		<palabra>OLLA</palabra>
+		<palabra>CACEROLA</palabra>
+		<palabra>CAZO</palabra>
+		<palabra>COLADOR</palabra>
+		<palabra>ESCURRIDOR</palabra>
+		<palabra>BATIDORA</palabra>
+		<palabra>VARILLAS</palabra>
+		<palabra>TIJERAS</palabra>
+		<palabra>RALLADOR</palabra>
+		<palabra>EMBUDO</palabra>
+		<palabra>ESPUMADERA</palabra>
+		<palabra>MANOPLAS</palabra>
+		<palabra>MORTERO</palabra>
+		<palabra>SACACORCHOS</palabra>
+		<palabra>RETROEXCAVADORA</palabra>
+	</categoria>
+	<categoria id="Colores">
+		<palabra>NEGRO</palabra>
+		<palabra>AZUL</palabra>
+		<palabra>MARRON</palabra>
+		<palabra>GRIS</palabra>
+		<palabra>VERDE</palabra>
+		<palabra>NARANJA</palabra>
+		<palabra>ROSA</palabra>
+		<palabra>PURPURA</palabra>
+		<palabra>ROJO</palabra>
+		<palabra>BLANCO</palabra>
+		<palabra>AMARILLO</palabra>
+		
+		<palabra>TURQUESA</palabra>
+		<palabra>MORADO</palabra>
+		<palabra>MAGENTA</palabra>
+		<palabra>VIOLETA</palabra>
+		<palabra>GRANATE</palabra>
+		<palabra>OCRE</palabra>
+		<palabra>BEIGE</palabra>
+		<palabra>CIAN</palabra>
+		<palabra>MAGENTA</palabra>
+		<palabra>SALMON</palabra>
+	</categoria>
 </categorias>

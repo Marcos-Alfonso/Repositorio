@@ -71,7 +71,7 @@
             this.sq5 = new System.Windows.Forms.PictureBox();
             this.sq6 = new System.Windows.Forms.PictureBox();
             this.txPuntos = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btSurrender = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sq1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sq2)).BeginInit();
@@ -425,7 +425,7 @@
             this.txPalabra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txPalabra.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txPalabra.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txPalabra.Location = new System.Drawing.Point(349, 88);
+            this.txPalabra.Location = new System.Drawing.Point(349, 114);
             this.txPalabra.Multiline = true;
             this.txPalabra.Name = "txPalabra";
             this.txPalabra.ReadOnly = true;
@@ -486,7 +486,7 @@
             this.txUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txUserName.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txUserName.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txUserName.Location = new System.Drawing.Point(314, 12);
+            this.txUserName.Location = new System.Drawing.Point(314, 11);
             this.txUserName.Name = "txUserName";
             this.txUserName.ReadOnly = true;
             this.txUserName.Size = new System.Drawing.Size(274, 23);
@@ -499,7 +499,7 @@
             this.txCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txCategoria.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txCategoria.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txCategoria.Location = new System.Drawing.Point(314, 284);
+            this.txCategoria.Location = new System.Drawing.Point(314, 47);
             this.txCategoria.Multiline = true;
             this.txCategoria.Name = "txCategoria";
             this.txCategoria.Size = new System.Drawing.Size(274, 23);
@@ -577,22 +577,25 @@
             this.txPuntos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txPuntos.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txPuntos.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txPuntos.Location = new System.Drawing.Point(314, 32);
+            this.txPuntos.Location = new System.Drawing.Point(314, 31);
             this.txPuntos.Name = "txPuntos";
             this.txPuntos.ReadOnly = true;
             this.txPuntos.Size = new System.Drawing.Size(274, 18);
             this.txPuntos.TabIndex = 41;
             this.txPuntos.Text = "Puntos: ";
             // 
-            // label1
+            // btSurrender
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(155, 288);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "label1";
+            this.btSurrender.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btSurrender.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btSurrender.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btSurrender.Location = new System.Drawing.Point(12, 275);
+            this.btSurrender.Name = "btSurrender";
+            this.btSurrender.Size = new System.Drawing.Size(100, 32);
+            this.btSurrender.TabIndex = 42;
+            this.btSurrender.Text = "Rendirse";
+            this.btSurrender.UseVisualStyleBackColor = false;
+            this.btSurrender.Click += new System.EventHandler(this.surrender);
             // 
             // Form2
             // 
@@ -600,7 +603,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(685, 319);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btSurrender);
             this.Controls.Add(this.txPuntos);
             this.Controls.Add(this.sq6);
             this.Controls.Add(this.sq5);
@@ -699,6 +702,6 @@
         private PictureBox sq5;
         private PictureBox sq6;
         private TextBox txPuntos;
-        private Label label1;
+        private Button btSurrender;
     }
 }

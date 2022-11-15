@@ -1,1 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfPersona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Persona><nombre /><puntos>-9</puntos><gameTime>PT6.1313764S</gameTime></Persona><Persona><nombre>Marcos</nombre><puntos>60</puntos><gameTime>PT3M4.3880115S</gameTime></Persona><Persona><nombre>f</nombre><puntos>20</puntos><gameTime>PT11.093124S</gameTime></Persona></ArrayOfPersona>
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPersona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Persona>
+    <nombre />
+    <puntos>-9</puntos>
+    <gameTime>PT6.1313764S</gameTime>
+  </Persona>
+  <Persona>
+    <nombre>Marcos</nombre>
+    <puntos>68</puntos>
+    <gameTime>PT3M58.3317982S</gameTime>
+  </Persona>
+  <Persona>
+    <nombre>f</nombre>
+    <puntos>20</puntos>
+    <gameTime>PT11.093124S</gameTime>
+  </Persona>
+  <Persona>
+    <nombre>N</nombre>
+    <puntos>36</puntos>
+    <gameTime>PT3M17.5954385S</gameTime>
+  </Persona>
+</ArrayOfPersona>

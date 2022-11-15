@@ -107,8 +107,9 @@ namespace Ahorcado
                 }
                 if (nErrores >= 6)
                 {
-                    MessageBox.Show("Número de errores máximos alcanzado. F", "FFFF");
                     puntos -= 5;
+                    MessageBox.Show("Número de errores máximos alcanzado. La palabra era: "+palabra, "F");
+                    
                     launchEnding();
                     
                 }
@@ -202,6 +203,14 @@ namespace Ahorcado
             txPlaytime.Text = s.Substring(0,8);
             txPuntos.Text = "Puntos: " + (puntos);
             //label1.Text = System.DateTime.Now.ToString().Substring(10);
+        }
+
+        private void surrender(object sender, EventArgs e)
+        {
+            puntos -= 5;
+            MessageBox.Show("La palabra era: "+palabra, "Rendición");
+            
+            launchEnding();
         }
     }
 

@@ -61,7 +61,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(28, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(284, 165);
+            this.dataGridView1.Size = new System.Drawing.Size(289, 165);
             this.dataGridView1.TabIndex = 34;
             // 
             // Nombre
@@ -86,7 +86,7 @@
             this.Tiempo.HeaderText = "Tiempo";
             this.Tiempo.Name = "Tiempo";
             this.Tiempo.ReadOnly = true;
-            this.Tiempo.Width = 72;
+            this.Tiempo.Width = 73;
             // 
             // btBack
             // 

@@ -56,6 +56,7 @@
             // cbCategoria
             // 
             this.cbCategoria.BackColor = System.Drawing.SystemColors.InfoText;
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.ForeColor = System.Drawing.Color.Ivory;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(134, 141);

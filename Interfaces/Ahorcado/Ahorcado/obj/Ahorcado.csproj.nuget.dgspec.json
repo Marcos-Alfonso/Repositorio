@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Repositorio\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {}
+    "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {}
   },
   "projects": {
-    "E:\\Repositorio\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {
+    "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Repositorio\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
+        "projectUniqueName": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
         "projectName": "Ahorcado",
-        "projectPath": "E:\\Repositorio\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
-        "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
-        "outputPath": "E:\\Repositorio\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\obj\\",
+        "projectPath": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\Ahorcado.csproj",
+        "packagesPath": "C:\\Users\\manana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ahorcado\\Ahorcado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\manana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
