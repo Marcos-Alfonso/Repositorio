@@ -1,0 +1,6 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\DNIlib\DNIlib\bin\Debug\DNIlib.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\DNIlib\DNIlib\bin\Debug\DNIlib.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\DNIlib\DNIlib\obj\Debug\DNIlib.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\DNIlib\DNIlib\obj\Debug\DNIlib.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\DNIlib\DNIlib\obj\Debug\DNIlib.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\DNIlib\DNIlib\obj\Debug\DNIlib.pdb

@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0628ec63-485f-470c-a2ac-db01f66c7484" name="Changes" comment="" />
+    <list default="true" id="0628ec63-485f-470c-a2ac-db01f66c7484" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/Ahorcado/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/Ahorcado/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/Ahorcado/FileContentIndex/dcbd77ba-39af-4dfa-9d59-757cd2bc3bdf.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/Ahorcado/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/Ahorcado/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/Ahorcado/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/Ahorcado/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/ProjectEvaluation/ahorcado.metadata.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/ProjectEvaluation/ahorcado.metadata.v5.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/ProjectEvaluation/ahorcado.projects.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ahorcado/.vs/ProjectEvaluation/ahorcado.projects.v5.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ahorcado/Ahorcado/Resources/leaderBoards.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ahorcado/Ahorcado/Resources/leaderBoards.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/Ej5/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/Ej5/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/Ej5/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/Ej5/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/Ej5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/Ej5/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/ProjectEvaluation/ej5.metadata.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/ProjectEvaluation/ej5.metadata.v5.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/ProjectEvaluation/ej5.projects.v5.1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/.vs/ProjectEvaluation/ej5.projects.v5.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Debug/net6.0-windows/Ej5.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Debug/net6.0-windows/Ej5.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Debug/net6.0-windows/Ej5.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Debug/net6.0-windows/Ej5.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Debug/net6.0-windows/Ej5.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Debug/net6.0-windows/Ej5.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Ej5.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/Ej5.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Ej5/Ej5/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/.vs/Reloj/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/.vs/Reloj/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/Reloj.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/Reloj.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/Reloj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/Reloj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/bin/Debug/Reloj.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/bin/Debug/Reloj.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/bin/Debug/Reloj.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/bin/Debug/Reloj.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Interfaces/Nueva carpeta/Reloj/Reloj/obj/Debug/Reloj.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +55,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/manana/Documents/GitHub/Repositorio/ADAT/psp2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -35,6 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1663312586958</updated>
       <workItem from="1663312589999" duration="622000" />
+      <workItem from="1668584211762" duration="1927000" />
+      <workItem from="1668669399256" duration="25000" />
     </task>
     <servers />
   </component>

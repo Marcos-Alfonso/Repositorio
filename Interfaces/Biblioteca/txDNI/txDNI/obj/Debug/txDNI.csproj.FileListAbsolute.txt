@@ -1,0 +1,8 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\bin\Debug\txDNI.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\bin\Debug\txDNI.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\obj\Debug\txDNI.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\obj\Debug\txDNI.txDNI.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\obj\Debug\txDNI.csproj.GenerateResource.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\obj\Debug\txDNI.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\obj\Debug\txDNI.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\txDNI\txDNI\obj\Debug\txDNI.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj": {}
+    "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj": {}
   },
   "projects": {
-    "C:\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj": {
+    "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj",
+        "projectUniqueName": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj",
         "projectName": "Ej5",
-        "projectPath": "C:\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj",
+        "projectPath": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ej5\\Ej5\\Ej5.csproj",
         "packagesPath": "C:\\Users\\manana\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorio\\Interfaces\\Ej5\\Ej5\\obj\\",
+        "outputPath": "C:\\Users\\manana\\Documents\\GitHub\\Repositorio\\Interfaces\\Ej5\\Ej5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manana\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

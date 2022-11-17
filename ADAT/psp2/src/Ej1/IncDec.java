@@ -31,6 +31,7 @@ public class IncDec {
         System.out.println("\nValor incial: "+contador);
         Thread hiloInc = new Incrementa();
         Thread hiloDec = new Decrementa();
+
         hiloInc.start();
         hiloDec.start();
         try {

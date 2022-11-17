@@ -1,0 +1,8 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\bin\Debug\textLength.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\bin\Debug\textLength.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\obj\Debug\textLength.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\obj\Debug\textLength.txLength.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\obj\Debug\textLength.csproj.GenerateResource.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\obj\Debug\textLength.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\obj\Debug\textLength.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textLength\textLength\obj\Debug\textLength.pdb
