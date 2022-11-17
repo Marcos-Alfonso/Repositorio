@@ -62,6 +62,7 @@ namespace Ahorcado
             //f.ShowDialog();
             this.Hide();
             f.Closed += (s, args) => this.Show();
+            f.Closed += (s, args) => this.txNombre_TextChanged(sender, e);
             f.Show();
         }
 

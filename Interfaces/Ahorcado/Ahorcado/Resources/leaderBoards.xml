@@ -7,8 +7,8 @@
   </Persona>
   <Persona>
     <nombre>Marcos</nombre>
-    <puntos>117</puntos>
-    <gameTime>PT5M50.6442401S</gameTime>
+    <puntos>165</puntos>
+    <gameTime>PT7M18.2437458S</gameTime>
   </Persona>
   <Persona>
     <nombre>f</nombre>
@@ -19,5 +19,10 @@
     <nombre>N</nombre>
     <puntos>36</puntos>
     <gameTime>PT3M17.5954385S</gameTime>
+  </Persona>
+  <Persona>
+    <nombre>Marina</nombre>
+    <puntos>131</puntos>
+    <gameTime>PT8M5.7274463S</gameTime>
   </Persona>
 </ArrayOfPersona>
