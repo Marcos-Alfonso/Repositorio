@@ -1,0 +1,6 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textNumberLib\textNumberLib\bin\Debug\textNumberLib.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textNumberLib\textNumberLib\bin\Debug\textNumberLib.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textNumberLib\textNumberLib\obj\Debug\textNumberLib.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textNumberLib\textNumberLib\obj\Debug\textNumberLib.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textNumberLib\textNumberLib\obj\Debug\textNumberLib.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Biblioteca\textNumberLib\textNumberLib\obj\Debug\textNumberLib.pdb
