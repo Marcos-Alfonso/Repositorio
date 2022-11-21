@@ -1,0 +1,12 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\bin\Debug\pruebaExamen.exe.config
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\bin\Debug\pruebaExamen.exe
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\bin\Debug\pruebaExamen.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.Form1.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.Form2.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.Form3.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.Properties.Resources.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.csproj.GenerateResource.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.exe
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\pruebaExamen\pruebaExamen\obj\Debug\pruebaExamen.pdb
