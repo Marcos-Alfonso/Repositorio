@@ -9,48 +9,40 @@
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $surnameErr = $genderErr = $birthDateErr = "";
+$name = $surname = $gender = $birthDate = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
-    $nameErr = "Leucocitos";
+    $nameErr = "Nombre requerido";
   } else {
     $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
+    // coprueba que solo son letras y espacios, para nomrbes compuestos
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
+      $nameErr = "Nombre incluye carácteres no permtido";
     }
   }
   
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
+  if (empty($_POST["surname"])) {
+    $surnameErr = "Apellido requerido";
   } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
-    }
+    $surname = test_input($_POST["surname"]);
+    //filtro apellido
+
   }
     
-  if (empty($_POST["website"])) {
-    $website = "";
+  if (empty($_POST["birthDate"])) {
+    $birthDateErr = "Fecha de nacimiento requerido";
   } else {
-    $website = test_input($_POST["website"]);
+    $birthDate = test_input($_POST["birthDate"]);
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL";
-    }
+   
   }
 
-  if (empty($_POST["comment"])) {
-    $comment = "";
-  } else {
-    $comment = test_input($_POST["comment"]);
-  }
+ 
 
   if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
+    $genderErr = "Sexo Requerido";
   } else {
     $gender = test_input($_POST["gender"]);
   }
@@ -64,24 +56,29 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
-<p><span class="error">* required field</span></p>
+<h2 style="text-align:center;"><u>Alta datos Empleado</u></h2>
+<p><span class="error">* Campo Requerido</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
+  Nombre: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
+  Apellido: <input type="text" name="surname" value="<?php echo $surname;?>">
+  <span class="error">* <?php echo $surnameErr;?></span>
   <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
+  Fecha de nacimiento: <input type="text" name="birthDate" value="<?php echo $birthDate;?>">(dd/MM/yyyy)
+  <span class="error"><?php echo $birthDateErr;?></span>
   <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  Categoría: 
+  <select name="cat" id="cat">
+    <option value="peon">Peón</option>
+    <option value="oficial">Oficial</option>
+    <option value="jefeDep">Jefe de Departamento</option>
+    <option value="director">Director</option>
+  </select>
   <br><br>
-  Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
+  Sexo:
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="m") echo "checked";?> value="female">Mujer
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="h") echo "checked";?> value="male">Hombre 
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
@@ -91,9 +88,9 @@ function test_input($data) {
 echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
-echo $email;
+echo $surname;
 echo "<br>";
-echo $website;
+echo $birthDate;
 echo "<br>";
 echo $comment;
 echo "<br>";
