@@ -1,17 +1,5 @@
-/*
-    Programa que intenta demostrar los problemas de la condición de carrera
-    si no utilizamos mecanismos de sincronización.
- */
-package Ej1;
 
-/**
- * Ejemplo de aplicación que demuestra el problema de la condición de carrera
- * 
- * El programa no da resultados acorde a lo esperado y dependerá del orden en
- * el que se han ejecutado los hilos.
- * 
- * 
- */
+package Ej1;
 public class IncDec {
 
     final int N_OPERACIONES = 1000;
@@ -45,10 +33,9 @@ public class IncDec {
     // HILO QUE INCREMENTA
     class Incrementa extends Thread {
 
-        public void run() {
+        public synchronized void run() {
             for (int n = 0; n < N_OPERACIONES; n++) {
                 contador++;
-                printCount();
             }
         }
     }
@@ -56,10 +43,10 @@ public class IncDec {
     // HILO QUE DECREMENTA
     class Decrementa extends Thread {
 
-        public void run() {
+        public synchronized void run() {
             for (int n = 0; n < N_OPERACIONES; n++) {
                 contador--;
-                printCount();
+
             }
         }
     }
