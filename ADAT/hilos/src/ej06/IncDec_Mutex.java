@@ -49,6 +49,7 @@ public class IncDec_Mutex {
         public void run() {
             for (int n = 0; n < N_OPERACIONES; n++) {
                 try {
+
                     mutex.acquire(1);   // Entramos en sección critica
                     contador++;         // Sección critica
                     //mutex.release(1);   // Salimos de sección critica

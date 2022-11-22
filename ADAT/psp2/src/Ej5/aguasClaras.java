@@ -31,7 +31,7 @@ public class aguasClaras {
         public synchronized void run() {
                 try {
                     while(puenteOcupado){
-
+                        wait();
                         System.out.print("");
                     }
                     puenteOcupado = true;
@@ -39,11 +39,16 @@ public class aguasClaras {
                     sleep(500);
                     System.out.println("C_"+nombre+" - Puente Cruzado");
                     puenteOcupado = false;
-                    notifyAll();
+
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                     System.err.println("Hilo Interrumpido");
                 }
+        }
+        public synchronized void carga(){
+            System.out.println("C_"+nombre+" - Pasando puente");
+            sleep(500);
+            System.out.println("C_"+nombre+" - Puente Cruzado");
         }
 
     }
