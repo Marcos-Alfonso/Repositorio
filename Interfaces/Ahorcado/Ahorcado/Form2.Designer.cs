@@ -470,14 +470,15 @@
             this.txPlaytime.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txPlaytime.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txPlaytime.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txPlaytime.Location = new System.Drawing.Point(594, 3);
+            this.txPlaytime.Location = new System.Drawing.Point(584, 2);
             this.txPlaytime.Multiline = true;
             this.txPlaytime.Name = "txPlaytime";
             this.txPlaytime.ReadOnly = true;
-            this.txPlaytime.Size = new System.Drawing.Size(89, 34);
+            this.txPlaytime.Size = new System.Drawing.Size(99, 34);
             this.txPlaytime.TabIndex = 31;
             this.txPlaytime.Text = "00:00:00";
             this.txPlaytime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txPlaytime.TextChanged += new System.EventHandler(this.txPlaytime_TextChanged);
             // 
             // txUserName
             // 
@@ -503,7 +504,7 @@
             this.txCategoria.Multiline = true;
             this.txCategoria.Name = "txCategoria";
             this.txCategoria.ReadOnly = true;
-            this.txCategoria.Size = new System.Drawing.Size(274, 23);
+            this.txCategoria.Size = new System.Drawing.Size(364, 23);
             this.txCategoria.TabIndex = 33;
             this.txCategoria.Text = "Categoría:";
             // 

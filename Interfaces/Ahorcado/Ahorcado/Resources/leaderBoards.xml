@@ -2,8 +2,8 @@
 <ArrayOfPersona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Persona>
     <nombre>Marcos</nombre>
-    <puntos>190</puntos>
-    <gameTime>PT8M57.2623926S</gameTime>
+    <puntos>167</puntos>
+    <gameTime>PT10M5.3223037S</gameTime>
   </Persona>
   <Persona>
     <nombre>f</nombre>
@@ -19,5 +19,10 @@
     <nombre>Marina</nombre>
     <puntos>131</puntos>
     <gameTime>PT8M5.7274463S</gameTime>
+  </Persona>
+  <Persona>
+    <nombre>El Peña</nombre>
+    <puntos>19</puntos>
+    <gameTime>PT7M0.3057126S</gameTime>
   </Persona>
 </ArrayOfPersona>

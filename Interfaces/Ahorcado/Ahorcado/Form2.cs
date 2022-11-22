@@ -232,6 +232,11 @@ namespace Ahorcado
             
             launchEnding();
         }
+
+        private void txPlaytime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     [Serializable]
