@@ -84,7 +84,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Location = new System.Drawing.Point(349, 170);
             this.button1.Name = "button1";
@@ -97,7 +97,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Location = new System.Drawing.Point(314, 170);
             this.button2.Name = "button2";
@@ -110,7 +110,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.Location = new System.Drawing.Point(384, 170);
             this.button3.Name = "button3";
@@ -123,7 +123,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.Location = new System.Drawing.Point(419, 170);
             this.button4.Name = "button4";
@@ -136,7 +136,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button5.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Location = new System.Drawing.Point(454, 170);
             this.button5.Name = "button5";
@@ -149,7 +149,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button6.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button6.Location = new System.Drawing.Point(489, 170);
             this.button6.Name = "button6";
@@ -162,7 +162,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button7.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button7.Location = new System.Drawing.Point(524, 170);
             this.button7.Name = "button7";
@@ -175,7 +175,7 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button8.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button8.Location = new System.Drawing.Point(559, 170);
             this.button8.Name = "button8";
@@ -188,7 +188,7 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button9.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button9.Location = new System.Drawing.Point(594, 170);
             this.button9.Name = "button9";
@@ -201,7 +201,7 @@
             // button10
             // 
             this.button10.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button10.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button10.Location = new System.Drawing.Point(629, 170);
             this.button10.Name = "button10";
@@ -214,7 +214,7 @@
             // button11
             // 
             this.button11.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button11.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button11.Location = new System.Drawing.Point(314, 205);
             this.button11.Name = "button11";
@@ -227,7 +227,7 @@
             // button12
             // 
             this.button12.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button12.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button12.Location = new System.Drawing.Point(349, 205);
             this.button12.Name = "button12";
@@ -240,7 +240,7 @@
             // button13
             // 
             this.button13.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button13.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button13.Location = new System.Drawing.Point(384, 205);
             this.button13.Name = "button13";
@@ -253,7 +253,7 @@
             // button14
             // 
             this.button14.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button14.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button14.Location = new System.Drawing.Point(419, 205);
             this.button14.Name = "button14";
@@ -266,7 +266,7 @@
             // button15
             // 
             this.button15.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button15.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button15.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button15.Location = new System.Drawing.Point(454, 205);
             this.button15.Name = "button15";
@@ -279,7 +279,7 @@
             // button16
             // 
             this.button16.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button16.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button16.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button16.Location = new System.Drawing.Point(489, 205);
             this.button16.Name = "button16";
@@ -292,7 +292,7 @@
             // button17
             // 
             this.button17.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button17.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button17.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button17.Location = new System.Drawing.Point(524, 205);
             this.button17.Name = "button17";
@@ -305,7 +305,7 @@
             // button18
             // 
             this.button18.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button18.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button18.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button18.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button18.Location = new System.Drawing.Point(559, 205);
             this.button18.Name = "button18";
@@ -318,7 +318,7 @@
             // button19
             // 
             this.button19.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button19.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button19.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button19.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button19.Location = new System.Drawing.Point(594, 205);
             this.button19.Name = "button19";
@@ -331,7 +331,7 @@
             // button20
             // 
             this.button20.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button20.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button20.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button20.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button20.Location = new System.Drawing.Point(630, 205);
             this.button20.Name = "button20";
@@ -344,7 +344,7 @@
             // button21
             // 
             this.button21.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button21.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button21.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button21.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button21.Location = new System.Drawing.Point(384, 240);
             this.button21.Name = "button21";
@@ -357,7 +357,7 @@
             // button22
             // 
             this.button22.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button22.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button22.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button22.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button22.Location = new System.Drawing.Point(419, 240);
             this.button22.Name = "button22";
@@ -370,7 +370,7 @@
             // button23
             // 
             this.button23.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button23.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button23.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button23.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button23.Location = new System.Drawing.Point(454, 240);
             this.button23.Name = "button23";
@@ -383,7 +383,7 @@
             // button24
             // 
             this.button24.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button24.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button24.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button24.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button24.Location = new System.Drawing.Point(489, 240);
             this.button24.Name = "button24";
@@ -396,7 +396,7 @@
             // button25
             // 
             this.button25.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button25.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button25.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button25.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button25.Location = new System.Drawing.Point(524, 240);
             this.button25.Name = "button25";
@@ -409,7 +409,7 @@
             // button26
             // 
             this.button26.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button26.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button26.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button26.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button26.Location = new System.Drawing.Point(559, 240);
             this.button26.Name = "button26";
@@ -423,7 +423,7 @@
             // 
             this.txPalabra.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txPalabra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txPalabra.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txPalabra.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txPalabra.ForeColor = System.Drawing.SystemColors.Menu;
             this.txPalabra.Location = new System.Drawing.Point(349, 114);
             this.txPalabra.Multiline = true;
@@ -445,7 +445,7 @@
             this.txErrorCount.ReadOnly = true;
             this.txErrorCount.Size = new System.Drawing.Size(241, 34);
             this.txErrorCount.TabIndex = 29;
-            this.txErrorCount.Text = "Número de errores: 0/6";
+            this.txErrorCount.Text = "Numero de errores: 0/6";
             // 
             // txErrorChars
             // 
@@ -484,12 +484,12 @@
             this.txUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txUserName.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txUserName.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txUserName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txUserName.ForeColor = System.Drawing.SystemColors.Menu;
             this.txUserName.Location = new System.Drawing.Point(314, 11);
             this.txUserName.Name = "txUserName";
             this.txUserName.ReadOnly = true;
-            this.txUserName.Size = new System.Drawing.Size(274, 23);
+            this.txUserName.Size = new System.Drawing.Size(274, 25);
             this.txUserName.TabIndex = 32;
             this.txUserName.Text = "Usuario: ";
             // 
@@ -497,11 +497,12 @@
             // 
             this.txCategoria.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txCategoria.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txCategoria.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txCategoria.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txCategoria.Location = new System.Drawing.Point(314, 47);
+            this.txCategoria.Location = new System.Drawing.Point(309, 51);
             this.txCategoria.Multiline = true;
             this.txCategoria.Name = "txCategoria";
+            this.txCategoria.ReadOnly = true;
             this.txCategoria.Size = new System.Drawing.Size(274, 23);
             this.txCategoria.TabIndex = 33;
             this.txCategoria.Text = "Categoría:";
@@ -575,12 +576,12 @@
             this.txPuntos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txPuntos.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txPuntos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txPuntos.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txPuntos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txPuntos.ForeColor = System.Drawing.SystemColors.Menu;
             this.txPuntos.Location = new System.Drawing.Point(314, 31);
             this.txPuntos.Name = "txPuntos";
             this.txPuntos.ReadOnly = true;
-            this.txPuntos.Size = new System.Drawing.Size(274, 18);
+            this.txPuntos.Size = new System.Drawing.Size(274, 19);
             this.txPuntos.TabIndex = 41;
             this.txPuntos.Text = "Puntos: ";
             // 
@@ -645,6 +646,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -17,14 +17,34 @@ using static System.Windows.Forms.LinkLabel;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
 using System.IO;
+using System.Drawing.Text;
 
 namespace Ahorcado
 {
     public partial class Form2 : Form
     {
+        
         public Form2()
         {
             InitializeComponent();
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile("../../../Resources/" + "/Minecraft.ttf");
+            foreach(Control c in this.Controls)
+            {
+                try
+                {
+                    Button b = (Button)c;
+                    b.Font = new Font(pfc.Families[0], b.Font.Size, b.Font.Style);
+                }
+                catch (Exception ex){ }
+                try
+                {
+                    TextBox tb = (TextBox)c;
+                    tb.Font = new Font(pfc.Families[0], tb.Font.Size, tb.Font.Style);
+                }
+                catch (Exception ex) { }
+            }
+
         }
         List<PictureBox> lista = new List<PictureBox>();
         private void Form2_Load(object sender, EventArgs e)

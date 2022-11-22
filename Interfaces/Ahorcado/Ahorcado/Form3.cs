@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,10 @@ namespace Ahorcado
         public Form3()
         {
             InitializeComponent();
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile("../../../Resources/" + "/Minecraft.ttf");
+            tx.Font = new Font(pfc.Families[0], tx.Font.Size, tx.Font.Style);
+            btBack.Font = new Font(pfc.Families[0], btBack.Font.Size, btBack.Font.Style);
         }
 
         private void Form3_Load(object sender, EventArgs e)

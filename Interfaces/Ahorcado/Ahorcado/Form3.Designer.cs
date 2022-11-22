@@ -42,7 +42,7 @@
             this.tx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tx.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.tx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tx.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tx.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tx.ForeColor = System.Drawing.SystemColors.Menu;
             this.tx.Location = new System.Drawing.Point(28, 12);
             this.tx.Multiline = true;
@@ -91,7 +91,7 @@
             // btBack
             // 
             this.btBack.BackColor = System.Drawing.SystemColors.Desktop;
-            this.btBack.Font = new System.Drawing.Font("Minecraft", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btBack.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btBack.Location = new System.Drawing.Point(339, 156);
             this.btBack.Name = "btBack";
@@ -111,6 +111,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tx);
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
