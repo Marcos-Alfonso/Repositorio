@@ -1,0 +1,14 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\bin\Debug\PrimerExamen.exe.config
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\bin\Debug\PrimerExamen.exe
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\bin\Debug\PrimerExamen.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.Form1.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.Properties.Resources.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.csproj.GenerateResource.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.csproj.CoreCompileInputs.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.exe
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.pdb
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.Form2.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.FormAltaMod.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.FormNotas.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\PrimerExamen\PrimerExamen\obj\Debug\PrimerExamen.FormBuscador.resources
