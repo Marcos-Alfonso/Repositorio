@@ -2,13 +2,13 @@ package Ej5;
 
 import java.util.ArrayList;
 
-public class Cantera {
+public class Puente {
     ArrayList<Thread> ladoDerecho = new ArrayList<>();
     ArrayList<Thread> ladoIzquierdo = new ArrayList<>();
     boolean puenteOcupado = false;
 
-    public void addRight(Thread t){
-        ladoDerecho.add(t);
+    public void addRight(Camion c){
+        ladoDerecho.add(c);
     }
     /*
     public void addLeft(Thread t){
@@ -21,31 +21,35 @@ public class Cantera {
         ladoIzquierdo.remove(t);
     }
     */
-    public synchronized void  crossLeft(Thread t){
+    public synchronized void  crossLeft(Camion c){
         try {
-            ladoDerecho.remove(t);
+            System.out.println("C_"+c.getNombre()+" - Pasando puente <--");
+            ladoDerecho.remove(c);
             puenteOcupado = true;
             Thread.sleep(500);
-            ladoIzquierdo.add(t);
+            ladoIzquierdo.add(c);
             puenteOcupado= false;
+            System.out.println("C_"+c.getNombre()+" - Puente Cruzado <--");
             notifyAll();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public synchronized void  crossRight(Thread t){
+    public synchronized void  crossRight(Camion c){
         try {
-            ladoIzquierdo.remove(t);
+            System.out.println("C_"+c.getNombre()+" - Pasando puente -->");
+            ladoIzquierdo.remove(c);
             puenteOcupado = true;
             Thread.sleep(500);
-            ladoDerecho.add(t);
+            ladoDerecho.add(c);
             puenteOcupado= false;
-            notifyAll();
+            System.out.println("C_"+c.getNombre()+" - Puente Cruzado -->");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
+    /*
     public synchronized void carga(Camion c){
         try {
 
@@ -53,6 +57,7 @@ public class Cantera {
             throw new RuntimeException(e);
         }
     }
+     */
 
 
 }
