@@ -33,32 +33,33 @@ public class Ej2 {
             DOMImplementation implementation = builder.getDOMImplementation();
             Document dom = builder.newDocument();
             dom.setXmlVersion("1.0");
-
-            Element rootEle = dom.createElement("cliente");
-
+            //El elemento Raíz del XML será clientes y dentro del mismo cada cliente con sus apartados
+            Element rootEle = dom.createElement("clientes");
             for (Cliente c: listaCliente) {
-                Element ep = dom.createElement("cliente");
+                Element cl = dom.createElement("cliente");
 
                 Element nombre = dom.createElement("nombre");
                 nombre.appendChild(dom.createTextNode(c.getNombre()));
-                ep.appendChild(nombre);
 
                 Element edad = dom.createElement("edad");
                 edad.appendChild(dom.createTextNode(c.getEdad()+""));
-                ep.appendChild(edad);
 
                 Element ciudad = dom.createElement("ciudad");
                 ciudad.appendChild(dom.createTextNode(c.getCiudad()));
-                ep.appendChild(ciudad);
 
                 Element descuento = dom.createElement("descuento");
                 descuento.appendChild(dom.createTextNode(c.getDescuento()+""));
-                ep.appendChild(descuento);
 
-                rootEle.appendChild(ep);
+                cl.appendChild(nombre);
+                cl.appendChild(edad);
+                cl.appendChild(ciudad);
+                cl.appendChild(descuento);
+
+                rootEle.appendChild(cl);
             }
             dom.appendChild(rootEle);
 
+            //genero el xml con DOM
             Source source = new DOMSource(dom);
             Result result =
                     new StreamResult(new java.io.File("clientes.xml"));
