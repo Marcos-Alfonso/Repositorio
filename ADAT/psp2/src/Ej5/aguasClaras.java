@@ -47,7 +47,7 @@ public class aguasClaras {
         }
         public synchronized void carga(){
             System.out.println("C_"+nombre+" - Pasando puente");
-            sleep(500);
+            //sleep(500);
             System.out.println("C_"+nombre+" - Puente Cruzado");
         }
 
