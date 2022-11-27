@@ -1,4 +1,4 @@
-package Ej5;
+package Ej5_2;
 
 import java.util.ArrayList;
 
@@ -10,27 +10,18 @@ public class Puente {
     public void addRight(Camion c){
         ladoDerecho.add(c);
     }
-    /*
-    public void addLeft(Thread t){
-        ladoIzquierdo.add(t);
-    }
-    public void removeRight(Thread t){
-        ladoDerecho.remove(t);
-    }
-    public void removeLeft(Thread t){
-        ladoIzquierdo.remove(t);
-    }
-    */
+
     public synchronized void  crossLeft(Camion c){
         try {
-            System.out.println("C_"+c.getNombre()+" - Pasando puente <--");
-            ladoDerecho.remove(c);
             puenteOcupado = true;
+            ladoDerecho.remove(c);
+            System.out.println("C_"+c.getNombre()+" (2) - PUENTE - Comienzo cruzar");
+
             Thread.sleep(500);
             ladoIzquierdo.add(c);
             puenteOcupado= false;
-            System.out.println("C_"+c.getNombre()+" - Puente Cruzado <--");
-            notifyAll();
+            System.out.println("C_"+c.getNombre()+" (3) - PUENTE - Fin cruzar");
+            //notifyAll();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -38,16 +29,20 @@ public class Puente {
 
     public synchronized void  crossRight(Camion c){
         try {
-            System.out.println("C_"+c.getNombre()+" - Pasando puente -->");
-            ladoIzquierdo.remove(c);
             puenteOcupado = true;
+            ladoIzquierdo.remove(c);
+            System.out.println("C_"+c.getNombre()+" (8) - PUENTE - Comienzo cruzar");
             Thread.sleep(500);
             ladoDerecho.add(c);
             puenteOcupado= false;
-            System.out.println("C_"+c.getNombre()+" - Puente Cruzado -->");
+            notify();
+            System.out.println("C_"+c.getNombre()+" (9) - PUENTE - Fin cruzar");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+    public int cuantosLadoIzq(){
+        return ladoIzquierdo.size();
     }
     /*
     public synchronized void carga(Camion c){
