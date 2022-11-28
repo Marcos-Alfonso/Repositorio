@@ -250,7 +250,7 @@ public class CarreraSolidariaParar {
          * Mueve la etiqueta en la dirección calculada y comprueba que no se
          * salga de los límites de la ventana
          */
-        public ArrayList<Hilo> blockedThreads = new ArrayList<>();
+        //public ArrayList<Hilo> blockedThreads = new ArrayList<>();
         private void desplazaEtiqueta() throws Exception {
             Rectangle rectLabel = label.getBounds();
             Rectangle rectPanel = panel.getBounds();
@@ -290,13 +290,16 @@ public class CarreraSolidariaParar {
                 label.setBackground(Color.WHITE);
 
             }
+            /*
             for (Hilo h:blockedThreads) {
                 if(this.getX() >= h.getX()){
                     h.label.setForeground(Color.GREEN);
                     blockedThreads.remove(h);
 
+
                 }
             }
+             */
 
 
             label.setText(textLabel + "(" + separacion + ")");
@@ -307,10 +310,12 @@ public class CarreraSolidariaParar {
                 System.out.print("\n" + getLabel().getText() + " Penalizado");
 
                 this.label.setText(textLabel + "<" + ultimo.textLabel + ">");
-                //author M
+                //author
+                    synchronized (hilos){
+                        notifyAll();
 
-                    ultimo().blockedThreads.add(this);
-                    
+                        wait();
+                    }
 
                 //
 
