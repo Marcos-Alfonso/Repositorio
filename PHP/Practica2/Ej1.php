@@ -21,6 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
       $nameErr = "Nombre incluye carácteres no permtido";
     }
+    if(strlen($name)<3){
+      $nameErr = "Nombre tiene que tener mas de 3 letras.";
+    }
   }
   
   if (empty($_POST["surname"])) {
@@ -28,7 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $surname = test_input($_POST["surname"]);
     //filtro apellido
-
+    $appellidos = explode(" ", $surname);
+    if(count($appellidos)<1){
+      $surnameErr = "Debe haber mas de un apellido";
+    }
   }
     
   if (empty($_POST["birthDate"])) {
@@ -38,8 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
    
   }
-
- 
 
   if (empty($_POST["gender"])) {
     $genderErr = "Sexo Requerido";
@@ -77,9 +81,15 @@ function test_input($data) {
   </select>
   <br><br>
   Sexo:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="m") echo "checked";?> value="female">Mujer
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="h") echo "checked";?> value="male">Hombre 
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="m") echo "checked";?> value="Mujer">Mujer
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="h") echo "checked";?> value="Hombre">Hombre 
   <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  <input type="checkbox" class="form-check-input" id="conditions" name="conditions" value="1">Deportes
+  <input type="checkbox" class="form-check-input" id="conditions" name="conditions" value="1">Lectura
+  <input type="checkbox" class="form-check-input" id="conditions" name="conditions" value="1">Música
+  <input type="checkbox" class="form-check-input" id="conditions" name="conditions" value="1">Cine
+  <input type="checkbox" class="form-check-input" id="conditions" name="conditions" value="1">Idiomas
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -91,8 +101,6 @@ echo "<br>";
 echo $surname;
 echo "<br>";
 echo $birthDate;
-echo "<br>";
-echo $comment;
 echo "<br>";
 echo $gender;
 ?>
