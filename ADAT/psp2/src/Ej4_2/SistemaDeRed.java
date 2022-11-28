@@ -24,8 +24,13 @@ public class SistemaDeRed {
 
     public synchronized boolean checkClave(String s){
         nIntentos++;
-        return s.equals(clave);
+        if(s.equals(clave)){
+            System.out.println(nIntentos+" - H-"+s.charAt(0)+", prueba "+s+" - Acierto");
+            claveAcertada = true;
+            return true;
+        }else if(!claveAcertada){
+            System.out.println(nIntentos+" - H-"+s.charAt(0)+", prueba "+s+" - Fallo");
+        }
+        return false;
     }
-
-
 }

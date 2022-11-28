@@ -15,6 +15,5 @@ public class Main {
             Letra l = new Letra((char)('a'+i), sr, s);
             l.start();
         }
-
     }
 }

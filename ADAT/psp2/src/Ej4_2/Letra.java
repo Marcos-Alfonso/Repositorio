@@ -15,16 +15,10 @@ public class Letra extends Thread{
     public void run(){
         try {
             semaphore.acquire();
-
             if(!sistema.claveAcertada){
-                //System.out.println("Inicia "+caracterInicial);
                 iniciaServicio();
-                //System.out.println("Finaliza "+caracterInicial);
             }
-
             semaphore.release();
-
-
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -36,26 +30,16 @@ public class Letra extends Thread{
             for (int j = 0; j < 26; j++) {
                 char c2 = (char)('a'+j);
                 for (int k = 0; k < 26; k++){
-
                     if (sistema.claveAcertada){
                         return;
                     }
-
                     char c3 = (char)('a'+k);
                     String prueba = ""+caracterInicial+c1+c2+c3;
-
-                    if(sistema.checkClave(prueba)){
-                        sistema.claveAcertada = true;
-                        System.out.println(sistema.nIntentos+" - H-"+caracterInicial+", prueba "+prueba+" - Acierto");
-                        return;
-                    }else{
-                        System.out.println(sistema.nIntentos+" - H-"+caracterInicial+", prueba "+prueba+" - Fallo");
-                    }
+                    sistema.checkClave(prueba);
 
                 }
             }
         }
-
     }
 
 }
