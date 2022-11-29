@@ -11,7 +11,7 @@ public class Puente {
         ladoDerecho.add(c);
     }
 
-    public synchronized void  crossLeft(Camion c){
+    public void  crossLeft(Camion c){
         try {
             puenteOcupado = true;
             ladoDerecho.remove(c);
@@ -21,13 +21,13 @@ public class Puente {
             ladoIzquierdo.add(c);
             puenteOcupado= false;
             System.out.println("C_"+c.getNombre()+" (3) - PUENTE - Fin cruzar");
-            //notifyAll();
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public synchronized void  crossRight(Camion c){
+    public void  crossRight(Camion c){
         try {
             puenteOcupado = true;
             ladoIzquierdo.remove(c);
@@ -41,18 +41,7 @@ public class Puente {
             throw new RuntimeException(e);
         }
     }
-    public int cuantosLadoIzq(){
-        return ladoIzquierdo.size();
-    }
-    /*
-    public synchronized void carga(Camion c){
-        try {
 
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-     */
 
 
 }

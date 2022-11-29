@@ -1,4 +1,4 @@
-package Ej5_2;
+package Ej5_1Semaforo;
 
 public class Main {
     public static final int N_CAMIONES = 7;
@@ -9,10 +9,9 @@ public class Main {
         Puente p = new Puente();
         Escabadora e = new Escabadora();
         for (int i = 0; i < N_CAMIONES; i++) {
-            Camion camion = new Camion("Camion "+(i+1), p, e);
+            Camion camion = new Camion("Camion"+(i+1), p, e);
             p.addRight(camion);
             camion.start();
         }
-
     }
 }

@@ -17,10 +17,7 @@ public class Camion extends Thread{
         return nombre;
     }
     public void run(){
-
-
         System.out.println("C_"+nombre+" (1) - Esperando derecha para cruzar puente");
-
         synchronized (puente){
             try {
             if(puente.cuantosLadoIzq() >= N_CAMIONES_MAX){
@@ -39,7 +36,5 @@ public class Camion extends Thread{
         synchronized (puente){
             puente.crossRight(this);
         }
-
-
     }
 }

@@ -1,4 +1,4 @@
-package Ej5_2;
+package Ej5_1Semaforo;
 
 import java.util.ArrayList;
 
@@ -35,15 +35,11 @@ public class Puente {
             Thread.sleep(500);
             ladoDerecho.add(c);
             puenteOcupado= false;
+
             System.out.println("C_"+c.getNombre()+" (9) - PUENTE - Fin cruzar");
-            notify();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
-    public int cuantosLadoIzq(){
-        return ladoIzquierdo.size();
-    }
-
 
 }

@@ -1,4 +1,4 @@
-package Ej5_2;
+package Ej5_2Semaforo;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,7 @@ public class Puente {
             ladoIzquierdo.add(c);
             puenteOcupado= false;
             System.out.println("C_"+c.getNombre()+" (3) - PUENTE - Fin cruzar");
-            //notifyAll();
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -36,14 +36,9 @@ public class Puente {
             ladoDerecho.add(c);
             puenteOcupado= false;
             System.out.println("C_"+c.getNombre()+" (9) - PUENTE - Fin cruzar");
-            notify();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
-    public int cuantosLadoIzq(){
-        return ladoIzquierdo.size();
-    }
-
 
 }
