@@ -167,7 +167,7 @@ public class CarreraSolidariaParar {
                 idx = i;
             }
         }
-//        System.out.print("\n posUltimo () - FIN =" + x);
+
         return hilos[idx];
     }
 
@@ -214,10 +214,9 @@ public class CarreraSolidariaParar {
                 while (continuarHilo) {
                     //System.out.print("\n [ " + getLabel().getText() + " ]");
                     //Y tambien añado aquí un semáforo
-                    Semaphore s = new Semaphore(1);
-                    s.acquire();
+
                     desplazaEtiqueta();
-                    s.release();
+
 
                     int espera = rnd.nextInt(DEMORA_BASE) * rnd.nextInt(VELOCIDAD);
                     if (ESPERA_ACTIVA) {

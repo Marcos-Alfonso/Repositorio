@@ -68,7 +68,7 @@ public class CarreraSolidariaPararError {
 
     // main class 
     public static void main(String[] args) {
-        CarreraSolidariaParar programa = new CarreraSolidariaParar();
+        CarreraSolidariaPararError programa = new CarreraSolidariaPararError();
     }
 
     /**
@@ -201,7 +201,7 @@ public class CarreraSolidariaPararError {
         public void run() {
             try {
                 while (continuarHilo) {
-                    //System.out.print("\n [ " + getLabel().getText() + " ]");
+
                     desplazaEtiqueta();
                     int espera = rnd.nextInt(DEMORA_BASE) * rnd.nextInt(VELOCIDAD);
                     if (ESPERA_ACTIVA) {
@@ -278,7 +278,7 @@ public class CarreraSolidariaPararError {
             if (separacion > MAX_SEPARACION) {
                 // Penalizado
                 label.setForeground(Color.RED);
-                label.setBackground(Color.GRAY);
+                label.setBackground(Color.MAGENTA);
                 System.out.print("\n" + getLabel().getText() + " Descalificado");
                 this.continuarHilo = false;
                 this.label.setText(textLabel + "<" + ultimo.textLabel + ">");
