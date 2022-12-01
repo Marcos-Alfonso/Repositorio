@@ -32,6 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $surname = test_input($_POST["surname"]);
     //filtro apellido
 
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$surname)) {
+      $nameErr = "Apellido incluye carácteres no permtido";
+    }
     if(str_word_count($surname)<=1){
       $surnameErr = "Debe haber mas de un apellido";
     }
@@ -41,8 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $birthDateErr = "Fecha de nacimiento requerido";
   } else {
     $birthDate = test_input($_POST["birthDate"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-   
+    $date1=date_create_from_format($birthDate, "dd/mm/yyyy");
+    $date2=date_create_from_format(date("dd/mm/yyyy"), "dd/mm/yyyy");
+   echo $date2;
   }
 
   if (empty($_POST["gender"])) {
@@ -103,6 +107,7 @@ echo "<br>";
 echo $birthDate;
 echo "<br>";
 echo $gender;
+
 ?>
 
 </body>
