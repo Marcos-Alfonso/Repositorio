@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $surname = test_input($_POST["surname"]);
     //filtro apellido
-    $appellidos = explode(" ", $surname);
-    if(count($appellidos)<1){
+
+    if(str_word_count($surname)<=1){
       $surnameErr = "Debe haber mas de un apellido";
     }
   }
