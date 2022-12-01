@@ -75,21 +75,14 @@ public class CarreraSolidariaParar {
      * Creamos la ventana principal
      */
     public void initComponents() {
-        // create a new frame to stor text field and button 
+
         frame = new JFrame("Etiquetas");
         panel = new JPanel(); // create a panel 
         panel.setLayout(null);
 
-        // add panel to frame 
-        //frame.add(panel);
         frame.getContentPane().add(panel);
         frame.setSize(SIZE_X, SIZE_Y); // set the size of frame 
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-        /**
-         * Evento que captura cuando se cierra la ventana. Comunica a los hilos
-         * que finalicen
-         */
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -98,19 +91,12 @@ public class CarreraSolidariaParar {
             }
         });
 
-        //5. Show it.
         frame.setVisible(true);
 
-        //frame.show();   // Obsoleto, aunque a nosotros no nos preocupa
     }
 
-    /**
-     * Crea una etiqueta JLabel y la situa en la posición indicada
-     *
-     * @param x
-     * @param y
-     * @return
-     */
+    //Crea una etiqueta JLabel y la situa en la posición indicada
+
     JLabel creaEtiqueta(int x, int y, String id) {
         // create a label to display text 
         JLabel label = new JLabel();
@@ -124,10 +110,6 @@ public class CarreraSolidariaParar {
         panel.add(label);
         return label;
     }
-
-    /**
-     * Lanza los hilos
-     */
     public void ejecutaHilos() {
         for (int i = 0; i < hilos.length; i++) {
             JLabel l = creaEtiqueta(0, i * SIZE_CARRIL + SEP_Y / 2, Integer.toString(i + 1));
@@ -150,7 +132,6 @@ public class CarreraSolidariaParar {
     }
 
     public Hilo ultimo() {
-        //De aqui
         int idx = 0;
         boolean encontrado = false;
         while(!encontrado && idx < 24){
@@ -160,33 +141,21 @@ public class CarreraSolidariaParar {
                 encontrado = true;
             }
         }
-        //A aquí
         for (int i = 0; i < hilos.length; i++) {
             if (hilos[i].continuarHilo && hilos[i].getX() <= hilos[idx].getX()) {
                 idx = i;
             }
         }
-//        System.out.print("\n posUltimo () - FIN =" + x);
+
         return hilos[idx];
     }
 
-    /**
-     * Comunica a todos los hilos que deben finalizar
-     */
     public void finalizaHilos() {
         for (int i = 0; i < hilos.length; i++) {
             hilos[i].finaliza();
 
         }
     }
-
-
-
-    /**
-     * *********************************************************************
-     * CLASE ANIDADA
-     * **********************************************************************
-     */
     class Hilo extends Thread {
 
         private JLabel label;
@@ -194,30 +163,17 @@ public class CarreraSolidariaParar {
         boolean continuarHilo = true;
         Hilo bloqueadoPor = null;
 
-        /**
-         * Constructor
-         *
-         * @param label
-         */
         public Hilo(JLabel label) {
             this.label = label;
             this.textLabel = label.getText();
         }
 
-        /**
-         * Se ejecuta indefinidamente hasta que se marca el hilo para finalizar
-         */
         @Override
         public void run() {
             try {
                 while (continuarHilo) {
                     //System.out.print("\n [ " + getLabel().getText() + " ]");
-
-                    Semaphore s = new Semaphore(1);
-                    s.acquire();
                     desplazaEtiqueta();
-                    s.release();
-
                     int espera = rnd.nextInt(DEMORA_BASE) * rnd.nextInt(VELOCIDAD);
                     if (ESPERA_ACTIVA) {
                         double inicio = System.currentTimeMillis();
@@ -239,18 +195,11 @@ public class CarreraSolidariaParar {
             return (int) label.getBounds().getX();
         }
 
-        /**
-         * Marca el hilo para que se finalice
-         */
         public void finaliza() {
             continuarHilo = false;
         }
 
-        /**
-         * Mueve la etiqueta en la dirección calculada y comprueba que no se
-         * salga de los límites de la ventana
-         */
-        //public ArrayList<Hilo> blockedThreads = new ArrayList<>();
+
         private void desplazaEtiqueta() throws Exception {
             Rectangle rectLabel = label.getBounds();
             Rectangle rectPanel = panel.getBounds();
@@ -259,11 +208,9 @@ public class CarreraSolidariaParar {
             int y = ((int) rectLabel.getY());
             int salto = SALTO;
             if (newX + salto < rectPanel.getWidth() - rectLabel.getWidth()) {
-                // No llega al final
                 newX += salto;
-                //System.out.print("\n" + getLabel().getText() + " Avanza  [" + salto + "] - X=" + newX);
             } else {
-                // LLega al final, no sobrepasa
+
                 newX = (int) (rectPanel.getWidth() - rectLabel.getWidth());
                 continuarHilo = false;
                 System.out.print("\n** Termina " + getLabel().getText());
@@ -290,41 +237,43 @@ public class CarreraSolidariaParar {
                 label.setBackground(Color.WHITE);
 
             }
-            /*
-            for (Hilo h:blockedThreads) {
-                if(this.getX() >= h.getX()){
-                    h.label.setForeground(Color.GREEN);
-                    blockedThreads.remove(h);
 
 
-                }
-            }
-             */
 
 
+            this.label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
             label.setText(textLabel + "(" + separacion + ")");
             if (separacion > MAX_SEPARACION) {
                 // Penalizado
                 label.setForeground(Color.RED);
                 label.setBackground(Color.GRAY);
-                System.out.print("\n" + getLabel().getText() + " Penalizado");
+                System.out.print("\n" + getLabel().getText() + " Bloqueado");
 
                 this.label.setText(textLabel + "<" + ultimo.textLabel + ">");
-                //author
-                    synchronized (hilos){
-                        notifyAll();
 
+                try {
+                    this.bloqueadoPor = ultimo;
+                    synchronized (this) {
                         wait();
                     }
+                    System.out.print("\n" + getLabel().getText() + " Despierta");
+                    this.label.setBorder(BorderFactory.createLineBorder(Color.MAGENTA, 2));
+                } catch (InterruptedException interruptedException) {}
 
-                //
 
             }
+            despiertaDemas();
         }
-
-        /**
-         * @return the label
-         */
+        private void despiertaDemas(){
+            for (Hilo h:hilos) {
+                if(h.bloqueadoPor == this && h.getX() <= this.getX()){
+                    synchronized (h) {
+                        h.notify();
+                        h.bloqueadoPor = null;
+                    }
+                }
+            }
+        }
         public JLabel getLabel() {
             return label;
         }

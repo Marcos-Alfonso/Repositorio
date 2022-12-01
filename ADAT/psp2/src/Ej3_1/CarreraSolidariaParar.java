@@ -13,15 +13,12 @@
  * Para saber como se crea una etiqueta
  * Véase https://www.geeksforgeeks.org/jlabel-java-swing/
  */
-package Ej3;
+package Ej3_1;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Random;
-import java.util.concurrent.Semaphore;
 import javax.swing.*;
 
 /**
@@ -39,7 +36,7 @@ public class CarreraSolidariaParar {
     final int SEP_Y = 4;    // separación entre etiquetas
     final int SIZE_CARRIL = (H_LABEL + SEP_Y);
 
-    final int MAX_SEPARACION = 200;
+    final int MAX_SEPARACION = 150;
 
     final int DEMORA_BASE = 100; // Milisegundos que esperamos para realizar el siguiente movimiento
     final int VELOCIDAD = 15;
@@ -48,33 +45,23 @@ public class CarreraSolidariaParar {
 
     final int N_HILOS = (int) SIZE_Y / SIZE_CARRIL;  // Nº de hilos y etiquetas que se mostrarán, tantas como caben en vertical
 
-    final Random rnd = new Random();    // Generador de nºs aleatorios. 
-    // Cuando trabajamos en concurrencia debemos tratar
-    // de garantizar que este objeto es accedido en modo exclusivo
-    // en otro caso no hay garantía de que los números sean aleatorios
+    final Random rnd = new Random();    // Generador de nºs aleatorios.
 
     JFrame frame;   // Ventana principal (marco)
     JPanel panel;   // La ventana principal tiene un marco
 
     final CarreraSolidariaParar.Hilo hilos[] = new CarreraSolidariaParar.Hilo[N_HILOS];
 
-    //
-    // METODOS =========================================================
-    // 
-    // default constructor 
     public CarreraSolidariaParar() {
         initComponents();
         ejecutaHilos();
     }
 
-    // main class 
     public static void main(String[] args) {
         CarreraSolidariaParar programa = new CarreraSolidariaParar();
     }
 
-    /**
-     * Creamos la ventana principal
-     */
+
     public void initComponents() {
         // create a new frame to stor text field and button 
         frame = new JFrame("Etiquetas");
@@ -86,11 +73,6 @@ public class CarreraSolidariaParar {
         frame.getContentPane().add(panel);
         frame.setSize(SIZE_X, SIZE_Y); // set the size of frame 
         frame.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
-
-        /**
-         * Evento que captura cuando se cierra la ventana. Comunica a los hilos
-         * que finalicen
-         */
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -98,25 +80,14 @@ public class CarreraSolidariaParar {
                 finalizaHilos();
             }
         });
-
-        //5. Show it.
         frame.setVisible(true);
 
-        //frame.show();   // Obsoleto, aunque a nosotros no nos preocupa
     }
 
-    /**
-     * Crea una etiqueta JLabel y la situa en la posición indicada
-     *
-     * @param x
-     * @param y
-     * @return
-     */
     JLabel creaEtiqueta(int x, int y, String id) {
-        // create a label to display text 
+
         JLabel label = new JLabel();
 
-        // add text to label 
         label.setText(id);
         label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
         label.setHorizontalAlignment(JLabel.CENTER);
@@ -126,9 +97,6 @@ public class CarreraSolidariaParar {
         return label;
     }
 
-    /**
-     * Lanza los hilos
-     */
     public void ejecutaHilos() {
         for (int i = 0; i < hilos.length; i++) {
             JLabel l = creaEtiqueta(0, i * SIZE_CARRIL + SEP_Y / 2, Integer.toString(i + 1));
@@ -151,17 +119,16 @@ public class CarreraSolidariaParar {
     }
 
     public Hilo ultimo() {
-        //De aqui
+
         int idx = 0;
-        boolean encontrado = false;
-        while(!encontrado && idx < 24){
+        boolean found = false;
+        while(!found && idx < hilos.length){
             if(!hilos[idx].continuarHilo){
                 idx++;
             }else{
-                encontrado = true;
+                found = true;
             }
         }
-        //A aquí
         for (int i = 0; i < hilos.length; i++) {
             if (hilos[i].continuarHilo && hilos[i].getX() <= hilos[idx].getX()) {
                 idx = i;
@@ -170,10 +137,6 @@ public class CarreraSolidariaParar {
 
         return hilos[idx];
     }
-
-    /**
-     * Comunica a todos los hilos que deben finalizar
-     */
     public void finalizaHilos() {
         for (int i = 0; i < hilos.length; i++) {
             hilos[i].finaliza();
@@ -181,43 +144,23 @@ public class CarreraSolidariaParar {
         }
     }
 
-
-
-    /**
-     * *********************************************************************
-     * CLASE ANIDADA
-     * **********************************************************************
-     */
     class Hilo extends Thread {
 
         private JLabel label;
         private String textLabel;
         boolean continuarHilo = true;
-        Hilo bloqueadoPor = null;
 
-        /**
-         * Constructor
-         *
-         * @param label
-         */
+
         public Hilo(JLabel label) {
             this.label = label;
             this.textLabel = label.getText();
         }
 
-        /**
-         * Se ejecuta indefinidamente hasta que se marca el hilo para finalizar
-         */
         @Override
         public void run() {
             try {
                 while (continuarHilo) {
-                    //System.out.print("\n [ " + getLabel().getText() + " ]");
-                    //Y tambien añado aquí un semáforo
-
                     desplazaEtiqueta();
-
-
                     int espera = rnd.nextInt(DEMORA_BASE) * rnd.nextInt(VELOCIDAD);
                     if (ESPERA_ACTIVA) {
                         double inicio = System.currentTimeMillis();
@@ -239,17 +182,10 @@ public class CarreraSolidariaParar {
             return (int) label.getBounds().getX();
         }
 
-        /**
-         * Marca el hilo para que se finalice
-         */
         public void finaliza() {
             continuarHilo = false;
         }
 
-        /**
-         * Mueve la etiqueta en la dirección calculada y comprueba que no se
-         * salga de los límites de la ventana
-         */
         private void desplazaEtiqueta() throws Exception {
             Rectangle rectLabel = label.getBounds();
             Rectangle rectPanel = panel.getBounds();
@@ -258,11 +194,9 @@ public class CarreraSolidariaParar {
             int y = ((int) rectLabel.getY());
             int salto = SALTO;
             if (newX + salto < rectPanel.getWidth() - rectLabel.getWidth()) {
-                // No llega al final
                 newX += salto;
-                //System.out.print("\n" + getLabel().getText() + " Avanza  [" + salto + "] - X=" + newX);
             } else {
-                // LLega al final, no sobrepasa
+
                 newX = (int) (rectPanel.getWidth() - rectLabel.getWidth());
                 continuarHilo = false;
                 System.out.print("\n** Termina " + getLabel().getText());
@@ -298,10 +232,6 @@ public class CarreraSolidariaParar {
                 this.label.setText(textLabel + "<" + ultimo.textLabel + ">");
             }
         }
-
-        /**
-         * @return the label
-         */
         public JLabel getLabel() {
             return label;
         }
