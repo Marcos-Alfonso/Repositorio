@@ -45,8 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $birthDate = test_input($_POST["birthDate"]);
     $date1=date_create_from_format($birthDate, "dd/mm/yyyy");
-    $date2=date_create_from_format(date("dd/mm/yyyy"), "dd/mm/yyyy");
-   echo $date2;
+    $date   = new DateTime(); //this returns the current date time
+    $result = $date->format('Y-m-d-H-i-s');
+    echo $result."AAAAA";
+
   }
 
   if (empty($_POST["gender"])) {
