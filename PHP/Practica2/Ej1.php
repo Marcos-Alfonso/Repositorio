@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $birthDateErr = "Fecha de nacimiento requerido";
   } else {
     $birthDate = test_input($_POST["birthDate"]);
-    if (calcYears($birthDate)<18) {
+    if (2022-getYear($birthDate)<18) {
       $birthDateErr = "Usuario menor de edad";
     }
     if (getYear($birthDate)<1950 || getYear($birthDate)>date("Y")) {
@@ -55,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $sueldo = test_input($_POST["sueldo"]);
     $selected = $_POST["function"];
+    $function = $selected;
     if($selected == "peon" && ($sueldo<600 || $sueldo>1200)){
       $sueldoErr = "Sueldo no correspondiente para peón.";
     }
@@ -81,21 +82,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $aficion = $aficion."/".$selected;
     }
     /*
-    if($gender == "Hombre" && count($_POST["Aficion"])<2){
-      $aficionErr = "Debe seleccionar al menos dos aficiones";
-    }if($gender == "Mujer" && count($_POST["Aficion"])<1){
+    if(count($_POST["Aficion"])<2){
       $aficionErr = "Debe seleccionar al menos una afición";
-    }
+    }else
     */
-    if(count($_POST["Aficion"])<1){
-      $aficionErr = "Debe seleccionar al menos una afición";
-    }else if($gender == "Hombre" && count($_POST["Aficion"])== 1 && in_array("Deportes", $_POST["Aficion"]) ){
+     if($gender == "Hombre" && count($_POST["Aficion"])== 1 && in_array("Deportes", $_POST["Aficion"]) ){
       $aficionErr = "Los hombres no pueden seleccionar solo deportes";
     }
+  }else{
+    $aficionErr = "Debe seleccionar al menos una afición";
   }
   if($nameErr == "" && $surnameErr =="" &&  $genderErr =="" && $birthDateErr =="" && 
    $functionError =="" && $sueldoErr=="" && $aficionErr==""){
-    echo "YYYYYYYYYYYESSSSSSSSSSSSSSSSSSSSSSS";
+    
+
+    $myfile = fopen("empleados.csv", "a+")or die("Unable to open file!");
+    fwrite($myfile, "$name,$surname,$gender,$birthDate,$function,$sueldo,$aficion\n");
+    fclose($myfile);
+    echo '<script>alert("Usuario Creado!")</script>';
   }
  
 }
@@ -106,25 +110,6 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-//Introduce string de fecha y devuelve los años que tenga la persona
-function calcYears($fecha){
-  $day=date("d");
-  $month=date("m");
-  $year=date("Y");
-  $birthday=date("d",strtotime($fecha));
-  $birthmonth=date("m",strtotime($fecha));
-  $birthyear=date("Y",strtotime($fecha));
- 
-  if (($birthmonth == $month) && ($birthday > $day)) {
-  $year=($year-1); }
-  
-  if ($birthmonth > $month) {
-  $year=($year-1);}
-  
-  $edad=($year-$birthyear);
-  
-  return $edad;
-  }
 
   //Introduce string de fecha y devuelve el año en el que haya nacido
 function getYear($fecha){
@@ -176,9 +161,19 @@ function getYear($fecha){
   <input type="checkbox" class="form-check-input" id="conditions" name="Aficion[]" value="Idiomas">Idiomas
   <span class="error">* <?php echo $aficionErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <input type="submit" name="submit" value="Enviar">  
+  <button onclick="erase()">Borrar Datos</button>
+  <br><br>
+  <button onclick="myFunction()">Ver Empleados</button>
 </form>
-
+<script>
+function myFunction() {
+  window.open("Ej2.php");
+}
+function erase() {
+  
+}
+</script>
 <?php
 echo "<h2>Resumen Datos Empleado</h2>";
 echo "Nombre: <span style='color: #03c2fc;'>$name</span>";
