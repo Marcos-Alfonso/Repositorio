@@ -120,7 +120,10 @@ function getYear($fecha){
   }catch(Exception){}
   }
   
-   
+  function erase() {
+    $nameErr = $surnameErr = $genderErr = $birthDateErr = $functionError = $sueldoErr= $aficionErr="";
+  $name = $surname = $gender = $birthDate = $function = $sueldo=$aficion= "";
+  }
     
 ?>
 
@@ -169,9 +172,6 @@ function getYear($fecha){
 <script>
 function myFunction() {
   window.open("Ej2.php");
-}
-function erase() {
-  
 }
 </script>
 <?php
