@@ -1,13 +1,19 @@
 using System.Xml;
-
+using MySql.Data.MySqlClient;
 namespace Ahorcado
 {
     public partial class Form1 : Form
     {
+        MySqlConnection con;
+
+
         public Form1()
         {
             InitializeComponent();
             
+               con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
+            con.Open();
+            label1.Text = con.ConnectionString.ToString();
         }
         List<List<String>> list = new List<List<String>>();
         private void Form1_Load(object sender, EventArgs e)

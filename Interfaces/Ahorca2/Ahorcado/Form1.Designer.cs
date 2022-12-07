@@ -87,7 +87,7 @@
             // 
             this.txNombre.BackColor = System.Drawing.SystemColors.InfoText;
             this.txNombre.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txNombre.Location = new System.Drawing.Point(134, 112);
+            this.txNombre.Location = new System.Drawing.Point(134, 89);
             this.txNombre.MaxLength = 10;
             this.txNombre.Name = "txNombre";
             this.txNombre.Size = new System.Drawing.Size(121, 23);
@@ -112,7 +112,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(261, 115);
+            this.label1.Location = new System.Drawing.Point(261, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 7;

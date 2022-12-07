@@ -84,3 +84,10 @@ C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Deb
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.pdb
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.genruntimeconfig.cache
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\ref\Ahorcado.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll

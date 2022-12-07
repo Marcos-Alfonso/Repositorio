@@ -25,7 +25,6 @@ namespace Ahorcado
         private void Form3_Load(object sender, EventArgs e)
         {
             List<Persona> list = Form2.loadArray();
-
             foreach (Persona persona in list)
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
