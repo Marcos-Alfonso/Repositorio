@@ -43,11 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $birthDateErr = "Fecha de nacimiento requerido";
   } else {
     $birthDate = test_input($_POST["birthDate"]);
-    if (2022-getYear($birthDate)<18) {
-      $birthDateErr = "Usuario menor de edad";
+    if (!validFecha($birthDate)) {
+      $birthDateErr = "Fecha No valida";
     }
-    if (getYear($birthDate)<1950 || getYear($birthDate)>date("Y")) {
-      $birthDateErr = "Año introducido no válido";
+    else if (2022-getYear($birthDate)<18) {
+      $birthDateErr = "Usuario menor de edad";
     }
   }
   if (empty($_POST["sueldo"])) {
@@ -99,6 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myfile = fopen("empleados.csv", "a+")or die("Unable to open file!");
     fwrite($myfile, "$name,$surname,$gender,$birthDate,$function,$sueldo,$aficion\n");
     fclose($myfile);
+    $nameErr = $surnameErr = $genderErr = $birthDateErr = $functionError = $sueldoErr= $aficionErr="";
+    $name = $surname = $gender = $birthDate = $function = $sueldo=$aficion= "";
     echo '<script>alert("Usuario Creado!")</script>';
   }
  
@@ -119,11 +121,25 @@ function getYear($fecha){
   return $year[2];
   }catch(Exception){}
   }
-  
-  function erase() {
-    $nameErr = $surnameErr = $genderErr = $birthDateErr = $functionError = $sueldoErr= $aficionErr="";
-  $name = $surname = $gender = $birthDate = $function = $sueldo=$aficion= "";
+  //compruebo si la fecha tiene el formato que quiero y si está entre 1950 y la actualidad.
+  function validFecha($fecha){
+    try{
+    $year = explode("/",$fecha);
+    if(strlen($year[0])!=2 || $year[0]>31 ||$year[0]<1){
+      return false;
+    }
+    if(strlen($year[1])!=2 || $year[1]>12 ||$year[1]<1){
+      return false;
+    }
+    if(strlen($year[2])!=4 || $year[2]<1950 ||$year[2]>date("Y")){
+      return false;
+    }
+    return true;
+    }catch(Exception){
+      return false;
+    }
   }
+  
     
 ?>
 
@@ -165,13 +181,13 @@ function getYear($fecha){
   <span class="error">* <?php echo $aficionErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Enviar">  
-  <button onclick="erase()">Borrar Datos</button>
   <br><br>
   <button onclick="myFunction()">Ver Empleados</button>
 </form>
 <script>
 function myFunction() {
   window.open("Ej2.php");
+  window.close();
 }
 </script>
 <?php

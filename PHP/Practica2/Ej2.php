@@ -71,6 +71,12 @@ if ($myfile) {
 ?>
         
 </table>
-
+<button onclick="myFunction()">Volver</button>
+<script>
+function myFunction() {
+    window.open("Ej1.php");
+    window.close();
+}
+</script>
 </body>
 </html>
