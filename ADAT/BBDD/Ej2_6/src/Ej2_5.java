@@ -1,17 +1,13 @@
 import java.sql.*;
 
 
-public class Main {
+public class Ej2_5 {
     public static void main(String[] args){
         try {
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/prueba", "root", "root");
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/unidad2", "root", "root");
             Statement stmt=c.createStatement();
             ResultSet rs=stmt.executeQuery("select * from empleados");
-            /*
-            rs.last();
-            System.out.println("Nº Filas"+rs.getRow());
-            rs.beforeFirst();
-             */
+
             while (rs.next()){
                 System.out.printf("Fila %d: %s, %s, %f\n",
                         rs.getRow(),

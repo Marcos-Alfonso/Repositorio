@@ -4,7 +4,7 @@ import java.util.Locale;
 public class Ej2_8 {
     public static void main(String[] args) {
         try {
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/prueba", "root", "root");
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/unidad2", "root", "root");
             DatabaseMetaData dbmd = c.getMetaData();
             System.out.println("Información Base de Datos\n" +
                     "------------------------------------");
