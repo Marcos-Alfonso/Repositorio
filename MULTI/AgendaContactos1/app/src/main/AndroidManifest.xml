@@ -10,7 +10,7 @@
         android:theme="@style/Theme.AgendaContactos">
 
         <activity
-            android:name=".BussquedaAvandaza"
+            android:name=".BusquedaAvanzada"
             android:exported="true" />
         <activity
             android:name=".NuevoGrupo"

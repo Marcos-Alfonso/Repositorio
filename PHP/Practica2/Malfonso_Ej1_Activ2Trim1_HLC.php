@@ -186,7 +186,7 @@ function getYear($fecha){
 </form>
 <script>
 function myFunction() {
-  window.open("Ej2.php");
+  window.open("Malfonso_Ej2_Activ2Trim1_HLC.php");
   window.close();
 }
 </script>

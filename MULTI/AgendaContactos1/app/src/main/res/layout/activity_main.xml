@@ -6,6 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btTelf"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#BA4949"
+        android:minWidth="0dp"
+        android:onClick="eraseTelefono"
+        android:text="-"
+        app:cornerRadius="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName4"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName4" />
+
+    <Button
+        android:id="@+id/btEmail"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#BA4949"
+        android:minWidth="0dp"
+        android:onClick="eraseEmail"
+        android:text="-"
+        app:cornerRadius="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName5" />
+
+    <Button
+        android:id="@+id/btNombre"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#BA4949"
+        android:minWidth="0dp"
+        android:onClick="eraseNombre"
+        android:text="-"
+        app:cornerRadius="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2" />
+
+    <Button
+        android:id="@+id/btApellidos"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#BA4949"
+        android:minWidth="0dp"
+        android:onClick="eraseApellido"
+        android:text="-"
+        app:cornerRadius="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3" />
+
     <EditText
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="wrap_content"
@@ -34,7 +86,7 @@
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Telefono"
         android:inputType="textPersonName"
@@ -55,62 +107,64 @@
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4" />
 
     <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#75AF71"
+        android:onClick="registrar"
+        android:text="Crear"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#BA4949"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#ECBC6C"
         android:onClick="avanzada"
-        android:text="Busqueda Avanzada"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#BA4949"
-        android:onClick="modificar"
-        android:text="Modificar"
-        app:layout_constraintBottom_toBottomOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+        android:text="Busqueda Avanzada🔎"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#BA4949"
+        android:backgroundTint="#ECBC6C"
         android:onClick="consultar"
-        android:text="Buscar"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3" />
+        android:text="Buscar🔎"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/btNombre" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="4dp"
         android:backgroundTint="#BA4949"
         android:onClick="eliminar"
         android:text="Eliminar"
-        app:layout_constraintBottom_toBottomOf="@+id/button4"
-        app:layout_constraintStart_toEndOf="@+id/button4" />
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="28dp"
-        android:backgroundTint="#BA4949"
-        android:onClick="registrar"
-        android:text="Crear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#569DD3"
+        android:onClick="modificar"
+        android:text="Modificar"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -128,21 +182,63 @@
         android:id="@+id/spinner"
         android:layout_width="198dp"
         android:layout_height="33dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="24dp"
         android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button" />
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
-        android:backgroundTint="#BA4949"
+        android:backgroundTint="#75AF71"
         android:minWidth="40dp"
         android:onClick="creargrupo"
         android:text="+"
+        app:cornerRadius="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner"
         app:layout_constraintStart_toEndOf="@+id/spinner" />
+
+    <Switch
+        android:id="@+id/swNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="cambiaText"
+        android:text="AND"
+        app:layout_constraintBottom_toBottomOf="@+id/btNombre"
+        app:layout_constraintStart_toEndOf="@+id/btNombre" />
+
+    <Switch
+        android:id="@+id/swTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="cambiaText"
+        android:text="AND"
+        app:layout_constraintBottom_toBottomOf="@+id/btTelf"
+        app:layout_constraintStart_toStartOf="@+id/swApellidos" />
+
+    <Switch
+        android:id="@+id/swEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="cambiaText"
+        android:text="AND"
+        app:layout_constraintBottom_toBottomOf="@+id/btEmail"
+        app:layout_constraintStart_toStartOf="@+id/swTelefono" />
+
+    <Switch
+        android:id="@+id/swApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="cambiaText"
+        android:text="AND"
+        app:layout_constraintBottom_toBottomOf="@+id/btApellidos"
+        app:layout_constraintStart_toStartOf="@+id/swNombre" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

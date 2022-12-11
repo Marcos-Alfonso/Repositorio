@@ -74,7 +74,7 @@ if ($myfile) {
 <button onclick="myFunction()">Volver</button>
 <script>
 function myFunction() {
-    window.open("Ej1.php");
+    window.open("Malfonso_Ej1_Activ2Trim1_HLC.php");
     window.close();
 }
 </script>
