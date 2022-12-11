@@ -12,7 +12,7 @@ public class Ej2_8 {
             System.out.printf("Driver: %s %n", dbmd.getDriverName());
             System.out.printf("URL: %s %n", dbmd.getURL());
             System.out.printf("Usuario: %s %n", dbmd.getUserName());
-            ResultSet rs = dbmd.getTables("prueba", null, null, null);
+            ResultSet rs = dbmd.getTables("unidad2", null, null, null);
             while (rs.next()){
                 System.out.printf("Tabla %s %n", rs.getString("TABLE_NAME").toUpperCase());
                 System.out.printf("\tCatalogo: %s %n",rs.getString("TABLE_CAT"));

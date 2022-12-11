@@ -39,12 +39,26 @@ public class Ej2 {
         //h)	Método que reciba una cantidad y un número de departamento e incremente el sueldo detodos los empleados de ese departamento en esa cantidad.
         System.out.println(aumentaSueldo(100,20)+" filas modificadas.");
         //i)	Método que imprima todas las tablas y vistas del esquema actual, indicando además, sitrata de una tabla o una vista.
-
+        printDBinfo();
         try {
             c.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private static void printDBinfo() {
+        try {
+            DatabaseMetaData m = c.getMetaData();
+            ResultSet rs = m.getTables("unidad2", null, null, null);
+            while (rs.next()){
+                System.out.printf("Tabla %s %n", rs.getString("TABLE_NAME").toUpperCase());
+                System.out.printf("\tTipo: %s %n", rs.getString("TABLE_TYPE"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     private static int aumentaSueldo(int aumento, int dept_no) {
