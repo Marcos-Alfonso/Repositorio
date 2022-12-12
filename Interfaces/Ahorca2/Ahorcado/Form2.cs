@@ -18,6 +18,7 @@ using System.Xml.Serialization;
 using Newtonsoft.Json;
 using System.IO;
 using System.Drawing.Text;
+using MySql.Data.MySqlClient;
 
 namespace Ahorcado
 {
@@ -107,8 +108,9 @@ namespace Ahorcado
                 recodify(c);
                 b.BackColor = Color.Green;
                 if (!txPalabra.Text.Contains("_")) {
-                    MessageBox.Show("Correcto! La palabra era: "+palabra, "Has ganado!");
+                    timer1.Enabled = false;
                     puntos += 10;
+                    MessageBox.Show("Correcto! La palabra era: "+palabra, "Has ganado!");
                     launchEnding();
                 }
             }
@@ -128,6 +130,7 @@ namespace Ahorcado
                 if (nErrores >= 6)
                 {
                     puntos -= 5;
+                    timer1.Enabled = false;
                     MessageBox.Show("Número de errores máximos alcanzado. La palabra era: "+palabra, "F");
                     
                     launchEnding();
@@ -145,7 +148,19 @@ namespace Ahorcado
             p.nombre = nombre;
             p.puntos = puntos;
             p.gameTime = System.DateTime.Now - start;
-           
+
+            MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
+            con.Open();
+            
+            String query = "INSERT INTO partida VALUES('"+nombre+"', '"+txPlaytime.Text+"', "+puntos+");";
+            MySqlCommand mycomand = new MySqlCommand(query, con);
+            MySqlDataReader myreader = mycomand.ExecuteReader();
+            while (myreader.Read())
+            {
+            }
+            myreader.Close();
+            con.Close();
+            /*
             List<Persona> parts = loadArray();
 
             bool tiene = false;
@@ -168,8 +183,8 @@ namespace Ahorcado
             System.IO.FileStream file = System.IO.File.Create(path);
             writer.Serialize(file, parts);
             file.Close();
+            */
 
-            
             Form3 f = new Form3();
             f.FormBorderStyle = FormBorderStyle.FixedSingle;
 
@@ -227,7 +242,9 @@ namespace Ahorcado
 
         private void surrender(object sender, EventArgs e)
         {
+
             puntos -= 5;
+            timer1.Enabled = false;
             MessageBox.Show("La palabra era: "+palabra, "Rendición");
             
             launchEnding();

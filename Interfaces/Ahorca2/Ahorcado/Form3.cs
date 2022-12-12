@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +45,23 @@ namespace Ahorcado
             this.nombre = nombre;
             this.puntos = puntos;
             tx.Text = $"Nombre: {nombre}, Puntos: {puntos}";
+
+
+            MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
+            con.Open();
+            String query = "SELECT tiempo, puntos FROM partida WHERE usuario = '"+nombre+"';";
+            MySqlCommand mycomand = new MySqlCommand(query, con);
+
+            MySqlDataReader myreader = mycomand.ExecuteReader();
+            while (myreader.Read())
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[1].Value = myreader.GetInt16("puntos");
+                row.Cells[0].Value = myreader.GetTimeSpan("tiempo");
+                dataGridView1.Rows.Add(row);
+            }
+            myreader.Close();
+            con.Close();
         }
 
         private void button26_Click(object sender, EventArgs e)

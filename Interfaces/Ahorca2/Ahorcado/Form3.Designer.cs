@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.tx = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btBack = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,43 +50,6 @@
             this.tx.Size = new System.Drawing.Size(395, 23);
             this.tx.TabIndex = 33;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Puntos,
-            this.Tiempo});
-            this.dataGridView1.Location = new System.Drawing.Point(28, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(289, 165);
-            this.dataGridView1.TabIndex = 34;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 76;
-            // 
-            // Puntos
-            // 
-            this.Puntos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Puntos.HeaderText = "Puntuación";
-            this.Puntos.Name = "Puntos";
-            this.Puntos.ReadOnly = true;
-            this.Puntos.Width = 93;
-            // 
-            // Tiempo
-            // 
-            this.Tiempo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Tiempo.HeaderText = "Tiempo";
-            this.Tiempo.Name = "Tiempo";
-            this.Tiempo.ReadOnly = true;
-            this.Tiempo.Width = 73;
-            // 
             // btBack
             // 
             this.btBack.BackColor = System.Drawing.SystemColors.Desktop;
@@ -101,19 +63,46 @@
             this.btBack.UseVisualStyleBackColor = false;
             this.btBack.Click += new System.EventHandler(this.button26_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tiempo,
+            this.Puntos});
+            this.dataGridView1.Location = new System.Drawing.Point(28, 56);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(199, 150);
+            this.dataGridView1.TabIndex = 36;
+            // 
+            // tiempo
+            // 
+            this.tiempo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tiempo.HeaderText = "Tiempo";
+            this.tiempo.Name = "tiempo";
+            this.tiempo.ReadOnly = true;
+            this.tiempo.Width = 73;
+            // 
+            // Puntos
+            // 
+            this.Puntos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Puntos.HeaderText = "Puntos";
+            this.Puntos.Name = "Puntos";
+            this.Puntos.ReadOnly = true;
+            this.Puntos.Width = 69;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(435, 234);
-            this.Controls.Add(this.btBack);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btBack);
             this.Controls.Add(this.tx);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadísticas";
-            this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,10 +112,9 @@
         #endregion
 
         private TextBox tx;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Puntos;
-        private DataGridViewTextBoxColumn Tiempo;
         private Button btBack;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn tiempo;
+        private DataGridViewTextBoxColumn Puntos;
     }
 }

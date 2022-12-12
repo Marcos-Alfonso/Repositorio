@@ -91,3 +91,4 @@ C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Deb
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\MySql.Data.dll
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\ZstdNet.dll
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.adminPalabras.resources

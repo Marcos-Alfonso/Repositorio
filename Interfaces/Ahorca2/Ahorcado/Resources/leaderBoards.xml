@@ -20,4 +20,9 @@
     <puntos>131</puntos>
     <gameTime>PT8M5.7274463S</gameTime>
   </Persona>
+  <Persona>
+    <nombre>root</nombre>
+    <puntos>-8</puntos>
+    <gameTime>PT11.7312479S</gameTime>
+  </Persona>
 </ArrayOfPersona>
