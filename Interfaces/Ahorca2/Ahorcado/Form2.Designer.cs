@@ -443,7 +443,7 @@
             this.txErrorCount.Multiline = true;
             this.txErrorCount.Name = "txErrorCount";
             this.txErrorCount.ReadOnly = true;
-            this.txErrorCount.Size = new System.Drawing.Size(241, 34);
+            this.txErrorCount.Size = new System.Drawing.Size(296, 34);
             this.txErrorCount.TabIndex = 29;
             this.txErrorCount.Text = "Numero de errores: 0/6";
             // 
@@ -457,7 +457,7 @@
             this.txErrorChars.Multiline = true;
             this.txErrorChars.Name = "txErrorChars";
             this.txErrorChars.ReadOnly = true;
-            this.txErrorChars.Size = new System.Drawing.Size(241, 34);
+            this.txErrorChars.Size = new System.Drawing.Size(269, 34);
             this.txErrorChars.TabIndex = 30;
             // 
             // timer1

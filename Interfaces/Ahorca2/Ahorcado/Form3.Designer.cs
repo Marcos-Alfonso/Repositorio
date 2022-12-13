@@ -65,12 +65,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tiempo,
             this.Puntos});
             this.dataGridView1.Location = new System.Drawing.Point(28, 56);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(199, 150);
             this.dataGridView1.TabIndex = 36;
@@ -81,7 +83,7 @@
             this.tiempo.HeaderText = "Tiempo";
             this.tiempo.Name = "tiempo";
             this.tiempo.ReadOnly = true;
-            this.tiempo.Width = 73;
+            this.tiempo.Width = 72;
             // 
             // Puntos
             // 
