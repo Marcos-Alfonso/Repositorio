@@ -60,7 +60,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(365, 277);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.select);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.select);
             // 
             // palabra
             // 
@@ -79,6 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(383, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 15);
@@ -104,6 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(383, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 15);
@@ -155,6 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(510, 301);
             this.Controls.Add(this.lbError);
             this.Controls.Add(this.button3);

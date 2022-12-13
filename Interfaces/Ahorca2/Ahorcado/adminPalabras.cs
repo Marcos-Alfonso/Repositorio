@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -44,11 +45,12 @@ namespace Ahorcado
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try { 
             if (txPalabra.Text != "" && txCategoria.Text != "")
             {
                 MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
                 con.Open();
-                String query = "INSERT INTO palabra VALUES('"+txPalabra.Text+ "','"+txCategoria.Text+"');";
+                String query = "INSERT INTO palabra VALUES('"+txPalabra.Text.ToUpper()+ "','"+txCategoria.Text.ToUpper() + "');";
                 MySqlCommand mycomand = new MySqlCommand(query, con);
 
                 MySqlDataReader myreader = mycomand.ExecuteReader();
@@ -62,13 +64,55 @@ namespace Ahorcado
                 con.Close();
                 txPalabra.Text = txCategoria.Text = "";
                 loadPalabras();
+                }
+            }catch(Exception ex)
+            {
+                lbError.Text = "Palabra ya existente.";
+                lbError.Visible = true;
             }
         }
         //modificar
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txPalabra.Text != "" && txCategoria.Text != "")
+            {
+                if (dataGridView1.SelectedRows.Count == 1)
+                {
+                    MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
+                    con.Open();
+                    DataGridViewRow row = dataGridView1.SelectedRows[0];
+                    String query = $"UPDATE palabra SET palabra = '{txPalabra.Text}', categoria = '{txCategoria.Text}' WHERE palabra = '{row.Cells[0].Value}' AND categoria = '{row.Cells[1].Value}';";
+                    MySqlCommand mycomand = new MySqlCommand(query, con);
 
-        }
+                    MySqlDataReader myreader = mycomand.ExecuteReader();
+
+                    while (myreader.Read())
+                    {}
+                    myreader.Close();
+                    con.Close();
+                    txPalabra.Text = txCategoria.Text = "";
+                    loadPalabras();
+                }
+                else
+                {
+                    lbError.Text = "Selecciona al una fila.";
+                    lbError.Visible = true;
+                }
+            }
+            else
+            {
+                lbError.Text = "Campos vacios.";
+                lbError.Visible = true;
+            }
+
+        }catch(Exception ex)
+            {
+                lbError.Text = "Palabra ya existente.";
+                lbError.Visible = true;
+            }
+}
         //eliminar
         private void button3_Click(object sender, EventArgs e)
         {
@@ -106,13 +150,27 @@ namespace Ahorcado
             myreader.Close();
             con.Close();
         }
-        private void select(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void cambio(object sender, EventArgs e)
         {
+            
+        }
+
+        private void select(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count != 0)
+                {
+                    DataGridViewRow row = dataGridView1.SelectedRows[0];
+                    txPalabra.Text = row.Cells[0].Value.ToString();
+                    txCategoria.Text = row.Cells[1].Value.ToString();
+                }
+            }catch(Exception ex)
+            {
+
+            }
             
         }
     }
