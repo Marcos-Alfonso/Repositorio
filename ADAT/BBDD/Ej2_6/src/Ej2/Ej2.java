@@ -54,6 +54,7 @@ public class Ej2 {
             while (rs.next()){
                 System.out.printf("Tabla %s %n", rs.getString("TABLE_NAME").toUpperCase());
                 System.out.printf("\tTipo: %s %n", rs.getString("TABLE_TYPE"));
+                //tramite que muestra cada tabla, OPCIONAL
                 DBTablePrinter.printTable(c, rs.getString("TABLE_NAME"));
             }
 
