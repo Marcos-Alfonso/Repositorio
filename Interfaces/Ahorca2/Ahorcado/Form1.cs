@@ -139,10 +139,12 @@ namespace Ahorcado
                         button3.Visible = true;
                         button2.Visible = true;
                     }
+                    cbCategoria.Visible = true;
                     label1.Text = "✓";
                     label1.ForeColor = Color.Green;
                     label1.Visible = true;
                     btLeaderBoard.Visible = true;
+                    button5.Visible = false;
                 }
                 else
                 {
@@ -160,6 +162,8 @@ namespace Ahorcado
         }
         private void cierraSesion()
         {
+            button5.Visible = true;
+            cbCategoria.Visible = false;
             button1.Visible = false;
             label2.Visible = false;
             button3.Visible = false;
@@ -180,6 +184,12 @@ namespace Ahorcado
             //f.Closed += (s, args) => this.txNombre_TextChanged(sender, e);
             f.Show();
             loadCombo();
+        }
+
+        //nuevo usuario
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

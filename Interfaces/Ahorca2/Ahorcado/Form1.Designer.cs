@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 23);
             this.cbCategoria.TabIndex = 1;
+            this.cbCategoria.Visible = false;
             // 
             // pictureBox1
             // 
@@ -105,14 +107,14 @@
             // btLeaderBoard
             // 
             this.btLeaderBoard.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btLeaderBoard.BackgroundImage = global::Ahorcado.Properties.Resources._1;
             this.btLeaderBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btLeaderBoard.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btLeaderBoard.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btLeaderBoard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btLeaderBoard.Location = new System.Drawing.Point(342, 219);
+            this.btLeaderBoard.Location = new System.Drawing.Point(283, 219);
             this.btLeaderBoard.Name = "btLeaderBoard";
-            this.btLeaderBoard.Size = new System.Drawing.Size(30, 30);
+            this.btLeaderBoard.Size = new System.Drawing.Size(89, 30);
             this.btLeaderBoard.TabIndex = 6;
+            this.btLeaderBoard.Text = "Mis Datos";
             this.btLeaderBoard.UseVisualStyleBackColor = false;
             this.btLeaderBoard.Visible = false;
             this.btLeaderBoard.Click += new System.EventHandler(this.btLeaderBoard_Click);
@@ -212,12 +214,27 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.iniciaSesion);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(283, 89);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(89, 56);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Nuevo Usuario";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -259,5 +276,6 @@
         private Label label3;
         private Label label4;
         private Button button4;
+        private Button button5;
     }
 }

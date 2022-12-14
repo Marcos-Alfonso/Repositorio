@@ -32,12 +32,14 @@ namespace Ahorcado
             pfc.AddFontFile("../../../Resources/" + "/Minecraft.ttf");
             foreach(Control c in this.Controls)
             {
+                /*
                 try
                 {
                     Button b = (Button)c;
                     b.Font = new Font(pfc.Families[0], b.Font.Size, b.Font.Style);
                 }
                 catch (Exception ex){ }
+                */
                 try
                 {
                     TextBox tb = (TextBox)c;
@@ -187,7 +189,7 @@ namespace Ahorcado
 
             Form3 f = new Form3();
             f.FormBorderStyle = FormBorderStyle.FixedSingle;
-
+            f.hideMod();
             f.init(nombre, puntos);
             this.Hide();
             f.Closed += (s, args) => this.Close();

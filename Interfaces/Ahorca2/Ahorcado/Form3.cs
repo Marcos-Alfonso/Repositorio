@@ -68,5 +68,45 @@ namespace Ahorcado
         {
             this.Close();
         }
+        public void hideMod()
+        {
+            label1.Visible = label2.Visible = label3.Visible = txPass.Visible = txPassConfirm.Visible = button1.Visible = false;
+            tx.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lbError.Visible = false;
+            String s1 = txPass.Text, s2 = txPassConfirm.Text;
+            if (s1 == "" || s2 == "")
+            {
+                lbError.ForeColor = Color.Red;
+                lbError.Text = "Rellena ambos campos.";
+                lbError.Visible = true;
+                return;
+            }
+            if (s1 != s2)
+            {
+                lbError.ForeColor = Color.Red;
+                lbError.Text = "Contraseñas no coinciden";
+                lbError.Visible = true;
+                return;
+            }
+            MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
+            con.Open();
+            String query = $"UPDATE usuario SET pass='{s1}' WHERE nombre = '{nombre}';";
+            MySqlCommand mycomand = new MySqlCommand(query, con);
+
+            MySqlDataReader myreader = mycomand.ExecuteReader();
+            while (myreader.Read())
+            {
+            }
+            myreader.Close();
+            con.Close();
+            lbError.ForeColor = Color.Green;
+            lbError.Text = "Contraseña Actualizada.";
+            lbError.Visible = true;
+            txPass.Text = txPassConfirm.Text = "";
+        }
     }
 }
