@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+    <script>
+        function verTabla(){
+            num = parseInt(document.getElementById('num').value);
+            cadena = "<table>";
+            for (let i = 1; i < 11; i++) {
+                mult = num*i;
+                cadena += "<tr><td>"+num+" x "+i+"</td><td>"+mult+"</td></tr>"
+            }
+            cadena += "</table>";
+            document.getElementById('divTable').innerHTML = cadena;
+            console.log("End");
+        }
+    </script>
+</head>
+<body>
+    <input id="num" type="text">
+    <button onclick="verTabla()">Ver tabla</button><br>
+    <div id= "divTable"></div>
+</body>
+</html>

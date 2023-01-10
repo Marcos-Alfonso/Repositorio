@@ -112,7 +112,7 @@ namespace Ahorcado
                 if (!txPalabra.Text.Contains("_")) {
                     timer1.Enabled = false;
                     puntos += 10;
-                    MessageBox.Show("Correcto! La palabra era: "+palabra, "Has ganado!");
+                    
                     launchEnding();
                 }
             }
@@ -133,7 +133,6 @@ namespace Ahorcado
                 {
                     puntos -= 5;
                     timer1.Enabled = false;
-                    MessageBox.Show("Número de errores máximos alcanzado. La palabra era: "+palabra, "F");
                     
                     launchEnding();
                     
@@ -244,12 +243,16 @@ namespace Ahorcado
 
         private void surrender(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("¿Seguro que desea rendirse?", "Confirmar", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                puntos -= 5;
+                timer1.Enabled = false;
 
-            puntos -= 5;
-            timer1.Enabled = false;
-            MessageBox.Show("La palabra era: "+palabra, "Rendición");
+
+                launchEnding();
+            }
             
-            launchEnding();
         }
     }
 

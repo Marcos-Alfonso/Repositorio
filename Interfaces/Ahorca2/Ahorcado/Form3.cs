@@ -25,6 +25,7 @@ namespace Ahorcado
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            /*
             List<Persona> list = Form2.loadArray();
             foreach (Persona persona in list)
             {
@@ -34,6 +35,7 @@ namespace Ahorcado
                 row.Cells[2].Value = persona.gameTime.ToString().Substring(0, 8);
                 dataGridView1.Rows.Add(row);
             }
+            */
         }
         
         String nombre;
@@ -44,7 +46,7 @@ namespace Ahorcado
         {
             this.nombre = nombre;
             this.puntos = puntos;
-            tx.Text = $"Nombre: {nombre}, Puntos: {puntos}";
+            tx.Text = $"Nombre: {nombre}\n Puntos: {puntos}";
 
 
             MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");

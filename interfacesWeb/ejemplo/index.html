@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function suma() {
+            document.getElementById('suma').value = 
+            parseInt(document.getElementById('n1').value)
+            + parseInt(document.getElementById('n2').value);
+        }
+        
+    </script>
+</head>
+<body>
+
+    Numero 1: <input type="text" id="n1">
+    Numero 2: <input type="text" id="n2">
+    Suma: <input type="text" id="suma">
+        <button type="button" onclick="suma()">Sumar</button>
+        
+</body>
+
+</html>

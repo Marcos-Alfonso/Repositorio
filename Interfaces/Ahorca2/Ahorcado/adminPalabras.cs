@@ -17,20 +17,20 @@ namespace Ahorcado
         public adminPalabras()
         {
             InitializeComponent();
-            loadPalabras();
+            loadPalabras("%");
+            loadCombo();
         }
 
-        private void loadPalabras()
+        private void loadPalabras(string cat)
         {
             lbError.Visible = false;
-            dataGridView1.Rows.Clear();
             MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
             con.Open();
-            String query = "SELECT * FROM palabra ORDER BY categoria, palabra;";
+            String query = $"SELECT * FROM palabra WHERE categoria LIKE '{cat}' ORDER BY categoria, palabra;";
             MySqlCommand mycomand = new MySqlCommand(query, con);
 
             MySqlDataReader myreader = mycomand.ExecuteReader();
-            
+            dataGridView1.Rows.Clear();
             while (myreader.Read())
             {
                 int rowId = dataGridView1.Rows.Add();
@@ -39,6 +39,26 @@ namespace Ahorcado
                 row.Cells["categoria"].Value = myreader.GetString("categoria");
             }
             
+            
+            myreader.Close();
+            con.Close();
+        }
+
+        private void loadCombo()
+        {
+            MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
+            con.Open();
+            String query = "SELECT DISTINCT(categoria) FROM palabra";
+            MySqlCommand mycomand = new MySqlCommand(query, con);
+
+            MySqlDataReader myreader = mycomand.ExecuteReader();
+            cbCategoria.Items.Clear();
+            cbCategoria.Items.Add("");
+            while (myreader.Read())
+            {
+                cbCategoria.Items.Add(myreader.GetString("categoria"));
+            }
+            cbCategoria.SelectedIndex = 0;
             myreader.Close();
             con.Close();
         }
@@ -63,7 +83,8 @@ namespace Ahorcado
                 myreader.Close();
                 con.Close();
                 txPalabra.Text = txCategoria.Text = "";
-                loadPalabras();
+                loadPalabras("%");
+                loadCombo();
                 }
             }catch(Exception ex)
             {
@@ -93,8 +114,9 @@ namespace Ahorcado
                     myreader.Close();
                     con.Close();
                     txPalabra.Text = txCategoria.Text = "";
-                    loadPalabras();
-                }
+                    loadPalabras("%");
+                        loadCombo();
+                    }
                 else
                 {
                     lbError.Text = "Selecciona al una fila.";
@@ -129,7 +151,8 @@ namespace Ahorcado
                 {
                     elimina(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
                 }
-                loadPalabras();
+                loadPalabras("%");
+                loadCombo();
             }
             
             
@@ -172,6 +195,16 @@ namespace Ahorcado
 
             }
             
+        }
+
+        private void cambiaCat(object sender, EventArgs e)
+        {
+            if (cbCategoria.Text.Equals(""))
+            {
+                loadPalabras("%");
+                return;
+            }
+            loadPalabras(cbCategoria.Text);
         }
     }
 }

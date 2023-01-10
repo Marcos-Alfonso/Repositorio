@@ -39,6 +39,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lbError = new System.Windows.Forms.Label();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(383, 43);
+            this.label1.Location = new System.Drawing.Point(383, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 15);
             this.label1.TabIndex = 1;
@@ -88,7 +90,7 @@
             // 
             // txPalabra
             // 
-            this.txPalabra.Location = new System.Drawing.Point(383, 61);
+            this.txPalabra.Location = new System.Drawing.Point(383, 35);
             this.txPalabra.Name = "txPalabra";
             this.txPalabra.Size = new System.Drawing.Size(115, 23);
             this.txPalabra.TabIndex = 2;
@@ -96,7 +98,7 @@
             // 
             // txCategoria
             // 
-            this.txCategoria.Location = new System.Drawing.Point(383, 109);
+            this.txCategoria.Location = new System.Drawing.Point(383, 83);
             this.txCategoria.Name = "txCategoria";
             this.txCategoria.Size = new System.Drawing.Size(115, 23);
             this.txCategoria.TabIndex = 4;
@@ -106,7 +108,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(383, 91);
+            this.label2.Location = new System.Drawing.Point(383, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 3;
@@ -146,12 +148,32 @@
             // 
             this.lbError.AutoSize = true;
             this.lbError.ForeColor = System.Drawing.Color.Red;
-            this.lbError.Location = new System.Drawing.Point(383, 135);
+            this.lbError.Location = new System.Drawing.Point(383, 109);
             this.lbError.Name = "lbError";
             this.lbError.Size = new System.Drawing.Size(35, 15);
             this.lbError.TabIndex = 8;
             this.lbError.Text = "Error.";
             this.lbError.Visible = false;
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(383, 144);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(121, 23);
+            this.cbCategoria.TabIndex = 9;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cambiaCat);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(383, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 15);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Filtro";
             // 
             // adminPalabras
             // 
@@ -159,6 +181,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(510, 301);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.lbError);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -189,5 +213,7 @@
         private Button button2;
         private Button button3;
         private Label lbError;
+        private ComboBox cbCategoria;
+        private Label label3;
     }
 }

@@ -220,7 +220,7 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(283, 89);
+            this.button5.Location = new System.Drawing.Point(283, 157);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(89, 56);
             this.button5.TabIndex = 15;

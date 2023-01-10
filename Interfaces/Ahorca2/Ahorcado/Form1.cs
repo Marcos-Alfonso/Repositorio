@@ -130,6 +130,8 @@ namespace Ahorcado
                 MySqlDataReader myreader = mycomand.ExecuteReader();
                 if (myreader.HasRows)
                 {
+                    txNombre.Enabled = false;
+                    textBox1.Enabled = false;
                     button1.Visible = true;
                     button4.Text = "Cierra Sesión";
                     myreader.Read();
@@ -162,6 +164,8 @@ namespace Ahorcado
         }
         private void cierraSesion()
         {
+            txNombre.Enabled = true;
+            textBox1.Enabled = true;
             button5.Visible = true;
             cbCategoria.Visible = false;
             button1.Visible = false;
