@@ -123,3 +123,4 @@ E:\Repositorio\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\
 E:\Repositorio\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.genruntimeconfig.cache
 E:\Repositorio\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\ref\Ahorcado.dll
 C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.NuevoUsuario.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Ahorca2\Ahorcado\obj\Debug\net6.0-windows\Ahorcado.AdminUsers.resources

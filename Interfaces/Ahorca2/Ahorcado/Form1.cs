@@ -193,7 +193,22 @@ namespace Ahorcado
         //nuevo usuario
         private void button5_Click(object sender, EventArgs e)
         {
+            NuevoUsuario n = new NuevoUsuario(this);
+          
+            n.ShowDialog();
+            
+        }
+        public void rellena(String n, String pass)
+        {
+            txNombre.Text = n;
+            textBox1.Text = pass;
+            iniciaSesion(null, null);
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+             AdminUsers a = new AdminUsers();
+            a.Show();
         }
     }
 }

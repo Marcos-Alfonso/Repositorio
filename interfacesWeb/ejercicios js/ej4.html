@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej4</title>
+    <script>
+        function action(){
+            
+            input = document.getElementById('input').value;
+            isPalindrome = true;
+            for (var i = 0; i < input.length; i++) {
+                if(input.charAt(i)!=input.charAt(input.length-i-1)){
+                    isPalindrome = false;
+                }
+            }
+            if(isPalindrome){
+                document.getElementById('output').innerHTML = "Es palíndromo."
+            }else{
+                document.getElementById('output').innerHTML = "No es palíndromo."
+            }
+            if(input.length = 0){
+                document.getElementById('output').innerHTML = ""
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Ej4. Crear un script que nos diga si una palabra es palíndroma (se escribe igual de izquierda a derecha que al revés).</h2>
+    <input type="text" id="input">
+    <button onclick="action()">Acciona</button>
+    <div>
+        <p id="output">45</p>
+    </div>
+</body>
+</html>

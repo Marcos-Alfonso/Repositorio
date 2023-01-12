@@ -57,7 +57,7 @@
             this.txPassConfirm.Name = "txPassConfirm";
             this.txPassConfirm.PasswordChar = '*';
             this.txPassConfirm.Size = new System.Drawing.Size(119, 23);
-            this.txPassConfirm.TabIndex = 45;
+            this.txPassConfirm.TabIndex = 3;
             // 
             // label2
             // 
@@ -77,7 +77,7 @@
             this.txPass.Name = "txPass";
             this.txPass.PasswordChar = '*';
             this.txPass.Size = new System.Drawing.Size(119, 23);
-            this.txPass.TabIndex = 42;
+            this.txPass.TabIndex = 2;
             // 
             // label1
             // 
@@ -95,7 +95,7 @@
             this.txNombre.Location = new System.Drawing.Point(82, 72);
             this.txNombre.Name = "txNombre";
             this.txNombre.Size = new System.Drawing.Size(119, 23);
-            this.txNombre.TabIndex = 47;
+            this.txNombre.TabIndex = 1;
             // 
             // label4
             // 
@@ -113,7 +113,7 @@
             this.button1.Location = new System.Drawing.Point(141, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 50;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -124,6 +124,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 51;
+            this.button2.TabStop = false;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -157,7 +158,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txPass);
             this.Name = "NuevoUsuario";
-            this.Text = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nuevo Usuario";
             this.Load += new System.EventHandler(this.NuevoUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

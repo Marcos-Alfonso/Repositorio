@@ -49,15 +49,30 @@ namespace Ahorcado
                 lbError.Visible = true;
                 return;
             }
-            MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
-            con.Open();
+            
+            try
+            {
+            
+                MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
+                con.Open();
 
-            String query = "INSERT INTO partida VALUES('" + txNombre.Text + "', '" + txPass.Text + "', 'JG' );";
-            MySqlCommand mycomand = new MySqlCommand(query, con);
-            MySqlDataReader myreader = mycomand.ExecuteReader();
-            myreader.Close();
-            con.Close();
-            this.Close();
+                String query = "INSERT INTO usuario VALUES('" + txNombre.Text + "', '" + txPass.Text + "', 'JG' );";
+                MySqlCommand mycomand = new MySqlCommand(query, con);
+                MySqlDataReader myreader = mycomand.ExecuteReader();
+                myreader.Close();
+                con.Close();
+
+                f.rellena(txNombre.Text, txPass.Text);
+                this.Close();
+                
+            }
+            catch (MySqlException ex)
+            {
+                lbError.Text = "Nombre no disponible";
+                lbError.Visible = true;
+            }
+                
+            
         }
     }
 }
