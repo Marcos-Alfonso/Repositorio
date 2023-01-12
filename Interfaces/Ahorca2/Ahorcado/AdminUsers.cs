@@ -26,6 +26,33 @@ namespace Ahorcado
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             dtUsers.DataSource = ds.Tables[0];
+            dtUsers.Columns["pass"].Visible = false;
+            dtUsers.Columns["rol"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dtUsers.SelectedRows.Count == 0)
+            {
+                lbError.Text = "No hay filas seleccionadas";
+                return;
+            }
+            if (dtUsers.SelectedRows[0].Cells["rol"].Value == "AD")
+            {
+                dtUsers.SelectedRows[0].Cells["rol"].Value = "JG";
+            }
+            else
+            {
+                dtUsers.SelectedRows[0].Cells["rol"].Value = "AD";
+            }
+            lbError.Text = "";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
