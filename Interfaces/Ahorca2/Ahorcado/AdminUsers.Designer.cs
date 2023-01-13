@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtUsers = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +43,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbError = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +53,10 @@
             this.dtUsers.AllowUserToDeleteRows = false;
             this.dtUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre,
+            this.pass,
+            this.rol});
             this.dtUsers.Location = new System.Drawing.Point(12, 12);
             this.dtUsers.MultiSelect = false;
             this.dtUsers.Name = "dtUsers";
@@ -56,6 +65,25 @@
             this.dtUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtUsers.Size = new System.Drawing.Size(213, 286);
             this.dtUsers.TabIndex = 0;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Usuarios";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // pass
+            // 
+            this.pass.HeaderText = "Contra";
+            this.pass.Name = "pass";
+            this.pass.ReadOnly = true;
+            this.pass.Visible = false;
+            // 
+            // rol
+            // 
+            this.rol.HeaderText = "Rol";
+            this.rol.Name = "rol";
+            this.rol.ReadOnly = true;
             // 
             // textBox1
             // 
@@ -148,6 +176,11 @@
             this.lbError.Text = "Error.";
             this.lbError.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.tick);
+            // 
             // AdminUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -186,5 +219,9 @@
         private Button button4;
         private Panel panel1;
         private Label lbError;
+        private System.Windows.Forms.Timer timer1;
+        private DataGridViewTextBoxColumn nombre;
+        private DataGridViewTextBoxColumn pass;
+        private DataGridViewTextBoxColumn rol;
     }
 }

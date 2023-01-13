@@ -7,7 +7,6 @@
     <title>Ej4</title>
     <script>
         function action(){
-            
             input = document.getElementById('input').value;
             isPalindrome = true;
             for (var i = 0; i < input.length; i++) {
@@ -20,9 +19,6 @@
             }else{
                 document.getElementById('output').innerHTML = "No es palíndromo."
             }
-            if(input.length = 0){
-                document.getElementById('output').innerHTML = ""
-            }
         }
     </script>
 </head>
@@ -31,7 +27,7 @@
     <input type="text" id="input">
     <button onclick="action()">Acciona</button>
     <div>
-        <p id="output">45</p>
+        <p id="output"></p>
     </div>
 </body>
 </html>
