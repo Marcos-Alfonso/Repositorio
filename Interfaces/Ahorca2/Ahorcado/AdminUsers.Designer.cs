@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dtUsers = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +41,15 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.EliminaPartida = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbError = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtUsers)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtUsers
@@ -61,20 +66,22 @@
             this.dtUsers.MultiSelect = false;
             this.dtUsers.Name = "dtUsers";
             this.dtUsers.ReadOnly = true;
+            this.dtUsers.RowHeadersVisible = false;
             this.dtUsers.RowTemplate.Height = 25;
             this.dtUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtUsers.Size = new System.Drawing.Size(213, 286);
             this.dtUsers.TabIndex = 0;
+            this.dtUsers.SelectionChanged += new System.EventHandler(this.changed);
             // 
             // nombre
             // 
-            this.nombre.HeaderText = "Usuarios";
+            this.nombre.HeaderText = "Usuario";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             // 
             // pass
             // 
-            this.pass.HeaderText = "Contra";
+            this.pass.HeaderText = "Contraseña";
             this.pass.Name = "pass";
             this.pass.ReadOnly = true;
             this.pass.Visible = false;
@@ -137,6 +144,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -146,6 +154,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -160,10 +169,59 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.EliminaPartida);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(365, -9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 347);
             this.panel1.TabIndex = 20;
+            // 
+            // EliminaPartida
+            // 
+            this.EliminaPartida.Location = new System.Drawing.Point(15, 283);
+            this.EliminaPartida.Name = "EliminaPartida";
+            this.EliminaPartida.Size = new System.Drawing.Size(150, 23);
+            this.EliminaPartida.TabIndex = 19;
+            this.EliminaPartida.Text = "Eliminar";
+            this.EliminaPartida.UseVisualStyleBackColor = true;
+            this.EliminaPartida.Click += new System.EventHandler(this.EliminaPartida_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tiempo,
+            this.nombreUsuario,
+            this.puntos});
+            this.dataGridView1.Location = new System.Drawing.Point(15, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(150, 257);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // tiempo
+            // 
+            this.tiempo.HeaderText = "Tiempo";
+            this.tiempo.Name = "tiempo";
+            this.tiempo.ReadOnly = true;
+            // 
+            // nombreUsuario
+            // 
+            this.nombreUsuario.HeaderText = "Nombre";
+            this.nombreUsuario.Name = "nombreUsuario";
+            this.nombreUsuario.ReadOnly = true;
+            this.nombreUsuario.Visible = false;
+            // 
+            // puntos
+            // 
+            this.puntos.HeaderText = "Puntos";
+            this.puntos.Name = "puntos";
+            this.puntos.ReadOnly = true;
             // 
             // lbError
             // 
@@ -171,15 +229,8 @@
             this.lbError.ForeColor = System.Drawing.Color.Red;
             this.lbError.Location = new System.Drawing.Point(231, 177);
             this.lbError.Name = "lbError";
-            this.lbError.Size = new System.Drawing.Size(35, 15);
+            this.lbError.Size = new System.Drawing.Size(0, 15);
             this.lbError.TabIndex = 21;
-            this.lbError.Text = "Error.";
-            this.lbError.Visible = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.tick);
             // 
             // AdminUsers
             // 
@@ -199,8 +250,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dtUsers);
             this.Name = "AdminUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dtUsers)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,9 +273,13 @@
         private Button button4;
         private Panel panel1;
         private Label lbError;
-        private System.Windows.Forms.Timer timer1;
         private DataGridViewTextBoxColumn nombre;
         private DataGridViewTextBoxColumn pass;
         private DataGridViewTextBoxColumn rol;
+        private Button EliminaPartida;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn tiempo;
+        private DataGridViewTextBoxColumn nombreUsuario;
+        private DataGridViewTextBoxColumn puntos;
     }
 }

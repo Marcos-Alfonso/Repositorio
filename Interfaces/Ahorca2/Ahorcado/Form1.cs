@@ -45,7 +45,7 @@ namespace Ahorcado
         {
             String query = "SELECT DISTINCT(categoria) FROM palabra";
             MySqlCommand mycomand = new MySqlCommand(query, con);
-
+            cbCategoria.Items.Clear();
             MySqlDataReader myreader = mycomand.ExecuteReader();
             while (myreader.Read())
             {
@@ -194,7 +194,7 @@ namespace Ahorcado
         private void button5_Click(object sender, EventArgs e)
         {
             NuevoUsuario n = new NuevoUsuario(this);
-          
+            n.FormBorderStyle = FormBorderStyle.FixedSingle;
             n.ShowDialog();
             
         }
@@ -207,8 +207,9 @@ namespace Ahorcado
 
         private void button2_Click(object sender, EventArgs e)
         {
-             AdminUsers a = new AdminUsers();
-            a.Show();
+             AdminUsers a = new AdminUsers(txNombre.Text);
+            a.FormBorderStyle = FormBorderStyle.FixedSingle;
+            a.ShowDialog();
         }
     }
 }

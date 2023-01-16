@@ -104,7 +104,7 @@ namespace Ahorcado
                     MySqlConnection con = new MySqlConnection("server=127.0.0.1;uid=root;pwd=root;database=ahorcado");
                     con.Open();
                     DataGridViewRow row = dataGridView1.SelectedRows[0];
-                    String query = $"UPDATE palabra SET palabra = '{txPalabra.Text}', categoria = '{txCategoria.Text}' WHERE palabra = '{row.Cells[0].Value}' AND categoria = '{row.Cells[1].Value}';";
+                    String query = $"UPDATE palabra SET palabra = '{txPalabra.Text.ToUpper()}', categoria = '{txCategoria.Text.ToUpper()}' WHERE palabra = '{row.Cells[0].Value}' AND categoria = '{row.Cells[1].Value}';";
                     MySqlCommand mycomand = new MySqlCommand(query, con);
 
                     MySqlDataReader myreader = mycomand.ExecuteReader();
