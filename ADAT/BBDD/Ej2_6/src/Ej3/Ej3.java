@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Ej3 {
     public static void main(String[] args) throws SAXException, IOException {
@@ -37,8 +38,7 @@ public class Ej3 {
             ResultSet rs=stmt.executeQuery("select MAX(NUMERO) from biblioteca");
             rs.next();
             int i = rs.getInt("MAX(NUMERO)");
-            rs.close();
-            stmt.close();
+
             for (Libro l:listaLibros) {
                 PreparedStatement ps = c.prepareStatement("INSERT INTO `biblioteca` (`TITULO`, `AUTOR`, `FNAC`, `FECHAPUB`,`NUMERO`) VALUES (?,?,?,?,?);");
                 ps.setString(1, l.getTitulo());
@@ -50,11 +50,47 @@ public class Ej3 {
                 ps.close();
             }
             System.out.println("Finalizando inserción en la DB");
+
+            //c) Ahora leo los datos de la Base de Datos
+
+             stmt=c.createStatement();
+             rs=stmt.executeQuery("select * from biblioteca");
+            System.out.println("\nDatos de la Base de Datos");
+            while (rs.next()){
+                System.out.printf("Fila %d: %s, %s, %tc, %d\n",
+                        rs.getRow(),
+                        rs.getString("TITULO"),
+                        rs.getString("AUTOR"),
+                        rs.getDate("FNAC"),
+                        rs.getInt("FECHAPUB"));
+            }
+
+            // d)	Mostrar los libros publicados en un determinado año que se pasa como parámetro.
+            System.out.println("Inserta año de publicación a buscar en la base de datos:");
+            int input = (new Scanner(System.in)).nextInt();
+            stmt=c.createStatement();
+            rs=stmt.executeQuery("select * from biblioteca where FECHAPUB = '"+input+"'");
+            // Si no hay dato alguno lo digo
+            if (!rs.isBeforeFirst() ) {
+                System.out.println("No hay datos");
+            }
+            //si no muestra los que hay
+            while (rs.next()){
+                System.out.printf("Fila %d: %s, %s, %tc, %d\n",
+                        rs.getRow(),
+                        rs.getString("TITULO"),
+                        rs.getString("AUTOR"),
+                        rs.getDate("FNAC"),
+                        rs.getInt("FECHAPUB"));
+            }
+            stmt.close();
+            rs.close();
+            c.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        //c) Ahora leo los datos de la Base de Datos
+
 
 
     }
@@ -76,10 +112,10 @@ class GestionContenido extends DefaultHandler {
     }
     ArrayList<Libro> libros = new ArrayList<>();
     Libro currentLibro ;
-    boolean libro;
+
     boolean titulo;
     boolean autor;
-    boolean fechaNacimiento;
+
     boolean fechaPublicacion;
     public void startElement(String uri, String nombre,
                              String nombreC, Attributes atts) {

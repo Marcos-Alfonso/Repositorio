@@ -1,3 +1,5 @@
+package Ej1;
+
 import java.sql.*;
 import java.util.Locale;
 
