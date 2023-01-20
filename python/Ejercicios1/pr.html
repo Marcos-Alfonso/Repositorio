@@ -1,30 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous">
 
-    <select onchange="cambia()" id="combo">
-        <option value="1">Audi</option>
-        <option value="2">BMW</option>
-        <option value="3">Mercedes</option>
-        <option value="4">Volvo</option>
-    </select>
-    <script>
-        document.getElementById("demo").innerHTML = "";
-        html = "";
-        for (let index = 1; index <= 10; index++) {
-            html+= "<option value='"+index+"'>"+index+"</option>";
-        }
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
-        function cambia(){
+  </head>
+  <body>
+    <div class="container">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
 
-        }
-    </script>
-</body>
+      <div class="row">
+        <div class="card col" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://media.tenor.com/Ami1cSjr1NoAAAAd/saul-goodman3d-ok-saul-goodman.gif"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card
+              title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+
+        <div class="card col" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://media.tenor.com/Ami1cSjr1NoAAAAd/saul-goodman3d-ok-saul-goodman.gif"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card
+              title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+
+        <div class="card col" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://external-preview.redd.it/y3V8FQ_C_A28zz3XzVfVbf3JcyzyJogfyFIJFUZM32E.png?format=pjpg&auto=webp&s=d94e7b39356b2c167b2b6ffab1091e7b47f35c2f"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card
+              title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
