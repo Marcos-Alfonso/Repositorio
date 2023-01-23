@@ -49,18 +49,23 @@ public class Servidor {
 
             while (true) {
                 operador = entrada.readChar();
+                System.out.println("Recibe: "+operador);
                 if(operador == 'A'){
                     System.err.println("Instrucción abortar recibida.");
                     break;
                 }
+
                 long n1 = entrada.readLong();
+                System.out.println("Recibe: "+n1);
                 long n2 = entrada.readLong();
+                System.out.println("Recibe: "+n2);
 
                 salida.writeUTF(n1+""+operador+n2+" = "+opera(operador,n1,n2));
+                salida.flush();
             }
 
         } catch (IOException e) {
-            System.out.println("IOException: " + e.getMessage());
+            System.out.println("Conexión Finalizada");
         }
     }
 
