@@ -3,6 +3,8 @@ package Ej5;
 
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Arrays;
+import java.util.List;
 
 public class Partida extends Thread{
     //sockets jugadores
@@ -13,19 +15,68 @@ public class Partida extends Thread{
          j1 = new Jugador(socketJugador1);
          j2 = new Jugador(socketJugador2);
          initTablero();
-
     }
+    boolean continua = true;
     public void run(){
         try {
             j1.salida.writeUTF("J1");
             j1.salida.flush();
             j2.salida.writeUTF("J2");
             j2.salida.flush();
-            System.out.println("Mensaje enviado");
+            enviaAmbos(getTableroString(tablero));
+
+            while(continua){
+                movimiento(j1);
+                valida();
+                movimiento(j2);
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
+    private void valida() throws IOException {
+        if(!tableroTiene("1K")){
+            enviaAmbos("J2");
+            finaliza();
+        } else if (!tableroTiene("2K")) {
+            enviaAmbos("J1");
+            finaliza();
+        }else{
+            enviaAmbos("cont");
+        }
+    }
+
+    private void finaliza() {
+
+    }
+
+    private boolean tableroTiene(String s) {
+        List<String[]> list = Arrays.asList(tablero);
+        for(String[] arr: list){
+            if(Arrays.asList(arr).contains(s))
+                return true;
+        }
+        return false;
+    }
+
+    private void movimiento(Jugador j) throws IOException {
+        int oldX = j.entrada.readInt();
+        int oldY = j.entrada.readInt();
+        int newX = j.entrada.readInt();
+        int newY = j.entrada.readInt();
+        mueve(oldX, oldY, newX, newY);
+
+    }
+
+    private void enviaAmbos(String mensaje) throws IOException {
+        j1.salida.writeUTF(mensaje);
+        j1.salida.flush();
+        j2.salida.writeUTF(mensaje);
+        j2.salida.flush();
+        System.out.println("Mensaje enviado");
+    }
+
     private void mueve(int oldX, int oldY, int newX, int newY){
         tablero[newY][newX] = tablero[oldY][oldX];
         tablero[oldY][oldX] = "  ";
