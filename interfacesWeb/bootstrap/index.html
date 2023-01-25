@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form action="">
+        <div class="card">
+            <div class="card-header">Datos personales</div>
+            <div class="card-body">
+                <div clas="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>Historia</label>
+                                    <input type="text" class="form-control" id="historia" name="historia" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>NIF</label>
+                                    <input type="text" class="form-control" name="nif">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Apellidos</label>
+                                    <input type="text" class="form-control" name="apellidos" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Compañía</label>
+                                    <select class="form-control" name="compania">
+                                        <option value="0">Seleccione Compañía</option>
+                                        <option value="1">ADESLAS</option>
+                                        <option value="2">ADESLAS HUELVA</option>
+                                        <option value="3">ADESLAS SEVILLA</option>
+                                        <option value="4">AEGON</option>
+                                        <option value="5">ANTARES</option>
+                                        <option value="6">ARESA</option>
+                                        <option value="7">ASISA</option>
+                                        <option value="8">BCH</option>
+                                        <option value="9">CAJASALUD</option>
+                                        <option value="10">CASER</option>
+                                        <option value="11">CIGMA</option>
+                                        <option value="12">DIPUTAC. SEVILLA</option>
+                                        <option value="13">DKV</option>
+                                        <option value="14">GROUPAMA-MEDITEC</option>
+                                        <option value="15">LA ESTRELLA</option>
+                                        <option value="16">MEDIFIATC</option>
+                                        <option value="17">NINGUNA</option>
+                                        <option value="18">PRIVADA</option>
+                                        <option value="19">SANITAS</option>
+                                        <option value="20">SEGURIDAD SOCIAL</option>
+                                        <option value="21">SERSANET</option>
+                                        <option value="22">VITALICIO</option>
+                                        <option value="23">WINTERTHUR</option>
+                                        <option value="24">HNA</option>
+                                        <option value="25">GRUPO GENERALI</option>
+                                        <option value="26">CANALSALUD 24 H</option>
+                                        <option value="27">PROMEDIA</option>
+                                        <option value="28">AVANT SLUD</option>
+                                        <option value="29">NINGUNA</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Fecha Alta</label>
+                                    <div class="input-group">
+                                        <input id="fechaALta" class="form-control" type="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Fecha Nac.</label>
+                                    <div class="input-group">
+                                        <input id="fechaNacimiento" class="form-control" type="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Ultima Visita</label>
+                                    <div class="input-group">
+                                        <input id="fechaUltimaVisita" class="form-control" type="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>Estado Civil</label>
+                                    <select class="form-control" name="estadocivil" value="Separado/a">
+                                        <option>Casado/a</option>
+                                        <option>Soltero/a</option>
+                                        <option>Separado/a</option>
+                                        <option>Divorciado/a</option>
+                                        <option>Vive en pareja</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Ocupación</label>
+                                    <input type="text" class="form-control" name="ocupacion">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Nivel estudios</label>
+                                    <select class="form-control" name="nivelestudios">
+                                        <option>Analfabeto/a</option>
+                                        <option>Sin estudios</option>
+                                        <option>Estudios primarios</option>
+                                        <option>Enseñanza Secundaria (primer ciclo)</option>
+                                        <option>Enseñanza Secundaria (segundo ciclo)</option>
+                                        <option>Formación Profesional</option>
+                                        <option>Estudios universitarios</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Raza</label>
+                                    <select class="form-control" name="raza">
+                                        <option>Caucasica</option>
+                                        <option>Amarillo</option>
+                                        <option>Americano</option>
+                                        <option>Malayo</option>
+                                        <option>Negra</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">Contacto</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Domicilio</label>
+                                    <input type="text" class="form-control" name="domicilio">
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>C.P.</label>
+                                    <input type="text" class="form-control" name="cp" size="5">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Provincia</label>
+                                    <select class="form-control" name="provincia" id="provincia" required="">
+                                        <option value="">Seleccione provincia</option>
+                                        <option value="1">Araba/Álava</option>
+                                        <option value="2">Albacete</option>
+                                        <option value="3">Alicante/Alacant</option>
+                                        <option value="4">Almería</option>
+                                        <option value="5">Ávila</option>
+                                        <option value="6">Badajoz</option>
+                                        <option value="7">Balears, Illes</option>
+                                        <option value="8">Barcelona</option>
+                                        <option value="9">Burgos</option>
+                                        <option value="10">Cáceres</option>
+                                        <option value="11">Cádiz</option>
+                                        <option value="12">Castellón/Castelló</option>
+                                        <option value="13">Ciudad Real</option>
+                                        <option value="14">Córdoba</option>
+                                        <option value="15">Coruña, A</option>
+                                        <option value="16">Cuenca</option>
+                                        <option value="17">Girona</option>
+                                        <option value="18">Granada</option>
+                                        <option value="19">Guadalajara</option>
+                                        <option value="20">Gipuzkoa</option>
+                                        <option value="21" selected="">Huelva</option>
+                                        <option value="22">Huesca</option>
+                                        <option value="23">Jaén</option>
+                                        <option value="24">León</option>
+                                        <option value="25">Lleida</option>
+                                        <option value="26">Rioja, La</option>
+                                        <option value="27">Lugo</option>
+                                        <option value="28">Madrid</option>
+                                        <option value="29">Málaga</option>
+                                        <option value="30">Murcia</option>
+                                        <option value="31">Navarra</option>
+                                        <option value="32">Ourense</option>
+                                        <option value="33">Asturias</option>
+                                        <option value="34">Palencia</option>
+                                        <option value="35">Palmas, Las</option>
+                                        <option value="36">Pontevedra</option>
+                                        <option value="37">Salamanca</option>
+                                        <option value="38">Santa Cruz de Tenerife</option>
+                                        <option value="39">Cantabria</option>
+                                        <option value="40">Segovia</option>
+                                        <option value="41">Sevilla</option>
+                                        <option value="42">Soria</option>
+                                        <option value="43">Tarragona</option>
+                                        <option value="44">Teruel</option>
+                                        <option value="45">Toledo</option>
+                                        <option value="46">Valencia/València</option>
+                                        <option value="47">Valladolid</option>
+                                        <option value="48">Bizkaia</option>
+                                        <option value="49">Zamora</option>
+                                        <option value="50">Zaragoza</option>
+                                        <option value="51">Ceuta</option>
+                                        <option value="52">Melilla</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Poblacion</label>
+                                    <select class="form-control" name="poblacion" id="poblacion" required="">
+                                        <option value="21" selected="">Alájar</option>
+                                        <option value="71">Aljaraque</option>
+                                        <option value="118">Almendro, El</option>
+                                        <option value="166">Almonaster la Real</option>
+                                        <option value="214">Almonte</option>
+                                        <option value="261">Alosno</option>
+                                        <option value="310">Aracena</option>
+                                        <option value="357">Aroche</option>
+                                        <option value="404">Arroyomolinos de León</option>
+                                        <option value="454">Ayamonte</option>
+                                        <option value="502">Beas</option>
+                                        <option value="549">Berrocal</option>
+                                        <option value="599">Bollullos Par del Condado</option>
+                                        <option value="645">Bonares</option>
+                                        <option value="692">Cabezas Rubias</option>
+                                        <option value="741">Cala</option>
+                                        <option value="789">Calañas</option>
+                                        <option value="839">Campillo, El</option>
+                                        <option value="886">Campofrío</option>
+                                        <option value="935">Cañaveral de León</option>
+                                        <option value="984">Cartaya</option>
+                                        <option value="1033">Castaño del Robledo</option>
+                                        <option value="1081">Cerro de Andévalo, El</option>
+                                        <option value="1128">Corteconcepción</option>
+                                        <option value="1175">Cortegana</option>
+                                        <option value="1222">Cortelazor</option>
+                                        <option value="1269">Cumbres de Enmedio</option>
+                                        <option value="1314">Cumbres de San Bartolomé</option>
+                                        <option value="1361">Cumbres Mayores</option>
+                                        <option value="1409">Chucena</option>
+                                        <option value="1453">Encinasola</option>
+                                        <option value="1501">Escacena del Campo</option>
+                                        <option value="1551">Fuenteheridos</option>
+                                        <option value="1600">Galaroza</option>
+                                        <option value="1646">Gibraleón</option>
+                                        <option value="1694">Granada de Río-Tinto, La</option>
+                                        <option value="1740">Granado, El</option>
+                                        <option value="1788">Higuera de la Sierra</option>
+                                        <option value="1834">Hinojales</option>
+                                        <option value="1880">Hinojos</option>
+                                        <option value="1926">Huelva</option>
+                                        <option value="1973">Isla Cristina</option>
+                                        <option value="2020">Jabugo</option>
+                                        <option value="2066">Lepe</option>
+                                        <option value="2109">Linares de la Sierra</option>
+                                        <option value="2154">Lucena del Puerto</option>
+                                        <option value="2200">Manzanilla</option>
+                                        <option value="2245">Marines, Los</option>
+                                        <option value="2289">Minas de Riotinto</option>
+                                        <option value="2332">Moguer</option>
+                                        <option value="2378">Nava, La</option>
+                                        <option value="2423">Nerva</option>
+                                        <option value="2468">Niebla</option>
+                                        <option value="2512">Palma del Condado, La</option>
+                                        <option value="2555">Palos de la Frontera</option>
+                                        <option value="2600">Paterna del Campo</option>
+                                        <option value="2645">Paymogo</option>
+                                        <option value="2689">Puebla de Guzmán</option>
+                                        <option value="2732">Puerto Moral</option>
+                                        <option value="2777">Punta Umbría</option>
+                                        <option value="2822">Rociana del Condado</option>
+                                        <option value="2866">Rosal de la Frontera</option>
+                                        <option value="2910">San Bartolomé de la Torre</option>
+                                        <option value="2954">San Juan del Puerto</option>
+                                        <option value="2994">Sanlúcar de Guadiana</option>
+                                        <option value="3033">San Silvestre de Guzmán</option>
+                                        <option value="3072">Santa Ana la Real</option>
+                                        <option value="3110">Santa Bárbara de Casa</option>
+                                        <option value="3148">Santa Olalla del Cala</option>
+                                        <option value="3189">Trigueros</option>
+                                        <option value="3228">Valdelarco</option>
+                                        <option value="3267">Valverde del Camino</option>
+                                        <option value="3303">Villablanca</option>
+                                        <option value="3341">Villalba del Alcor</option>
+                                        <option value="3379">Villanueva de las Cruces</option>
+                                        <option value="3416">Villanueva de los Castillejos</option>
+                                        <option value="3453">Villarrasa</option>
+                                        <option value="3492">Zalamea la Real</option>
+                                        <option value="3529">Zufre</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Teléfono 1</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="telefono1">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Teléfono 2</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="telefono2">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i>@</i>
+                                        </span>
+                                        <input type="text" class="form-control" name="email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-header">Datos medicos</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Médico</label>
+                                    <select class="form-control" required="">
+                                        <option value="">Seleccione Médico</option>
+                                        <option value="1">Roberto López Garrido</option>
+                                        <option value="5">José Gutiérrez López</option>
+                                        <option value="6">SACAMUELAS SEGURO BRUTO</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h2 class="w-auto">Enfermedades</h2>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="hepatitis" id="hepatitis"checked="">
+                                    <label class="form-check-label">Hepatitis</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="sida" id="sida" checked="">
+                                    <label class="form-check-label">SIDA</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="piorrea" id="piorrea"checked="">
+                                    <label class="form-check-label">Piorrea</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="gingivitis" id="gingivitis" checked="">
+                                    <label class="form-check-label">Gingivitis</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="diabetes" id="diabetes" checked="">
+                                    <label class="form-check-label">Diabetes</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="epilepsia" id="epilepsia" checked="">
+                                    <label class="form-check-label">Epilepsia</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="cardiopatias"id="cardiopatias" checked="">
+                                    <label class="form-check-label">Cardiopatías</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="tipoosea" id="tipoosea"checked="">
+                                    <label class="form-check-label">Tipo Ósea</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="hipertension" id="hipertension" checked="">
+                                    <label class="form-check-label">Hipertensión</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="bronquitis" id="bronquitis" checked="">
+                                    <label class="form-check-label">Bronquitis</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="asma" id="asma" checked="">
+                                    <label class="form-check-label">Asma</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="tipocirculatoria" checked="" id="tipocirculatoria">
+                                    <label class="form-check-label">Tipo Circulatoria</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="tiponerviosa" id="tiponerviosa" checked="">
+                                    <label class="form-check-label">Tipo nerviosa</label>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="otras" id="otras" checked="">
+                                    <label class="form-check-label">Otras</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+                <legend class="w-auto">Medicamentos y alergias</legend>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Medicamentos</label>
+                            <textarea rows="5" class="form-control" name="medicamentos"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group" id="alergias">
+                            <label>Alergias</label>
+                            <textarea rows="5" class="form-control" name="alergias"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <legend class="w-auto">Otros datos</legend>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="fumador" id="fumador" checked="">
+                            <label class="form-check-label">¿Fumador?</label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="alcohol" id="alcohol" checked="">
+                            <label class="form-check-label">¿Bebe alcohol?</label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="embarazada" id="embarazada"checked="">
+                            <label class="form-check-label">¿Está embarazada o cree estarlo?</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Observaciones</label>
+                            <textarea rows="5" class="form-control" name="observaciones"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</body>
+
+</html>
