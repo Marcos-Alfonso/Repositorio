@@ -1,6 +1,7 @@
 from Alumno import Alumno
 print("Inserta nombre:")
 nombre = input ()
+print("Inserta nota:")
 nota = input()
 a1 = Alumno(nombre,int(nota) )
 print(a1)
