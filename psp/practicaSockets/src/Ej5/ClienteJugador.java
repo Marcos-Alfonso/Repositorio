@@ -27,6 +27,7 @@ public class ClienteJugador {
 
         System.out.println("Conectado a socket. Esperando confirmación de inicio de partida");
         String linea = entrada.readUTF();
+<<<<<<< Updated upstream
         System.out.println("Eres el "+linea);
         //imprimo el tablero
         System.out.println(entrada.readUTF());
@@ -74,5 +75,8 @@ public class ClienteJugador {
             if (i>=0 && i<=7) return i;
             System.out.println("Valor incorrecto, debe ser un valor entre 0-7");
         }
+=======
+        System.out.println(linea);
+>>>>>>> Stashed changes
     }
 }
