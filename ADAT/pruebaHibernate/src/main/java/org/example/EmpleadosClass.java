@@ -11,7 +11,6 @@ public class EmpleadosClass {
     private Date fechaAlt;
     private Double salario;
     private Double comision;
-    private byte deptNo;
     private DepartamentosClass departamentosByDeptNo;
 
     public short getEmpNo() {
@@ -70,25 +69,17 @@ public class EmpleadosClass {
         this.comision = comision;
     }
 
-    public byte getDeptNo() {
-        return deptNo;
-    }
-
-    public void setDeptNo(byte deptNo) {
-        this.deptNo = deptNo;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EmpleadosClass that = (EmpleadosClass) o;
-        return empNo == that.empNo && deptNo == that.deptNo && Objects.equals(apellido, that.apellido) && Objects.equals(oficio, that.oficio) && Objects.equals(dir, that.dir) && Objects.equals(fechaAlt, that.fechaAlt) && Objects.equals(salario, that.salario) && Objects.equals(comision, that.comision);
+        return empNo == that.empNo && Objects.equals(apellido, that.apellido) && Objects.equals(oficio, that.oficio) && Objects.equals(dir, that.dir) && Objects.equals(fechaAlt, that.fechaAlt) && Objects.equals(salario, that.salario) && Objects.equals(comision, that.comision);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(empNo, apellido, oficio, dir, fechaAlt, salario, comision, deptNo);
+        return Objects.hash(empNo, apellido, oficio, dir, fechaAlt, salario, comision);
     }
 
     public DepartamentosClass getDepartamentosByDeptNo() {
