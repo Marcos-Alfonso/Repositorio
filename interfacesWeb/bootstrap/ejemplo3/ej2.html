@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input type="text" id="tx1">
+    <button onclick="mueve1()"> &lt;--&gt;</button>
+    <input type="text" id="tx2">
+    <button onclick="mueve2()"> &lt;--&gt;</button>
+    <input type="text" id="tx3">
+    <span id="span"></span>
+
+    <script>
+        document.getElementById('tx1').value = Math.floor(Math.random() * 100) + 1
+        document.getElementById('tx2').value = Math.floor(Math.random() * 100) + 1
+        document.getElementById('tx3').value = Math.floor(Math.random() * 100) + 1
+        function mueve1(){
+            a = document.getElementById('tx1').value
+            document.getElementById('tx1').value = document.getElementById('tx2').value
+            document.getElementById('tx2').value = a
+
+            valida()
+        }
+        function mueve2(){
+            a = document.getElementById('tx2').value
+            document.getElementById('tx2').value = document.getElementById('tx3').value
+            document.getElementById('tx3').value = a
+
+            valida()
+        }
+        function valida(){
+            var num1 = parseInt(document.getElementById('tx1').value)
+            var num2 = parseInt(document.getElementById('tx2').value)
+            var num3 = parseInt(document.getElementById('tx3').value)
+            if(num1<=num2 && num2<=num3){
+                document.getElementById('span').innerHTML = 'Es válido'
+                console.log('Merequetngue')
+            }else{
+                document.getElementById('span').innerHTML = ''
+            }
+        }
+    </script>
+</body>
+</html>
