@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td >3</td>
+                <td>4</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>78</td>
+                <td>4</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>4</td>
+                <td>634</td>
+            </tr>
+        </table>
+        <label for="suma">Suma:</label>
+        <input type="text" name="" id="suma">
+        <button onclick="suma()">Suma</button><br>
+        <button onclick="aleatorio()">Recalcula</button>
+        <select name="" id="seleccion">
+            <option value="1">Suma</option>
+            <option value="2">Resta</option>
+        </select>
+        <script>
+            let td = document.getElementsByTagName('td');
+            for (let i = 0; i < td.length; i++) {
+                td[i].addEventListener('click', e=>{
+                //td[i].innerText = parseInt(td[i].innerText)+1;
+                recalculate(td[i])
+            })
+            }
+
+            function suma(){
+            elementos = document.getElementsByTagName('td');
+            sum = 0;
+            for (let i = 0; i < elementos.length; i++) {
+            sum+=parseInt( elementos[i].innerHTML);
+            }
+            document.getElementById('suma').value = sum;
+
+        }
+            function aleatorio(){
+                elementos = document.getElementsByTagName('td');
+            sum = 0;
+            for (let i = 0; i < elementos.length; i++) {
+            elementos[i].innerHTML = Math.floor(Math.random() * 100) + 1;
+            }
+            }
+            function recalculate(element){
+                if(document.getElementById('seleccion').value == 1){
+                    element.innerHTML = parseInt(element.innerHTML)+1;
+                }
+                else{
+                    element.innerHTML = parseInt(element.innerHTML)-1;
+                }
+            }
+        </script>
+    </body>
+</html>
