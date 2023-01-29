@@ -6,15 +6,20 @@ import java.util.Scanner;
 
 public class ClienteJugador {
     public static final int PORT = 4444;
-    public static final String SERVER="127.0.0.1";
+    public static String SERVER="127.0.0.1";
     static DataInputStream entrada;
     static DataOutputStream salida;
     static boolean continuar = true;
+    static String name;
     public static void main(String[] args) throws IOException {
+        try{
+            SERVER = args[0];
+        }catch(IndexOutOfBoundsException e){       }
+
         Socket socketCliente = null;
         try {
+            System.out.println("Conectando a dirección "+SERVER+":"+PORT);
             socketCliente = new Socket(SERVER, PORT);
-
             // Obtenemos el canal de entrada
             entrada = new DataInputStream(new BufferedInputStream(socketCliente.getInputStream()));
             // Establece canal de salida
@@ -23,15 +28,14 @@ public class ClienteJugador {
             System.err.println("No puede establer canales de E/S para la conexión");
             System.exit(-1);
         }
-        BufferedReader stdIn =new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Conectado a socket. Esperando confirmación de inicio de partida");
         String linea = entrada.readUTF();
-<<<<<<< Updated upstream
+        name = linea;
         System.out.println("Eres el "+linea);
         //imprimo el tablero
         System.out.println(entrada.readUTF());
-        if (linea == "J1"){
+        if (linea.equals("J1") ){
             while(continuar){
                 realizaMovimiento();
                 valida();
@@ -48,8 +52,19 @@ public class ClienteJugador {
         }
     }
 
-    private static void valida() {
-
+    private static void valida() throws IOException {
+        System.out.println("Esperando respuesta del servidor...");
+        //recibo e imprimo el tablero
+        System.out.println(entrada.readUTF());
+        String l = entrada.readUTF();
+        if (l.equals("J1") || l.equals("J2")){
+            continuar = false;
+            if (l.equals(name)){
+                System.out.println("Has ganado!");
+            }else {
+                System.out.println("Perdiste!");
+            }
+        }
     }
 
     private static void realizaMovimiento() throws IOException {
@@ -75,8 +90,6 @@ public class ClienteJugador {
             if (i>=0 && i<=7) return i;
             System.out.println("Valor incorrecto, debe ser un valor entre 0-7");
         }
-=======
-        System.out.println(linea);
->>>>>>> Stashed changes
+
     }
 }

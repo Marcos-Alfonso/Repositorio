@@ -20,19 +20,19 @@ public class Cliente {
 	private static final int SIZE = 64;
 
 	static Scanner sc = new Scanner(System.in);
+	static DatagramSocket socket;
 
 	public static void main(String[] args) {
 
-		try (DatagramSocket socket = new DatagramSocket(PUERTO_CLIENTE)) {
+		try {
+			socket= new DatagramSocket(PUERTO_CLIENTE);
 			System.out.println("- Cliente de operaciones matemáticas -");
 
 			InetAddress ip = InetAddress.getByName(IP);
 			socket.connect(ip, PUERTO_SERVIDOR);
-
-
 			boolean operar = true;
 			while (operar) {
-				operar = operacion(socket);
+				operar = operacion();
 			}
 
 		} catch (IOException e) {
@@ -41,7 +41,7 @@ public class Cliente {
 
 	}
 	static char operador;
-	private static boolean operacion(DatagramSocket socket) throws IOException {
+	private static boolean operacion() throws IOException {
 		// Pido operador
 		System.out.print("Seleccione operador o comando (+, -, *, /, F, A): ");
 		 operador = sc.nextLine().toUpperCase().charAt(0);
@@ -49,7 +49,7 @@ public class Cliente {
 
 		if (operador == 'A' || operador == 'F' || operador == '+' || operador == '-' || operador == '*' || operador == '/') {
 			// Envio operador
-			enviar(socket, operador);
+			enviar(operador);
 			return procesarOperador(socket, operador);
 		} else {
 			System.out.println("El operador no es correcto.");
@@ -82,32 +82,32 @@ public class Cliente {
 	}
 
 	private static String recibirResultados(DatagramSocket socket) throws IOException {
-		int numero = recibirInt(socket);
+		int numero = recibirInt();
 
-		long total = recibirLong(socket);
+		long total = recibirLong();
 
-		String operacion = recibirString(socket);
+		String operacion = recibirString();
 
 		String resultado = "Operación "+numero+": "+operacion;
 
 		return resultado;
 	}
 
-	private static String recibirString(DatagramSocket socket) throws IOException {
+	private static String recibirString() throws IOException {
 		DatagramPacket paqueteOperacion = new DatagramPacket(new byte[SIZE], SIZE);
 		socket.receive(paqueteOperacion);
 		String operacion = new String(paqueteOperacion.getData(), 0, paqueteOperacion.getLength());
 		return operacion;
 	}
 
-	private static long recibirLong(DatagramSocket socket) throws IOException {
+	private static long recibirLong() throws IOException {
 		DatagramPacket paquete = new DatagramPacket(new byte[Long.BYTES], Long.BYTES);
 		socket.receive(paquete);
 		long numero = ByteBuffer.wrap(paquete.getData()).getLong();
 		return numero;
 	}
 
-	private static int recibirInt(DatagramSocket socket) throws IOException {
+	private static int recibirInt() throws IOException {
 		DatagramPacket paquete = new DatagramPacket(new byte[Integer.BYTES], Integer.BYTES);
 		socket.receive(paquete);
 		int numero = ByteBuffer.wrap(paquete.getData()).getInt();
@@ -120,8 +120,8 @@ public class Cliente {
 		System.out.print("Número 2: ");
 		long numero2 = getNumero();
 
-		enviar(socket, numero1);
-		enviar(socket, numero2);
+		enviar(numero1);
+		enviar( numero2);
 	}
 	//leo un número por teclado, comprobando que es correcto
 	private static long getNumero() {
@@ -140,13 +140,13 @@ public class Cliente {
 		return n;
 	}
 
-	private static void enviar(DatagramSocket socket, long numero) throws IOException {
+	private static void enviar(long numero) throws IOException {
 		byte[] numeroBytes = ByteBuffer.allocate(Long.BYTES).putLong(numero).array();
 		DatagramPacket paquete = new DatagramPacket(numeroBytes, numeroBytes.length);
 		socket.send(paquete);
 	}
 
-	private static void enviar(DatagramSocket socket, char caracter) throws IOException {
+	private static void enviar( char caracter) throws IOException {
 		byte[] caracterBytes = ByteBuffer.allocate(Character.BYTES).putChar(caracter).array();
 		DatagramPacket paquete = new DatagramPacket(caracterBytes, caracterBytes.length);
 		socket.send(paquete);

@@ -16,58 +16,48 @@ public class Servidor {
 	static final int PUERTO_SERVIDOR = 4444;
 	static final int PUERTO_CLIENTE = 4445;
 	static int contador = 1;
-
-	public static void main(String[] args) {
-		try {
-			char operacion = '+';
+	static char operacion = '+';
+	public static void main(String[] args) throws SocketException {
+			socket = new DatagramSocket(PUERTO_SERVIDOR);
 			while (operacion != 'A') {
-				operacion = atenderCliente(operacion);
+				operaCliente();
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
-
-	private static char atenderCliente(char operacion) throws IOException {
-		try (DatagramSocket socket = new DatagramSocket(PUERTO_SERVIDOR)) {
+	static DatagramSocket socket ;
+	private static void operaCliente()  {
+		try{
 			InetAddress ip = InetAddress.getByName(IP);
 			socket.connect(ip, PUERTO_CLIENTE);
-
 			do {
-				operacion = operar(socket);
+				operar();
 			} while (operacion != 'F' && operacion != 'A');
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		return operacion;
 	}
 
-	private static char operar(DatagramSocket socket) throws IOException {
+	private static void operar() throws IOException {
 
-		char operacion = recibirChar(socket);
-		System.out.println("Cliente: " + operacion);
+		operacion = recibirChar();
+		System.out.println("Recibe: " + operacion);
 
 		if (operacion == '+' || operacion == '-' || operacion == '*' || operacion == '/') {
-			long numero1 = recibirLong(socket);
-			long numero2 = recibirLong(socket);
+			long numero1 = recibirLong();
+			long numero2 = recibirLong();
 			
-			System.out.println("Cliente: " + numero1);
-			System.out.println("Cliente: " + numero2);
+			System.out.println("Recibe: " + numero1);
+			System.out.println("Recibe: " + numero2);
 
 			long resultado = calcularOperacion(operacion, numero1, numero2);
 
 			String cadena = numero1 + " " + operacion + " " + numero2 + " = " + resultado;
 
-			enviar(socket, contador);
-			enviar(socket, resultado);
-			enviar(socket, cadena);
-			
-			System.out.println("Enviado: " + cadena);
-
+			enviar( contador);
+			enviar( resultado);
+			enviar( cadena);
 			contador++;
 		}
-		return operacion;
+
 	}
 
 	private static long calcularOperacion(char operacion, long numero1, long numero2) {
@@ -90,37 +80,33 @@ public class Servidor {
 	}
 
 
-	private static char recibirChar(DatagramSocket socket) throws IOException {
+	private static char recibirChar() throws IOException {
 		DatagramPacket paquete = new DatagramPacket(new byte[Character.BYTES], Character.BYTES);
 		socket.receive(paquete);
 		char caracter = ByteBuffer.wrap(paquete.getData()).getChar();
 		return caracter;
 	}
 
-	private static long recibirLong(DatagramSocket socket) throws IOException {
+	private static long recibirLong() throws IOException {
 		DatagramPacket paquete = new DatagramPacket(new byte[Long.BYTES], Long.BYTES);
 		socket.receive(paquete);
 		long numero = ByteBuffer.wrap(paquete.getData()).getLong();
 		return numero;
 	}
 
-	private static void enviar(DatagramSocket socket, long numero) throws IOException {
-		byte[] numeroBytes = ByteBuffer.allocate(Long.BYTES).putLong(numero).array();
-		DatagramPacket paquete = new DatagramPacket(numeroBytes, numeroBytes.length);
+	private static void enviar( long n) throws IOException {
+		byte[] nBytes = ByteBuffer.allocate(Long.BYTES).putLong(n).array();
+		DatagramPacket paquete = new DatagramPacket(nBytes, nBytes.length);
 		socket.send(paquete);
 	}
-
-
-	private static void enviar(DatagramSocket socket, int numero) throws IOException {
-		byte[] numeroBytes = ByteBuffer.allocate(Integer.BYTES).putInt(numero).array();
-		DatagramPacket paquete = new DatagramPacket(numeroBytes, numeroBytes.length);
+	private static void enviar( int n) throws IOException {
+		byte[] nBytes = ByteBuffer.allocate(Integer.BYTES).putInt(n).array();
+		DatagramPacket paquete = new DatagramPacket(nBytes, nBytes.length);
 		socket.send(paquete);
 	}
-
-
-	private static void enviar(DatagramSocket socket, String cadena) throws IOException {
-		byte[] cadenaBytes = cadena.getBytes();
-		DatagramPacket paquete = new DatagramPacket(cadenaBytes, cadenaBytes.length);
+	private static void enviar(String c) throws IOException {
+		byte[]cBytes = c.getBytes();
+		DatagramPacket paquete = new DatagramPacket(cBytes, cBytes.length);
 		socket.send(paquete);
 	}
 

@@ -1,6 +1,6 @@
-package Ej1_3;
+package Ej3;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 

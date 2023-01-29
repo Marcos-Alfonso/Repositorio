@@ -1,44 +1,33 @@
-package Ej1_1;
+package Ej1_3;
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Servidor {
-
-    public static final int PORT = 4444;
-
-    static ServerSocket socketServidor = null;
-    static Socket socketCliente = null;
-    static DataInputStream entrada;
-    static DataOutputStream salida;
-    static char operador;
-
-    static int nOperacion;
-    public static void main(String[] args) throws IOException {
+public class ConexionCliente extends Thread{
 
 
-        // Establece el puerto en el que escucha peticiones
+     Socket socketCliente = null;
+     DataInputStream entrada;
+     DataOutputStream salida;
+     char operador;
 
-        try {
-            socketServidor = new ServerSocket(PORT);
-        } catch (IOException e) {
-            System.out.println("No puede escuchar en el puerto: " + PORT);
-            System.exit(-1);
-        }
-
-        System.out.println("Escuchando: " + socketServidor);
-        do{
-            conexionClientes();
-        }while (operador !='A');
-
-        salida.close();
-        entrada.close();
-        socketCliente.close();
-        socketServidor.close();
+     static private int nOperacion = 0;
+    ConexionCliente(Socket socketCliente){
+        this.socketCliente = socketCliente;
     }
 
-    private static void conexionClientes() {
+    public void run(){
+            conexionClientes();
+        try {
+            salida.close();
+            entrada.close();
+            socketCliente.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private  void conexionClientes() {
         try {
             estableceConexión();
             while (true) {
@@ -51,11 +40,12 @@ public class Servidor {
         }
     }
 
-    private static boolean operaCliente() throws IOException {
+    private  boolean operaCliente() throws IOException {
         operador = entrada.readChar();
         System.out.println("Recibe: "+operador);
         if(operador == 'A'){
             System.err.println("Instrucción abortar recibida.");
+            Servidor.finaliza();
             return true;
         }
 
@@ -68,17 +58,15 @@ public class Servidor {
         return false;
     }
 
-    private static void envíaRespuesta(long n1, long n2) throws IOException {
+    private  void envíaRespuesta(long n1, long n2) throws IOException {
         salida.writeInt(++nOperacion);
         salida.writeLong(opera(operador, n1, n2));
         salida.writeUTF(n1 +""+operador+ n2);
         salida.flush();
     }
 
-    private static void estableceConexión() throws IOException {
-        socketCliente = socketServidor.accept();
-        nOperacion = 0;
-        System.out.println("Connexión acceptada: " + socketCliente);
+    private  void estableceConexión() throws IOException {
+
         // Establece canal de entrada
         entrada = new DataInputStream(new BufferedInputStream(socketCliente.getInputStream()));
         // Establece canal de salida
@@ -104,5 +92,6 @@ public class Servidor {
         }
         return resu;
     }
+
 
 }

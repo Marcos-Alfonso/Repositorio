@@ -28,27 +28,44 @@ public class Partida extends Thread{
             while(continua){
                 movimiento(j1);
                 valida();
+                if(!continua)break;
                 movimiento(j2);
+                valida();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.err.println("Error en la partida: "+j1.socket.getPort()+":"+j2.socket.getPort());
+            //nuevo
+            try{
+                j1.salida.writeUTF("J1");
+                j1.salida.writeUTF("J1");
+                j1.salida.flush();
+            }catch (IOException ex){}
+            try{
+                j2.salida.writeUTF("J2");
+                j2.salida.writeUTF("J2");
+                j2.salida.flush();
+            }catch (IOException ex){}
         }
     }
 
     private void valida() throws IOException {
+        enviaAmbos(getTableroString(tablero));
         if(!tableroTiene("1K")){
             enviaAmbos("J2");
+            System.out.println("Partida Finalizada, Ganador: "+j2.socket.getPort());
             finaliza();
         } else if (!tableroTiene("2K")) {
             enviaAmbos("J1");
+            System.out.println("Partida Finalizada, Ganador: "+j1.socket.getPort());
             finaliza();
         }else{
             enviaAmbos("cont");
         }
     }
 
-    private void finaliza() {
-
+    private void finaliza() throws IOException {
+        //enviaAmbos(getTableroString(tablero));
+        continua = false;
     }
 
     private boolean tableroTiene(String s) {
@@ -74,7 +91,6 @@ public class Partida extends Thread{
         j1.salida.flush();
         j2.salida.writeUTF(mensaje);
         j2.salida.flush();
-        System.out.println("Mensaje enviado");
     }
 
     private void mueve(int oldX, int oldY, int newX, int newY){
@@ -106,14 +122,14 @@ public class Partida extends Thread{
         tablero[6][0] = tablero[6][1] = tablero[6][2] = tablero[6][3] = tablero[6][4] = tablero[6][5] = tablero[6][6] = tablero[6][7] = "2P";
     }
     private String getTableroString(String[][] t){
-        String cadena = "   0  1  2  3  4  5  6  7\n  ┌──┬──┬──┬──┬──┬──┬──┬──┐\n";
+        String cadena = "    0    1    2    3    4    5    6    7\n  ┌────┬────┬────┬────┬────┬────┬────┬────┐\n";
         for (int i = 0; i < t.length; i++) {
-            cadena+= i+"-├"+t[i][0]+"┼"+t[i][1]+"┼"+t[i][2]+"┼"+t[i][3]+"┼"+t[i][4]+"┼"+t[i][5]+"┼"+t[i][6]+"┼"+t[i][7]+"┤\n";
+            cadena+= i+"-│ "+t[i][0]+" │ "+t[i][1]+" │ "+t[i][2]+" │ "+t[i][3]+" │ "+t[i][4]+" │ "+t[i][5]+" │ "+t[i][6]+" │ "+t[i][7]+" │\n";
             if (i< t.length-1){
-                cadena+="  ├──┼──┼──┼──┼──┼──┼──┼──┤\n";
+                cadena+="  ├────┼────┼────┼────┼────┼────┼────┼────┤\n";
             }
         }
-        cadena += "  └──┴──┴──┴──┴──┴──┴──┴──┘";
+        cadena += "  └────┴────┴────┴────┴────┴────┴────┴────┘";
         return cadena;
     }
 
