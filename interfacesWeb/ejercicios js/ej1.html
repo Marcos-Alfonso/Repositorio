@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            th {
+            background-color: #04AA6D;
+            color: white;
+            }
+            table{
+              border: 1px solid black;
+            }
+            </style>
+    </head>
+    <body>
+        <label for="codigo">Codigo:</label>
+        <input type="text" name="codigo" id="codigo">
+        <label for="desc">Descripcion:</label>
+        <input type="text" name="desc" id="desc">
+        <label for="cantidad">Cantidad:</label>
+        <input type="text" name="cantidad" id="cantidad">
+        <label for="precio">Precio:</label>
+        <input type="text" name="precio" id="precio">
+        <button onclick="add()">Añade</button>
+        <table>
+            <tbody id="tabla">
+                <th>Codigo</th>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+            </tbody>
+        </table>
+        <script>
+        function add(){
+            codigo = document.getElementById('codigo').value;
+            desc = document.getElementById('desc').value;
+            cantidad = document.getElementById('cantidad').value;
+            precio = document.getElementById('precio').value;
+            console.log(codigo+cantidad+desc+precio);
+            document.getElementById('tabla').innerHTML += "<tr><td>"+codigo+"</td><td>"+desc+"</td><td>"+cantidad+"</td><td>"+precio+"</td></tr>";
+        }
+    </script>
+    </body>
+</html>
