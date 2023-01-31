@@ -1,6 +1,7 @@
 package Ej3;
 
 import java.io.*;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -9,10 +10,9 @@ public class DescargaURL {
         String contenido;
         try {
             contenido = getHTML(args[0]);
-            System.out.println(contenido);
             crearFichero(contenido, args[1]);
         } catch (IOException | IndexOutOfBoundsException e) {
-            throw new RuntimeException(e);
+            System.err.println("Error en la creación del fichero.");
         }
     }
 
@@ -23,12 +23,15 @@ public class DescargaURL {
         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(fichero, true)));
         out.println(contenido);
         out.close();
+        System.out.println("Fichero "+fichero+" creado.");
     }
 
     private static String getHTML(String arg) throws IOException {
             URL url = new URL(arg);
-            URLConnection conexion = url.openConnection();
+            HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
+            conexion.setRequestMethod("GET");
             conexion.connect();
+            System.out.println("Código HTTP de respuesta: "+conexion.getResponseCode());
 
             InputStream is = conexion.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(is));

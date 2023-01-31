@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.modeloVentas.Ventas" table="ventas" schema="unidad2">
+        <id name="idventa" column="IDVENTA"/>
+        <property name="fechaventa" column="FECHAVENTA"/>
+        <property name="idcliente" column="IDCLIENTE"/>
+        <property name="idproducto" column="IDPRODUCTO"/>
+        <property name="cantidad" column="CANTIDAD"/>
+        <many-to-one name="clientesByIdcliente" class="org.example.modeloVentas.Clientes">
+            <column name="IDCLIENTE"/>
+        </many-to-one>
+        <many-to-one name="productosByIdproducto" class="org.example.modeloVentas.Productos">
+            <column name="IDPRODUCTO"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
