@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nuevoUsuario(View view){
-        Intent myIntent = new Intent(this, nuevoUsuario.class);
+        Intent myIntent = new Intent(this, listaCanciones.class);
         this.startActivity(myIntent);
     }
 
