@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="codigo">Codigo:</label>
+        <input type="text" name="codigo" id="codigo">
+        <label for="desc">Descripcion:</label>
+        <input type="text" name="desc" id="desc">
+        <label for="cantidad">Cantidad:</label>
+        <input type="text" name="cantidad" id="cantidad">
+        <label for="precio">Precio:</label>
+        <input type="text" name="precio" id="precio">
+        <button onclick="add()">Añade</button>
+        <table id="tabla">
+            <tbody>
+                <th>Codigo</th>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+            </tbody>
+        </table>
+        <label for="total">Total:</label>
+        <input type="text" name="total" id="total" readonly>
+        <button onclick="calculaTotal()">Calcula</button>
+        <script>
+        function add(){
+            codigo = document.getElementById('codigo').value;
+            desc = document.getElementById('desc').value;
+            cantidad = document.getElementById('cantidad').value;
+            precio = document.getElementById('precio').value;
+            console.log(codigo+cantidad+desc+precio);
+            var table = document.getElementById("tabla");
+            var row = table.insertRow(1);
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
+            var cell4 = row.insertCell(4);
+            cell0.innerHTML = codigo;
+            cell1.innerHTML = desc;
+            cell2.innerHTML = cantidad;
+            cell3.innerHTML = precio;
+            cell4.setAttribute("class", "subtotal");
+            cell4.innerHTML = cantidad*precio;
+            calculaTotal();
+        }
+        function calculaTotal(){
+            cells = document.getElementsByClassName("subtotal");
+            total = 0;
+            for (let i = 0; i < cells.length; i++) {
+            total +=  parseInt( cells[i].innerHTML);
+            }
+            document.getElementById("total").value = total;
+        }
+        </script>
+    </body>
+</html>
