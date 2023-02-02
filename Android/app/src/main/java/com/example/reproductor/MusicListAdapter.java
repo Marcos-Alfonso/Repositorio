@@ -31,7 +31,10 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
     public void onBindViewHolder(ViewHolder holder, int position) {
         ModeloAudio songData = listaCanciones.get(position);
         holder.txTitulo.setText(songData.getTitle());
-/*
+
+        if (songData.bm != null)
+        holder.imgImagen.setImageBitmap(songData.bm);
+        /*
         if(MyMediaPlayer.currentIndex==position){
             holder.titleTextView.setTextColor(Color.parseColor("#FF0000"));
         }else{
