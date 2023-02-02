@@ -7,12 +7,15 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class nuevoUsuario extends AppCompatActivity {
 
     int s;
     SoundPool sp;
+    EditText nombre;
+    EditText fecha;
 
     Handler handler = new Handler();
     Runnable runnable;
@@ -22,11 +25,20 @@ public class nuevoUsuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo_usuario);
-
+        nombre = findViewById(R.id.nombre);
+        fecha = findViewById(R.id.fecha);
          sp = new SoundPool(1, AudioManager.STREAM_MUSIC, 1);
          s =sp.load(this, R.raw.amongus_role, 1);
 
     }
+    public void add(View view){
+        if(fecha.getText().toString() == "" || nombre.getText().toString() == ""){
+            Toast toast1 = Toast.makeText(getApplicationContext(), "Rellena los campos", Toast.LENGTH_SHORT);
+            toast1.show();
+            return;
+        }
+    }
+
     @Override
     protected void onResume() {
         handler.postDelayed(runnable = new Runnable() {
@@ -47,9 +59,4 @@ public class nuevoUsuario extends AppCompatActivity {
         handler.removeCallbacks(runnable); //stop handler when activity not visible super.onPause();
     }
 
-    public void reproduce(View view){
-        sp.play(s, 1, 1, 1, 0, 1);
-        Toast toast1 = Toast.makeText(getApplicationContext(), "Vivimos en una h", Toast.LENGTH_SHORT);
-        toast1.show();
-    }
 }

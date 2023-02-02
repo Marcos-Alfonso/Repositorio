@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+    <script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+        $('#tablaCompleta').DataTable();
+        $( "#tabs" ).tabs();
+    } );
+    </script>
+   
+</head>
+<body>
+    <label for="codigo">Codigo:</label>
+    <input type="text" name="codigo" id="codigo" onblur="autocompleteSearch(this.value)">
+
+    <label for="desc">Descripción:</label>
+    <input type="text" name="desc" id="desc">
+    
+    <label for="cantidad">Cantidad:</label>
+    <input type="text" name="cantidad" id="cantidad">
+
+    <label for="precio">Precio:</label>
+    <input type="text" name="precio" id="precio">
+    <button onclick="add()">Añade</button><br>
+    <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Tabla Completa</a></li>
+          <li><a href="#tabs-2">Tabla </a></li>
+        </ul>
+        <div id="tabs-1">
+            <table id="tablaCompleta">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div id="tabs-2">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="autocomplete(this)" class="lista">
+                        <td>1</td>
+                        <td>Tornillos</td>
+                        <td>45</td>
+                    </tr>
+                    <tr onclick="autocomplete(this)" class="lista">
+                        <td>2</td>
+                        <td>Arandelas</td>
+                        <td>12</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+      <script>
+        function autocomplete(element){
+            elementos = element.getElementsByTagName('td');
+            console.log(element);
+            document.getElementById('codigo').value = elementos[0].innerHTML;
+            document.getElementById('desc').value = elementos[1].innerHTML;
+            document.getElementById('precio').value = elementos[2].innerHTML;
+            
+        }
+        function autocompleteSearch(value){
+            elementos = document.getElementsByClassName('lista');
+            for (let i = 0; i < elementos.length; i++) {
+            apartados = elementos[i].getElementsByTagName('td');
+                console.log(apartados[0]+apartados[1]+apartados[2]);
+                if(apartados[0].innerHTML == value){
+                document.getElementById('desc').value = apartados[1].innerHTML;
+                document.getElementById('precio').value = apartados[2].innerHTML;
+                }
+            }
+        }
+        function add(){
+            codigo = document.getElementById('codigo').value;
+            desc = document.getElementById('desc').value;
+            cantidad = document.getElementById('cantidad').value;
+            precio = document.getElementById('precio').value;
+            console.log(codigo+cantidad+desc+precio);
+            var table = document.getElementById("tablaCompleta");
+            var row = table.insertRow(1);
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
+            var cell4 = row.insertCell(4);
+            cell0.innerHTML = codigo;
+            cell1.innerHTML = desc;
+            cell2.innerHTML = cantidad;
+            cell3.innerHTML = precio;
+            cell4.setAttribute("class", "subtotal");
+            cell4.innerHTML = cantidad*precio;
+        }
+      </script>
+</body>
+</html>
