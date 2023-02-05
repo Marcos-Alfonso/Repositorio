@@ -8,8 +8,8 @@ public class ModeloAudio implements Serializable {
     String path;
     String title;
     String duration;
-    Bitmap bm;
-    public ModeloAudio(String path, String title, String duration, Bitmap bm) {
+    String bm;
+    public ModeloAudio(String path, String title, String duration, String bm) {
         this.path = path;
         this.title = title;
         this.duration = duration;
@@ -38,5 +38,13 @@ public class ModeloAudio implements Serializable {
 
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+    public String getBm() {
+        return bm;
+    }
+
+    public void setBm(String bm) {
+        this.bm = bm;
     }
 }

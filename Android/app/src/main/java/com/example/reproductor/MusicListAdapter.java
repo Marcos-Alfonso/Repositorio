@@ -1,6 +1,8 @@
 package com.example.reproductor;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,15 +34,17 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
         ModeloAudio songData = listaCanciones.get(position);
         holder.txTitulo.setText(songData.getTitle());
 
-        if (songData.bm != null)
-        holder.imgImagen.setImageBitmap(songData.bm);
+        if (songData.getBm() != "")
+            holder.imgImagen.setImageURI(Uri.parse(songData.getBm()));
+        else
+            holder.imgImagen.setImageResource(R.drawable.music_icon);
         /*
         if(MyMediaPlayer.currentIndex==position){
             holder.titleTextView.setTextColor(Color.parseColor("#FF0000"));
         }else{
             holder.titleTextView.setTextColor(Color.parseColor("#000000"));
         }
-
+ */
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,14 +52,14 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
 
                 MyMediaPlayer.getInstance().reset();
                 MyMediaPlayer.currentIndex = position;
-                Intent intent = new Intent(context,MusicPlayerActivity.class);
-                intent.putExtra("LIST",songsList);
+                Intent intent = new Intent(context,MusicPlayer.class);
+                intent.putExtra("LIST",listaCanciones);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
             }
         });
- */
+
     }
 
     @Override
