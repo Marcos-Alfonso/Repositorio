@@ -1,8 +1,9 @@
 package com.example.reproductor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
-import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -10,12 +11,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.Locale;
 
 public class nuevoUsuario extends AppCompatActivity {
 
@@ -52,19 +56,44 @@ public class nuevoUsuario extends AppCompatActivity {
         {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                imageSource = "";
+                if (!imageSource.equals(""))return;
                 if(checkedId == R.id.hombre){
-                    genero = "hombre";
                     imagen.setImageResource(R.drawable.hombre);
                 }else{
-                    genero = "mujer";
-
                     imagen.setImageResource(R.drawable.mujer);
                 }
             }
         });
+        fecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()) {
+                    case R.id.fecha:
+                        DatePickerDialog dialogoFecha = new DatePickerDialog(nuevoUsuario.this, listenerDeDatePicker, 2023, 1, 1);
+                        dialogoFecha.show();
+                        break;
+
+                }
+            }
+        });
     }
-    String genero = "";
+    final Calendar calendario = Calendar.getInstance();
+    int anio = calendario.get(Calendar.YEAR);
+    int mes = calendario.get(Calendar.MONTH);
+    int diaDelMes = calendario.get(Calendar.DAY_OF_MONTH);
+    private DatePickerDialog.OnDateSetListener listenerDeDatePicker = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker view, int anio, int mes, int diaDelMes) {
+            // Esto se llama cuando seleccionan una fecha. Nos pasa la vista, pero más importante, nos pasa:
+            // El año, el mes y el día del mes. Es lo que necesitamos para saber la fecha completa
+            String f = String.format(Locale.getDefault(), "%02d-%02d-%02d", anio, mes, diaDelMes);
+
+            // La ponemos en el editText
+            fecha.setText(f);
+        }
+    };
+
+
     int SELECT_PICTURE = 200;
     void imageChooser() {
 
@@ -92,10 +121,14 @@ public class nuevoUsuario extends AppCompatActivity {
         }
     }
     public void add(View view){
-        if(fecha.getText().toString() == "" || nombre.getText().toString() == ""){
+        RadioGroup rg = findViewById(R.id.group);
+
+        if(fecha.getText().toString().equals( "" )|| nombre.getText().toString().equals("") || rg.getCheckedRadioButtonId()==-1){
             Toast toast1 = Toast.makeText(getApplicationContext(), "Rellena los campos", Toast.LENGTH_SHORT);
             toast1.show();
             return;
+        }else{
+            super.onBackPressed();
         }
     }
 
@@ -118,5 +151,6 @@ public class nuevoUsuario extends AppCompatActivity {
         canPlay = true;
         handler.removeCallbacks(runnable); //stop handler when activity not visible super.onPause();
     }
+
 
 }
