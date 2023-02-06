@@ -26,8 +26,8 @@ public class ParseHTML {
     final static String URL1="http://localhost";
     final static  String URL2="http://huelvainformacion.es";
     //final static  String URL3="http://ieslamarisma.net/aulavirtual";
-    
-    final static  String URLSEL=URL1;
+
+    final static  String URLSEL=URL2;
     
     public static void main(String[] args) throws Exception {
 

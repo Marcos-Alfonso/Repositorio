@@ -22,6 +22,7 @@
         android:layout_alignBottom="@+id/image"
         android:layout_toEndOf="@+id/image"
         android:background="#003A1414"
+        android:id="@+id/buttonImage"
         android:src="@android:drawable/ic_menu_add"></ImageButton>
 
     <RadioGroup
@@ -36,6 +37,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/hombre"
             android:text="Hombre"
             android:textSize="20dp"
             >
@@ -43,7 +45,8 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hombre"
+            android:id="@+id/mujer"
+            android:text="Mujer"
             android:textSize="20dp"
             >
         </RadioButton>
