@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="login.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="user.png" id="icon" alt="Usuario" />
+      </div>
+  
+      <!-- Login Form -->
+      <form>
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre">
+        <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">       
+      </form>
+      <button  class="fadeIn fourth btn btn-info" onclick="validaSesion()" style="margin-bottom: 15px;">Iniciar Sesión</button>
+      <!-- Remind Passowrd -->
+      <div id="formFooter" >
+        <p class="text-danger">Datos Incorrectos</p>
+      </div>
+    </div>
+  </div>
+  <script>
+     $('#formFooter').hide()
+    function validaSesion(){
+       nombre = document.getElementById('login').value;
+       pass = document.getElementById('password').value;
+       if(nombre == "admin" && pass == "admin"){
+        location.replace("./clientes.html")
+       }
+       $('#formFooter').show()
+    }
+  </script>
+</body>
+</html>
