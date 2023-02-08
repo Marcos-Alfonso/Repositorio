@@ -1,4 +1,4 @@
-package com.example.reproductor;
+package com.example.reproductor.modelos;
 
 import android.graphics.Bitmap;
 

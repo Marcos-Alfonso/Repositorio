@@ -128,6 +128,14 @@ public class nuevoUsuario extends AppCompatActivity {
             toast1.show();
             return;
         }else{
+            String genero = "";
+            if (rg.getCheckedRadioButtonId()==R.id.hombre){
+                genero = "hombre";
+            }else{
+                genero = "mujer";
+            }
+            DB d = new DB(this);
+            d.addUsuario(nombre.getText().toString(), fecha.getText().toString(), imageSource, genero);
             super.onBackPressed();
         }
     }

@@ -35,7 +35,7 @@ public class DB extends SQLiteOpenHelper {
             "DROP TABLE IF EXISTS PLAYLIST",
             "DROP TABLE IF EXISTS CANCIONES"
     };
-    public DB(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public DB(Context context) {
         super(context, DB_NOMBRE, null, DB_VERSION);
     }
 

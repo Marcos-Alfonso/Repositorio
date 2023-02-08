@@ -18,6 +18,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.reproductor.modelos.ModeloAudio;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
