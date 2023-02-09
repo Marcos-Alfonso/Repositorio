@@ -12,6 +12,18 @@ public class Clientes {
     private String nif;
     private Collection<Ventas> ventasById;
 
+    public Clientes(){
+
+    }
+    public Clientes(Integer id, String nombre, String direccion, String poblacion, String telef, String nif) {
+        this.id = id;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.poblacion = poblacion;
+        this.telef = telef;
+        this.nif = nif;
+    }
+
     public Integer getId() {
         return id;
     }

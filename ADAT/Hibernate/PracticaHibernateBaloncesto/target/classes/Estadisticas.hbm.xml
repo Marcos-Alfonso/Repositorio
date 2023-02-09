@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.Estadisticas" table="estadisticas" schema="baloncesto">
+        <id name="temporada" column="temporada"/>
+        <property name="jugador" column="jugador" insert="false" update="false"/>
+
+        <property name="puntosPorPartido" column="Puntos_por_partido"/>
+        <property name="asistenciasPorPartido" column="Asistencias_por_partido"/>
+        <property name="taponesPorPartido" column="Tapones_por_partido"/>
+        <property name="rebotesPorPartido" column="Rebotes_por_partido"/>
+        <many-to-one name="jugadoresByJugador" class="org.example.Modelo.Jugadores">
+            <column name="jugador"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

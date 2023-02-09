@@ -6,9 +6,20 @@ import java.util.Objects;
 public class Ventas {
     private short idventa;
     private Date fechaventa;
-    private byte cantidad;
+    private int cantidad;
     private Clientes clientesByIdcliente;
     private Productos productosByIdproducto;
+
+    public Ventas(){
+
+    }
+    public Ventas(short idventa, Date fechaventa, int cantidad, Clientes clientesByIdcliente, Productos productosByIdproducto) {
+        this.idventa = idventa;
+        this.fechaventa = fechaventa;
+        this.cantidad = cantidad;
+        this.clientesByIdcliente = clientesByIdcliente;
+        this.productosByIdproducto = productosByIdproducto;
+    }
 
     public short getIdventa() {
         return idventa;
@@ -26,11 +37,11 @@ public class Ventas {
         this.fechaventa = fechaventa;
     }
 
-    public byte getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(byte cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 

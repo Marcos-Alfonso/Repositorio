@@ -12,6 +12,18 @@ public class Productos {
     private Double pvp;
     private Collection<Ventas> ventasById;
 
+    public Productos(){
+
+    }
+
+    public Productos(Integer id, String descripcion, Integer stockactual, Integer stockminimo, Double pvp) {
+        this.id = id;
+        this.descripcion = descripcion;
+        this.stockactual = stockactual;
+        this.stockminimo = stockminimo;
+        this.pvp = pvp;
+    }
+
     public Integer getId() {
         return id;
     }

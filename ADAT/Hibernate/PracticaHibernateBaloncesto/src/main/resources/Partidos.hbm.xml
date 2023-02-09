@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.Partidos" table="partidos" schema="baloncesto">
+        <id name="codigo" column="codigo"/>
+        <property name="equipoLocal" column="equipo_local" insert="false" update="false"/>
+        <property name="equipoVisitante" column="equipo_visitante" insert="false" update="false"/>
+        <property name="puntosLocal" column="puntos_local"/>
+        <property name="puntosVisitante" column="puntos_visitante"/>
+        <property name="temporada" column="temporada"/>
+        <many-to-one name="equiposByEquipoLocal" class="org.example.Modelo.Equipos">
+            <column name="equipo_local" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="equiposByEquipoVisitante" class="org.example.Modelo.Equipos">
+            <column name="equipo_visitante" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

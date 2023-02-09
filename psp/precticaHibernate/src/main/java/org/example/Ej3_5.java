@@ -4,18 +4,23 @@ import org.example.modeloVentas.Clientes;
 import org.example.modeloVentas.Ventas;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
 import java.util.Iterator;
 import java.util.Set;
 
-public class Main {
+public class Ej3_5 {
     public static void main(String[] args) {
 
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session s = sf.openSession();
 
-        Clientes c = s.load(Clientes.class, Integer.parseInt(args[0]));
+        int id;
+        try{
+            id = Integer.parseInt(args[0]);
+        }catch (Exception eob){
+            id = 1;
+        }
+        Clientes c = s.load(Clientes.class, id);
 
         System.out.println("Ventas del cliente: "+c.getNombre());
         Set<Ventas> lista = (Set<Ventas>) c.getVentasById();
@@ -31,15 +36,5 @@ public class Main {
         }
         System.out.println("Importe total: "+d+"\nTotal de ventas: "+count);
         s.close();
-        /*
-        Transaction t = s.beginTransaction();
-        Clientes c = new Clientes();
-        c.setId((byte) 56);
-        c.setNombre("Antonio");
-        c.setNif("12345678W");
-        s.save(c);
-        t.commit();
-
-        */
     }
 }
