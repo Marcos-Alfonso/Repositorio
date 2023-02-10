@@ -104,51 +104,109 @@
     </div>
 
 
-    
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <p class="close">&times;</p>
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="inputEmail4">Nombre</label>
-          <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre">
-        </div>
-        <div class="form-group col-md-8">
-          <label for="inputPassword4">Apellidos</label>
-          <input type="text" class="form-control" id="inputPassword4" placeholder="Apellidos">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputTelefono">Teléfono</label>
-          <input type="email" class="form-control" id="inputTelefono" placeholder="Teléfono">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="inputEmail4">Nombre</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Nombre">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputPassword4">Apellidos</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Apellidos">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputPassword4">Apellidos</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Apellidos">
-        </div>
-      </div>      
-      
-    </form>
-    <button class="btn btn-primary" id="btModal" style="display: block;">Sign in</button>
-  </div>
-</div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-<script>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <p class="close">&times;</p>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputNombre">Nombre</label>
+              <input type="text" class="form-control" id="inputNombre"
+                placeholder="Nombre">
+            </div>
+            <div class="form-group col-md-8">
+              <label for="inputApellidos">Apellidos</label>
+              <input type="text" class="form-control" id="inputApellidos"
+                placeholder="Apellidos">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputTelefono">Teléfono</label>
+              <input type="tel" class="form-control" id="inputTelefono"
+                placeholder="Teléfono">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputProvincia">Provincia</label>
+              <select class="form-control" name="provincia" id="inputProvincia">
+                <option value="1">Araba/Álava</option>
+                <option value="2">Albacete</option>
+                <option value="3">Alicante/Alacant</option>
+                <option value="4">Almería</option>
+                <option value="5">Ávila</option>
+                <option value="6">Badajoz</option>
+                <option value="7">Balears, Illes</option>
+                <option value="8">Barcelona</option>
+                <option value="9">Burgos</option>
+                <option value="10">Cáceres</option>
+                <option value="11">Cádiz</option>
+                <option value="12">Castellón/Castelló</option>
+                <option value="13">Ciudad Real</option>
+                <option value="14">Córdoba</option>
+                <option value="15">A Coruña</option>
+                <option value="16">Cuenca</option>
+                <option value="17">Girona</option>
+                <option value="18">Granada</option>
+                <option value="19">Guadalajara</option>
+                <option value="20">Gipuzkoa</option>
+                <option value="21" selected>Huelva</option>
+                <option value="22">Huesca</option>
+                <option value="23">Jaén</option>
+                <option value="24">León</option>
+                <option value="25">Lleida</option>
+                <option value="26">La Rioja</option>
+                <option value="27">Lugo</option>
+                <option value="28">Madrid</option>
+                <option value="29">Málaga</option>
+                <option value="30">Murcia</option>
+                <option value="31">Navarra</option>
+                <option value="32">Ourense</option>
+                <option value="33">Asturias</option>
+                <option value="34">Palencia</option>
+                <option value="35">Las Palmas</option>
+                <option value="36">Pontevedra</option>
+                <option value="37">Salamanca</option>
+                <option value="38">Santa Cruz de Tenerife</option>
+                <option value="39">Cantabria</option>
+                <option value="40">Segovia</option>
+                <option value="41">Sevilla</option>
+                <option value="42">Soria</option>
+                <option value="43">Tarragona</option>
+                <option value="44">Teruel</option>
+                <option value="45">Toledo</option>
+                <option value="46">Valencia/València</option>
+                <option value="47">Valladolid</option>
+                <option value="48">Bizkaia</option>
+                <option value="49">Zamora</option>
+                <option value="50">Zaragoza</option>
+                <option value="51">Ceuta</option>
+                <option value="52">Melilla</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputLocalidad">Localidad</label>
+              <input type="text" class="form-control" id="inputLocalidad"
+                placeholder="Localidad">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputCodPostal">Código Postal</label>
+              <input type="password" class="form-control" id="inputCodPostal"
+                placeholder="Código Postal">
+            </div>
+          </div>
+
+        </form>
+        <button class="btn btn-secondary" id="btModal">Aceptar</button>
+      </div>
+    </div>
+
+    <script>
 // Get the modal
 var modal = document.getElementById("myModal");
 
