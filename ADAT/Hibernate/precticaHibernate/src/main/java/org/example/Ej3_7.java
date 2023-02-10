@@ -1,6 +1,8 @@
-package org.example.modeloVentas;
+package org.example;
 
 import org.example.HibernateUtil;
+import org.example.modeloVentas.Clientes;
+import org.example.modeloVentas.Ventas;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;

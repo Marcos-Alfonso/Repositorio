@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5bd030e-f470-4f05-8049-60114a75a874" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ej7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8525be43-07a8-48cb-8a81-bdf577f1c286.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8525be43-07a8-48cb-8a81-bdf577f1c286.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PracticaHibernateTrenes/src/main/java/org/example/Ej3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaHibernateTrenes/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaHibernateTrenes/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticaHibernateTrenes/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../precticaHibernate/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../precticaHibernate/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../precticaHibernate/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../precticaHibernate/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../precticaHibernate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../precticaHibernate/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../precticaHibernate/src/main/java/org/example/modeloVentas/Ej3_7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../precticaHibernate/target/classes/org/example/modeloVentas/Ej3_7.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,23 +41,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;8525be43-07a8-48cb-8a81-bdf577f1c286&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JPA.DatabaseSchemaImportDialog": "8525be43-07a8-48cb-8a81-bdf577f1c286",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/manana/Documents/GitHub/Repositorio/ADAT/Hibernate/precticaHibernate",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="org.example.Modelo" />
@@ -94,6 +100,7 @@
       <updated>1675944674924</updated>
       <workItem from="1675944677284" duration="4076000" />
       <workItem from="1676013382705" duration="3122000" />
+      <workItem from="1676029902563" duration="24000" />
     </task>
     <servers />
   </component>
