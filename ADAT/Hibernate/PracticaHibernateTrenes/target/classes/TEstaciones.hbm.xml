@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.TEstaciones" table="t_estaciones" schema="trenes">
+        <id name="codEstacion" column="cod_estacion"/>
+        <property name="nombre" column="nombre"/>
+        <property name="direccion" column="direccion"/>
+        <property name="numaccesos" column="numaccesos"/>
+        <property name="numlineas" column="numlineas"/>
+        <property name="numviajesdestino" column="numviajesdestino"/>
+        <property name="numviajesprocedencia" column="numviajesprocedencia"/>
+        <set name="tAccesosByCodEstacion" inverse="true">
+            <key>
+                <column name="cod_estacion"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.Modelo.TAccesos"/>
+        </set>
+        <set name="tLineaEstacionsByCodEstacion" inverse="true">
+            <key>
+                <column name="cod_estacion"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.Modelo.TLineaEstacion"/>
+        </set>
+        <set name="tViajesByCodEstacion" inverse="true">
+            <key>
+                <column name="estacionorigen" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.Modelo.TViajes"/>
+        </set>
+        <set name="tViajesByCodEstacion_0" inverse="true">
+            <key>
+                <column name="estaciondestino" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.Modelo.TViajes"/>
+        </set>
+    </class>
+</hibernate-mapping>

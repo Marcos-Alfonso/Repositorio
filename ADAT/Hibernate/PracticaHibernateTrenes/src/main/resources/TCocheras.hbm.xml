@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.TCocheras" table="t_cocheras" schema="trenes">
+        <id name="codCochera" column="cod_cochera"/>
+        <property name="nombre" column="nombre"/>
+        <property name="direccion" column="direccion"/>
+        <set name="tTrenesByCodCochera" inverse="true">
+            <key>
+                <column name="cod_cochera"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.Modelo.TTrenes"/>
+        </set>
+    </class>
+</hibernate-mapping>

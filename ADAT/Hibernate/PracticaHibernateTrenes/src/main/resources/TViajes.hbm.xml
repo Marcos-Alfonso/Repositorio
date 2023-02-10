@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.TViajes" table="t_viajes" schema="trenes">
+        <id name="codViaje" column="cod_VIAJE"/>
+        <property name="nombre" column="nombre"/>
+        <property name="estacionorigen" column="estacionorigen" insert="false" update="false"/>
+        <property name="estaciondestino" column="estaciondestino" insert="false" update="false"/>
+        <many-to-one name="tEstacionesByEstacionorigen" class="org.example.Modelo.TEstaciones">
+            <column name="estacionorigen" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="tEstacionesByEstaciondestino" class="org.example.Modelo.TEstaciones">
+            <column name="estaciondestino" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.TLineas" table="t_lineas" schema="trenes">
+        <id name="codLinea" column="cod_linea"/>
+        <property name="nombre" column="nombre"/>
+        <set name="tLineaEstacionsByCodLinea" inverse="true">
+            <key>
+                <column name="cod_linea"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.Modelo.TLineaEstacion"/>
+        </set>
+        <set name="tTrenesByCodLinea" inverse="true">
+            <key>
+                <column name="cod_linea"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.Modelo.TTrenes"/>
+        </set>
+    </class>
+</hibernate-mapping>

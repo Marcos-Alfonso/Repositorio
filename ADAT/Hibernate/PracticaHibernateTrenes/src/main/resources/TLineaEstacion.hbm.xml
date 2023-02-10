@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.TLineaEstacion" table="t_linea_estacion" schema="trenes">
+        <composite-id name="id" class="org.example.Modelo.TLineaEstacionPK">
+            <key-property name="codLinea" column="cod_linea" />
+            <key-property name="codEstacion" column="cod_estacion"/>
+        </composite-id>
+        <property name="orden" column="orden"/>
+        <many-to-one name="tLineasByCodLinea" class="org.example.Modelo.TLineas" insert="false" update="false">
+            <column name="cod_linea" />
+        </many-to-one>
+        <many-to-one name="tEstacionesByCodEstacion" class="org.example.Modelo.TEstaciones" insert="false" update="false">
+            <column name="cod_estacion"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

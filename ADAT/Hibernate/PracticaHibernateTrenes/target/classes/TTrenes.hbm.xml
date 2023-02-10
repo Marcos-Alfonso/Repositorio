@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.Modelo.TTrenes" table="t_trenes" schema="trenes">
+        <id name="codTren" column="cod_tren"/>
+        <property name="nombre" column="nombre"/>
+        <property name="tipo" column="tipo"/>
+        <property name="codLinea" column="cod_linea" insert="false" update="false"/>
+        <property name="codCochera" column="cod_cochera" insert="false" update="false"/>
+        <many-to-one name="tLineasByCodLinea" class="org.example.Modelo.TLineas">
+            <column name="cod_linea"/>
+        </many-to-one>
+        <many-to-one name="tCocherasByCodCochera" class="org.example.Modelo.TCocheras">
+            <column name="cod_cochera"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
