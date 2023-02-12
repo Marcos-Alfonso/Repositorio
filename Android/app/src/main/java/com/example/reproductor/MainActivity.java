@@ -2,7 +2,9 @@ package com.example.reproductor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -33,8 +35,16 @@ public class MainActivity extends AppCompatActivity {
             Toast toast1 = Toast.makeText(getApplicationContext(), "Usuario no existe", Toast.LENGTH_SHORT);
             toast1.show();
         }else{
-            Toast toast1 = Toast.makeText(getApplicationContext(), "Usuario EXISTE", Toast.LENGTH_SHORT);
-            toast1.show();
+            SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putInt("userId", i);
+            editor.apply();
+
+
+            Intent intent = new Intent(this,VistaPlaylist.class);
+            intent.addFlags( Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_READ_URI_PERMISSION );
+            intent.putExtra("ID",i);
+            this.startActivity(intent);
         }
     }
 

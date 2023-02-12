@@ -19,30 +19,35 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:layout_toStartOf="@+id/pImage"></EditText>
+            android:layout_toStartOf="@+id/pImage"
+            ></EditText>
 
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nombrePlaylist"
-            android:text="Añadir Playlist"
             android:layout_toStartOf="@+id/pImage"
-            ></Button>
+            android:onClick="addPlaylist"
+            android:text="Añadir Playlist"></Button>
 
         <ImageView
+            android:id="@+id/pImage"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_alignParentEnd="true"
-            android:id="@+id/pImage"
-            android:layout_margin="20dp"
-            android:src="@drawable/music_icon"
-            ></ImageView>
+            android:scaleType="fitXY"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/music_icon"></ImageView>
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nuevaPlaylist"
+        android:id="@+id/recyclerviewPlaylist"
         ></androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

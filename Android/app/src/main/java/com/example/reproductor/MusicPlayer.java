@@ -2,6 +2,8 @@ package com.example.reproductor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -54,8 +56,10 @@ public class MusicPlayer extends AppCompatActivity {
         txTitulo.setSelected(true);
 
         inicia();
-
-
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        int id = sharedPref.getInt("userId", 0);
+        Toast toast1 = Toast.makeText(getApplicationContext(), String.valueOf(id), Toast.LENGTH_SHORT);
+        toast1.show();
         pause.setOnClickListener(v-> pausePlay());
         next.setOnClickListener(v-> playNextSong());
         previous.setOnClickListener(v-> playPreviousSong());

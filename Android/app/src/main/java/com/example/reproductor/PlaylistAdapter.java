@@ -1,44 +1,52 @@
 package com.example.reproductor;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.reproductor.modelos.ModeloAudio;
+import com.example.reproductor.modelos.Playlist;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
-public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.ViewHolder>{
+public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ViewHolder>{
 
-    ArrayList<ModeloAudio> listaCanciones;
+    ArrayList<Playlist> listaPlaylist;
     Context context;
 
-    public MusicListAdapter(ArrayList<ModeloAudio> listaCanciones, Context context) {
-        this.listaCanciones = listaCanciones;
+    public PlaylistAdapter(ArrayList<Playlist> listaPlaylist, Context context) {
+        this.listaPlaylist = listaPlaylist;
         this.context = context;
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.recycler_item,parent,false);
-        return new MusicListAdapter.ViewHolder(view);
+        View view = LayoutInflater.from(context).inflate(R.layout.playlist_item,parent,false);
+        return new PlaylistAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        ModeloAudio songData = listaCanciones.get(position);
-        holder.txTitulo.setText(songData.getTitle());
 
-        if (songData.getBm() != "")
-            holder.imgImagen.setImageURI(Uri.parse(songData.getBm()));
-        else
+        Playlist playlist = listaPlaylist.get(position);
+        holder.txTitulo.setText(playlist.getNombre());
+        if (!playlist.getImagen().equals("")){
+            //holder.imgImagen.setImageURI(Uri.parse(playlist.getImagen()));
+        }
+        else{
             holder.imgImagen.setImageResource(R.drawable.amongus1);
+        }
+
         /*
         if(MyMediaPlayer.currentIndex==position){
             holder.titleTextView.setTextColor(Color.parseColor("#FF0000"));
@@ -46,18 +54,19 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
             holder.titleTextView.setTextColor(Color.parseColor("#000000"));
         }
  */
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.imgImagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //navigate to another acitivty
+                Toast toast1 = Toast.makeText(context, "-"+playlist.getImagen()+"-", Toast.LENGTH_SHORT);
+                toast1.show();
 
-                MyMediaPlayer.getInstance().reset();
-                MyMediaPlayer.currentIndex = position;
-                Intent intent = new Intent(context,MusicPlayer.class);
-                intent.putExtra("LIST",listaCanciones);
+                ArrayList<ModeloAudio> r = new DB(context).getAudioByID(listaPlaylist.get(position).getId());
+
+                Intent intent = new Intent(context,ListaCanciones.class);
+                intent.putExtra("LIST",r);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
-
             }
         });
 
@@ -65,7 +74,7 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
 
     @Override
     public int getItemCount() {
-        return listaCanciones.size();
+        return listaPlaylist.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -74,8 +83,8 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.View
         ImageView imgImagen;
         public ViewHolder(View itemView) {
             super(itemView);
-            txTitulo = itemView.findViewById(R.id.music_title_text);
-            imgImagen = itemView.findViewById(R.id.icon_view);
+            txTitulo = itemView.findViewById(R.id.txPlaylist);
+            imgImagen = itemView.findViewById(R.id.imagePlaylist);
         }
     }
 }

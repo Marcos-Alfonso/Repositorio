@@ -22,6 +22,7 @@ import com.example.reproductor.modelos.ModeloAudio;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ListaCanciones extends AppCompatActivity {
@@ -40,6 +41,12 @@ public class ListaCanciones extends AppCompatActivity {
 
         if (cargaDefault()) return;
 
+        ArrayList<ModeloAudio> r = (ArrayList<ModeloAudio>)getIntent().getSerializableExtra("LIST");
+        if (r != null){
+            Toast toast1 = Toast.makeText(this, "-"+"-", Toast.LENGTH_SHORT);
+            toast1.show();
+            listaCanciones = r;
+        }
         if(listaCanciones.size()==0){
             noFound.setVisibility(View.VISIBLE);
         }else{
