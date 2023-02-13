@@ -31,36 +31,34 @@
           <button class="btn btn-dark btn-lg btn-block" id="create-user">Alta</button>
         </div>
         <div class="col" style="text-align: center;">
-          <button class="btn btn-dark btn-lg btn-block">Modificación</button>
+          <button class="btn btn-dark btn-lg btn-block" id="mod-user">Modificación</button>
         </div>
         <div class="col" style="text-align: center;">
-          <button class="btn btn-dark btn-lg btn-block">Baja</button>
+          <button class="btn btn-dark btn-lg btn-block" id="btElimina">Baja</button>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <label for="fNombre">Nombre: </label>
+          <label for="fNombre">Filtro: </label>
           <input type="text" name="fNombre" id="fNombre">
         </div>
         <div class="col">
-          <label for="fApellidos">Apellidos: </label>
-          <input type="text" name="fApellidos" id="fApellidos">
-        </div>
-        <div class="col">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label for="fProvincia">Provincia: </label>
-          <input type="text" name="fProvincia" id="fProvincia">
-        </div>
-        <div class="col">
-          <label for="fTipo">Tipo: </label>
-          <select name="fTipo" id="fTipo">
-            <option value="0" selected>Todos</option>
-            <option value="1">Particular</option>
-            <option value="2">Empresa</option>
+          <label for="fApellidos">Campo: </label>
+          <select name="filtro" id="filtro">
+            <option value="0">Nombre</option>
+            <option value="1">Apellidos</option>
+            <option value="2">Telefono</option>
+            <option value="3">Provincia</option>
+            <option value="4">Localidad</option>
+            <option value="5">Codigo Postal</option>
+            <option value="6">Tipo</option>
           </select>
+          <button type="button" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+            </svg>
+            Filtra
+          </button>
         </div>
         <div class="col">
         </div>
@@ -68,14 +66,14 @@
 
       <div class="row">
         <div class="col table-responsive">
-          <table class="table table-hover table-bordered border-danger">
+          <table class="table table-hover table-bordered border-danger" id="tablaClientes">
             <thead>
               <th>Nombre</th>
               <th>Apellidos</th>
               <th>Teléfono</th>
+              <th>Provincia</th>
               <th>Localidad</th>
               <th>Código Postal</th>
-              <th>Provincia</th>
               <th>Tipo</th>
             </thead>
             <tbody>
@@ -83,18 +81,18 @@
                 <td>Juan</td>
                 <td>Soriano Pérez</td>
                 <td>+12 234 12 23 12</td>
+                <td>Extremadura</td>
                 <td>Merida</td>
                 <td>23345</td>
-                <td>Extremadura</td>
                 <td>Particular</td>
               </tr>
               <tr>
                 <td>Pepe</td>
                 <td>López Melendi</td>
                 <td>+12 234 12 23 12</td>
+                <td>Huelva</td>
                 <td>Lepe</td>
                 <td>23345</td>
-                <td>Huelva</td>
                 <td>Particular</td>
               </tr>
             </tbody>
@@ -129,6 +127,13 @@
               <label for="inputTelefono">Teléfono</label>
               <input type="tel" class="form-control" id="inputTelefono"
                 placeholder="Teléfono">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputTelefono">Tipo</label>
+              <select class="form-control" name="tipo" id="inputTipo">
+                <option value="Particular" selected>Particular</option>
+                <option value="Empresa">Empresa</option>
+              </select>
             </div>
           </div>
           <div class="form-row">
@@ -196,7 +201,7 @@
             </div>
             <div class="form-group col-md-4">
               <label for="inputCodPostal">Código Postal</label>
-              <input type="password" class="form-control" id="inputCodPostal"
+              <input type="number" class="form-control" id="inputCodPostal"
                 placeholder="Código Postal">
             </div>
           </div>
@@ -207,31 +212,150 @@
     </div>
 
     <script>
-// Get the modal
+
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
+
 var btn = document.getElementById("create-user");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+var btnMod = document.getElementById("mod-user");
+var crearUsuario = document.getElementById("btModal");
+var eliminaUsuario = document.getElementById("btElimina")
+rows = document.getElementsByTagName('tr');
+var selectedIndex = 1; 
+cargaFilas();
+function cargaFilas(){
+  for (let index = 1; index < rows.length; index++) {
+  rows[index].onclick = function(){
+    console.log(index);
+    selectedIndex = index;
+  }  
+}
 }
 
-// When the user clicks on <span> (x), close the modal
+
+var span = document.getElementsByClassName("close")[0];
+
+ eliminaUsuario.onclick = function(){
+  rows = document.getElementsByTagName("table")[0].rows;
+  if(rows.length ==1){
+    alert("No hay filas")
+  }else{
+    if(confirm("Seguro que desea borrar la columna seleccionada?")){
+      document.getElementsByTagName("table")[0].deleteRow(selectedIndex);
+      selectedIndex = 1;
+    }
+  }
+
+ }
+btn.onclick = function() {
+  modal.style.display = "block";
+  crearUsuario.onclick = function(){
+    insertaUsuario();
+  }
+}
+btnMod.onclick = function() {
+  rows = document.getElementsByTagName("table")[0].rows;
+  if(rows.length ==1){
+    alert("No hay filas");
+    return;
+  }
+  
+  cargaModificacion();
+
+  modal.style.display = "block";
+  crearUsuario.onclick = function(){
+    modUsuario();
+  }
+}
+function cargaModificacion(){
+  var rows = document.getElementsByTagName("table")[0].rows;
+  selectedRow = rows[selectedIndex];
+  cells = selectedRow.cells;
+
+  document.getElementById('inputNombre').value = cells[0].innerHTML;
+  document.getElementById('inputApellidos').value= cells[1].innerHTML;
+  document.getElementById('inputTelefono').value= cells[2].innerHTML;
+/*
+  select =  document.getElementById('inputProvincia')
+  options = Array.from(select.options);
+  optionToSelect = options.find(item => item.text ===cells[3].innerHTML);
+  console.log(optionToSelect);
+  optionToSelect.selected = true;
+ */
+  document.getElementById("inputLocalidad").value= cells[4].innerHTML;
+  document.getElementById("inputCodPostal").value= cells[5].innerHTML;
+  document.getElementById('inputTipo').value= cells[6].innerHTML;
+}
+function modUsuario(){
+  nombre = document.getElementById('inputNombre').value;
+  apellidos = document.getElementById('inputApellidos').value;
+  telefono = document.getElementById('inputTelefono').value;
+  sel = document.getElementById("inputProvincia");
+  provincia= sel.options[sel.selectedIndex].text;
+
+  localidad = document.getElementById("inputLocalidad").value;
+  codigoPostal = document.getElementById("inputCodPostal").value;
+  tipo = document.getElementById('inputTipo').value;
+
+  console.log(selectedIndex);
+  var rows = document.getElementsByTagName("table")[0].rows;
+  selectedRow = rows[selectedIndex];
+  cells = selectedRow.cells;
+
+  cells[0].innerHTML = nombre;
+  cells[1].innerHTML = apellidos;
+  cells[2].innerHTML = telefono;
+  cells[3].innerHTML = provincia;
+  cells[4].innerHTML = localidad;
+  cells[5].innerHTML = codigoPostal;
+  cells[6].innerHTML = tipo;
+  modal.style.display = "none";
+}
+function insertaUsuario(){
+  nombre = document.getElementById('inputNombre').value;
+  apellidos = document.getElementById('inputApellidos').value;
+  telefono = document.getElementById('inputTelefono').value;
+  sel = document.getElementById("inputProvincia");
+  provincia= sel.options[sel.selectedIndex].text;
+
+  localidad = document.getElementById("inputLocalidad").value;
+  codigoPostal = document.getElementById("inputCodPostal").value;
+  tipo = document.getElementById('inputTipo').value;
+
+  var table = document.getElementById("tablaClientes");
+
+var row = table.insertRow(1);
+
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+var cell5 = row.insertCell(4);
+var cell6 = row.insertCell(5);
+var cell7 = row.insertCell(6);
+
+cell1.innerHTML = nombre;
+cell2.innerHTML = apellidos;
+cell3.innerHTML = telefono;
+cell4.innerHTML = provincia;
+cell5.innerHTML = localidad;
+cell6.innerHTML = codigoPostal;
+cell7.innerHTML = tipo;
+
+modal.style.display = "none";
+cargaFilas();
+}
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
+
+
 </script>
   </body>
 </html>
