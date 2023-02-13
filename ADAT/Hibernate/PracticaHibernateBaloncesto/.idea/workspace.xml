@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5bd030e-f470-4f05-8049-60114a75a874" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../interfacesWeb/practicaWeb/clientes.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../interfacesWeb/practicaWeb/clientes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +94,7 @@
       <workItem from="1675944677284" duration="4076000" />
       <workItem from="1676013382705" duration="3122000" />
       <workItem from="1676029902563" duration="24000" />
-      <workItem from="1676281615179" duration="334000" />
+      <workItem from="1676281615179" duration="612000" />
     </task>
     <servers />
   </component>

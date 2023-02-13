@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent(this, ListaCanciones.class);
         this.startActivity(myIntent);
     }
+    public void video(View view){
+        Intent intent = new Intent(this, VideoActivity.class);
+        this.startActivity(intent);
+    }
     public void iniciaSesion(View view){
         DB db = new DB(this);
         int i = db.userExist(nombre.getText().toString());
