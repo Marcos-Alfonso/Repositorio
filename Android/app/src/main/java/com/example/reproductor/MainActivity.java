@@ -49,7 +49,13 @@ public class MainActivity extends AppCompatActivity {
             intent.addFlags( Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_READ_URI_PERMISSION );
             intent.putExtra("ID",i);
             this.startActivity(intent);
+
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        nombre.setText("");
+    }
 }

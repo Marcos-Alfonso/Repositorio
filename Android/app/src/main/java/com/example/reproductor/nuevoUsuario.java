@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.time.Year;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -69,7 +70,7 @@ public class nuevoUsuario extends AppCompatActivity {
             public void onClick(View view) {
                 switch (view.getId()) {
                     case R.id.fecha:
-                        DatePickerDialog dialogoFecha = new DatePickerDialog(nuevoUsuario.this, listenerDeDatePicker, 2023, 1, 1);
+                        DatePickerDialog dialogoFecha = new DatePickerDialog(nuevoUsuario.this, listenerDeDatePicker, anio, mes, diaDelMes);
                         dialogoFecha.show();
                         break;
 
@@ -84,11 +85,13 @@ public class nuevoUsuario extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener listenerDeDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int anio, int mes, int diaDelMes) {
-            // Esto se llama cuando seleccionan una fecha. Nos pasa la vista, pero más importante, nos pasa:
-            // El año, el mes y el día del mes. Es lo que necesitamos para saber la fecha completa
+            int year = Calendar.getInstance().get(Calendar.YEAR);
+            if(year-anio <16){
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Edad no válida", Toast.LENGTH_SHORT);
+                toast1.show();
+                return;
+            }
             String f = String.format(Locale.getDefault(), "%02d-%02d-%02d", anio, mes, diaDelMes);
-
-            // La ponemos en el editText
             fecha.setText(f);
         }
     };
@@ -128,7 +131,12 @@ public class nuevoUsuario extends AppCompatActivity {
             toast1.show();
             return;
         }else{
-            String genero = "";
+            if(nombre.getText().toString().length()<8){
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Inserta un nombre mayor de 8 carácteres", Toast.LENGTH_SHORT);
+                toast1.show();
+                return;
+            }
+            String genero;
             if (rg.getCheckedRadioButtonId()==R.id.hombre){
                 genero = "hombre";
             }else{
