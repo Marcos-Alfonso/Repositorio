@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
 import android.view.KeyEvent;
@@ -37,7 +38,7 @@ public class GameView extends SurfaceView implements Runnable {
     private Flight flight;
     private GameActivity activity;
     private Background background1, background2;
-
+    public MediaPlayer mediaPlayer;
     public GameView(GameActivity activity, int screenX, int screenY) {
         super(activity);
 
@@ -63,6 +64,12 @@ public class GameView extends SurfaceView implements Runnable {
         sound = soundPool.load(activity, R.raw.shoot, 1);
         soundDead = soundPool.load(activity, R.raw.aaa, 2);
         soundBird = soundPool.load(activity, R.raw.disc, 3);
+
+        mediaPlayer = MediaPlayer.create(this.getContext(), R.raw.sp);
+        if (!prefs.getBoolean("isMute", false)){
+            mediaPlayer.start(); // no need to call prepare(); create() does that for you
+        }
+
         this.screenX = screenX;
         this.screenY = screenY;
         screenRatioX = 1920f / screenX;
@@ -184,11 +191,7 @@ public class GameView extends SurfaceView implements Runnable {
             }
 
             if (Rect.intersects(bird.getCollisionShape(), flight.getCollisionShape())) {
-
-
                 isGameOver = true;
-
-
                 return;
             }
 
