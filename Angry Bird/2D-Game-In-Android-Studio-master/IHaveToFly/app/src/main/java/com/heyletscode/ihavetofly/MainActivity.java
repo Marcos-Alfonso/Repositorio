@@ -8,7 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +63,66 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        RadioGroup rgDificultad = findViewById(R.id.dificultad), rgVelocidad = findViewById(R.id.velocidad);
+
+
+        rgDificultad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // checkedId is the RadioButton selected
+                RadioButton rb=findViewById(checkedId);
+                SharedPreferences.Editor editor = prefs.edit();
+                if (rb.getText().toString().equals("Facil")){
+                    editor.putFloat("dificultad", 1.5f);
+                }else if (rb.getText().toString().equals("Medio")){
+                    editor.putFloat("dificultad", 1.0f);
+                }else if (rb.getText().toString().equals("Dificil")){
+                    editor.putFloat("dificultad", 0.5f);
+                }
+                editor.apply();
+            }
+        });
+        rgVelocidad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // checkedId is the RadioButton selected
+                RadioButton rb=findViewById(checkedId);
+                SharedPreferences.Editor editor = prefs.edit();
+                if (rb.getText().toString().equals("Rapido")){
+                    editor.putFloat("velocidad", 1.3f);
+                }else if (rb.getText().toString().equals("Normal")){
+                    editor.putFloat("velocidad", 1.0f);
+                }else if (rb.getText().toString().equals("Lento")){
+                    editor.putFloat("velocidad", 0.5f);
+                }
+                editor.apply();
+            }
+        });
+        float dificultad = prefs.getFloat("dificultad", 1.0f);
+
+        float velocidad = prefs.getFloat("velocidad", 1.0f);
+
+        RadioButton rb;
+        if (dificultad == 0.5f){
+            rb = (RadioButton) rgDificultad.getChildAt(0);
+
+        } else if(dificultad == 1.5f){
+            rb = (RadioButton) rgDificultad.getChildAt(2);
+        }else{
+            rb = (RadioButton) rgDificultad.getChildAt(1);
+        }
+        rb.setChecked(true);
+
+        if (velocidad == 0.5f){
+            rb = (RadioButton) rgVelocidad.getChildAt(2);
+
+        } else if(velocidad == 1.3f){
+            rb = (RadioButton) rgVelocidad.getChildAt(0);
+        }else{
+            rb = (RadioButton) rgVelocidad.getChildAt(1);
+        }
+        rb.setChecked(true);
+
 
     }
 }

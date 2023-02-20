@@ -15,15 +15,15 @@ public class Bird {
     int x = 0, y, width, height, birdCounter = 1;
     Bitmap bird1, bird2, bird3, bird4;
 
-    Bird (Resources res) {
+    Bird (Resources res, float dif) {
 
         bird1 = BitmapFactory.decodeResource(res, R.drawable.bird1);
         bird2 = BitmapFactory.decodeResource(res, R.drawable.bird2);
         bird3 = BitmapFactory.decodeResource(res, R.drawable.bird3);
         bird4 = BitmapFactory.decodeResource(res, R.drawable.bird4);
 
-        width = bird1.getWidth();
-        height = bird1.getHeight();
+        width = (int) (bird1.getWidth()*dif);
+        height = (int) (bird1.getHeight()*dif);
 
         width /= 6;
         height /= 6;

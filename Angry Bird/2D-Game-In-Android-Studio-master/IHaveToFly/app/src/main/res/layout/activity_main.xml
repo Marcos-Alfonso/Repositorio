@@ -23,13 +23,13 @@
         android:layout_centerHorizontal="true"/>
 
     <TextView
+        android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:textSize="64sp"
         android:layout_centerInParent="true"
+        android:text="Play"
         android:textColor="#000000"
-        android:id="@+id/play"/>
+        android:textSize="64sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,5 +48,67 @@
         android:layout_margin="16dp"
         android:id="@+id/volumeCtrl"
         android:src="@drawable/ic_volume_up_black_24dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dificultad"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dificil"
+                android:textSize="30dp"
+
+                ></RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medio"
+                android:textSize="30dp"
+                ></RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facil"
+                android:textSize="30dp"
+                ></RadioButton>
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/dificultad"
+            android:id="@+id/velocidad"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rapido"
+                android:textSize="30dp"
+                ></RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:textSize="30dp"
+                ></RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lento"
+                android:textSize="30dp"
+                ></RadioButton>
+        </RadioGroup>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

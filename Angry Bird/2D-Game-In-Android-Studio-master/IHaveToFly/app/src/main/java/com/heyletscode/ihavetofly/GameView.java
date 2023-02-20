@@ -11,6 +11,7 @@ import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
 
@@ -31,6 +32,8 @@ public class GameView extends SurfaceView implements Runnable {
     private SoundPool soundPool;
     private List<Bullet> bullets;
     private int sound;
+    private int soundDead;
+    private int soundBird;
     private Flight flight;
     private GameActivity activity;
     private Background background1, background2;
@@ -55,10 +58,11 @@ public class GameView extends SurfaceView implements Runnable {
                     .build();
 
         } else
-            soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+            soundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
         sound = soundPool.load(activity, R.raw.shoot, 1);
-
+        soundDead = soundPool.load(activity, R.raw.aaa, 2);
+        soundBird = soundPool.load(activity, R.raw.disc, 3);
         this.screenX = screenX;
         this.screenY = screenY;
         screenRatioX = 1920f / screenX;
@@ -81,7 +85,7 @@ public class GameView extends SurfaceView implements Runnable {
 
         for (int i = 0;i < 4;i++) {
 
-            Bird bird = new Bird(getResources());
+            Bird bird = new Bird(getResources(), prefs.getFloat("dificultad", 1.0f));
             birds[i] = bird;
 
         }
@@ -140,7 +144,8 @@ public class GameView extends SurfaceView implements Runnable {
 
                 if (Rect.intersects(bird.getCollisionShape(),
                         bullet.getCollisionShape())) {
-
+                    if (!prefs.getBoolean("isMute", false))
+                        soundPool.play(soundBird, 1, 1, 0, 0, 1);
                     score++;
                     bird.x = -500;
                     bullet.x = screenX + 500;
@@ -157,7 +162,7 @@ public class GameView extends SurfaceView implements Runnable {
 
         for (Bird bird : birds) {
 
-            bird.x -= bird.speed;
+            bird.x -= bird.speed*prefs.getFloat("velocidad", 1.0f);
 
             if (bird.x + bird.width < 0) {
 
@@ -180,7 +185,10 @@ public class GameView extends SurfaceView implements Runnable {
 
             if (Rect.intersects(bird.getCollisionShape(), flight.getCollisionShape())) {
 
+
                 isGameOver = true;
+
+
                 return;
             }
 
@@ -207,6 +215,8 @@ public class GameView extends SurfaceView implements Runnable {
                 getHolder().unlockCanvasAndPost(canvas);
                 saveIfHighScore();
                 waitBeforeExiting ();
+
+
                 return;
             }
 
@@ -222,7 +232,8 @@ public class GameView extends SurfaceView implements Runnable {
     }
 
     private void waitBeforeExiting() {
-
+        if (!prefs.getBoolean("isMute", false))
+            soundPool.play(soundDead, 1, 1, 0, 0, 1);
         try {
             Thread.sleep(3000);
             activity.startActivity(new Intent(activity, MainActivity.class));
@@ -287,6 +298,18 @@ public class GameView extends SurfaceView implements Runnable {
         }
 
         return true;
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_SPACE:
+                flight.toShoot++;
+                break;
+            case KeyEvent.KEYCODE_ENTER:
+                flight.toShoot++;
+
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     public void newBullet() {

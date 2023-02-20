@@ -20,6 +20,8 @@ public class GameActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getSize(point);
 
         gameView = new GameView(this, point.x, point.y);
+        gameView.setFocusableInTouchMode(true);
+        gameView.requestFocus();
 
         setContentView(gameView);
     }
