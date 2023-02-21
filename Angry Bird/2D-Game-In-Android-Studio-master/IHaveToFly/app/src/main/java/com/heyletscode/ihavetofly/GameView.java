@@ -15,6 +15,7 @@ import android.os.Build;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,9 +89,10 @@ public class GameView extends SurfaceView implements Runnable {
         paint.setTextSize(128);
         paint.setColor(Color.WHITE);
 
-        birds = new Bird[4];
+        int cantidad  = (int)(prefs.getFloat("cantidad", 1.0f)*4);
+        birds = new Bird[cantidad];
 
-        for (int i = 0;i < 4;i++) {
+        for (int i = 0;i < cantidad;i++) {
 
             Bird bird = new Bird(getResources(), prefs.getFloat("dificultad", 1.0f));
             birds[i] = bird;
@@ -127,16 +129,19 @@ public class GameView extends SurfaceView implements Runnable {
             background2.x = screenX;
         }
 
-        if (flight.isGoingUp)
-            flight.y -= 30 * screenRatioY;
-        else
-            flight.y += 30 * screenRatioY;
+        if (!prefs.getBoolean("alternativo", false)){
+            if (flight.isGoingUp)
+                flight.y -= 30 * screenRatioY;
+            else
+                flight.y += 30 * screenRatioY;
 
-        if (flight.y < 0)
-            flight.y = 0;
+            if (flight.y < 0)
+                flight.y = 0;
 
-        if (flight.y >= screenY - flight.height)
-            flight.y = screenY - flight.height;
+            if (flight.y >= screenY - flight.height)
+                flight.y = screenY - flight.height;
+
+        }
 
         List<Bullet> trash = new ArrayList<>();
 
@@ -174,7 +179,8 @@ public class GameView extends SurfaceView implements Runnable {
             if (bird.x + bird.width < 0) {
 
                 if (!bird.wasShot) {
-                    isGameOver = true;
+                    //isGameOver = true;
+                    bird.wasShot = true;
                     return;
                 }
 
@@ -284,20 +290,35 @@ public class GameView extends SurfaceView implements Runnable {
 
     }
 
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
         switch (event.getAction()) {
+            case MotionEvent.ACTION_POINTER_DOWN:
+
             case MotionEvent.ACTION_DOWN:
                 if (event.getX() < screenX / 2) {
                     flight.isGoingUp = true;
+                }else{
+                    flight.toShoot++;
                 }
                 break;
+            case MotionEvent.ACTION_POINTER_UP:
             case MotionEvent.ACTION_UP:
+
                 flight.isGoingUp = false;
-                if (event.getX() > screenX / 2)
-                    flight.toShoot++;
+                //if (event.getX() > screenX / 2)
+
                 break;
+            case MotionEvent.ACTION_MOVE:
+                //flight.x = (int)event.getX();
+                if (prefs.getBoolean("alternativo", false)){
+                    if (event.getX() < screenX / 2) {
+                        flight.y = (int)event.getY();
+                    }
+                }
+
         }
 
         return true;

@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -63,20 +65,31 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        RadioGroup rgDificultad = findViewById(R.id.dificultad), rgVelocidad = findViewById(R.id.velocidad);
+        RadioGroup rgDificultad = findViewById(R.id.dificultad), rgVelocidad = findViewById(R.id.velocidad), rgCantidad = findViewById(R.id.cantidad);
+        CheckBox cb = findViewById(R.id.checkAltenativo);
 
-
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("alternativo", isChecked);
+                    editor.apply();
+            }
+        });
+        cb.setChecked(prefs.getBoolean("alternativo", false));
         rgDificultad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // checkedId is the RadioButton selected
                 RadioButton rb=findViewById(checkedId);
                 SharedPreferences.Editor editor = prefs.edit();
-                if (rb.getText().toString().equals("Facil")){
+                if (rb.getText().toString().equals("Grande")){
                     editor.putFloat("dificultad", 1.5f);
-                }else if (rb.getText().toString().equals("Medio")){
+                }else if (rb.getText().toString().equals("Mediano")){
                     editor.putFloat("dificultad", 1.0f);
-                }else if (rb.getText().toString().equals("Dificil")){
+                }else if (rb.getText().toString().equals("Pequeño")){
                     editor.putFloat("dificultad", 0.5f);
                 }
                 editor.apply();
@@ -98,9 +111,28 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
             }
         });
+        rgCantidad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // checkedId is the RadioButton selected
+                RadioButton rb=findViewById(checkedId);
+                SharedPreferences.Editor editor = prefs.edit();
+                if (rb.getText().toString().equals("Muchos")){
+                    editor.putFloat("cantidad", 1.5f);
+                }else if (rb.getText().toString().equals("Normal")){
+                    editor.putFloat("cantidad", 1.0f);
+                }else if (rb.getText().toString().equals("Pocos")){
+                    editor.putFloat("cantidad", 0.5f);
+                }
+                editor.apply();
+            }
+        });
+
         float dificultad = prefs.getFloat("dificultad", 1.0f);
 
         float velocidad = prefs.getFloat("velocidad", 1.0f);
+
+        float cantidad = prefs.getFloat("cantidad", 1.0f);
 
         RadioButton rb;
         if (dificultad == 0.5f){
@@ -120,6 +152,16 @@ public class MainActivity extends AppCompatActivity {
             rb = (RadioButton) rgVelocidad.getChildAt(0);
         }else{
             rb = (RadioButton) rgVelocidad.getChildAt(1);
+        }
+        rb.setChecked(true);
+
+        if ( cantidad== 0.5f){
+            rb = (RadioButton) rgCantidad.getChildAt(2);
+
+        } else if(cantidad == 1.5f){
+            rb = (RadioButton) rgCantidad.getChildAt(0);
+        }else{
+            rb = (RadioButton) rgCantidad.getChildAt(1);
         }
         rb.setChecked(true);
 
