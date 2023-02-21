@@ -116,7 +116,6 @@ public class ClienteFTP {
                 }else {
                     System.out.print("\n");
                 }
-
             }
         }
     }
