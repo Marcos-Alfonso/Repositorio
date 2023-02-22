@@ -24,5 +24,10 @@ namespace informes2
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
