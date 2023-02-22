@@ -91,7 +91,7 @@ public class GameView extends SurfaceView implements Runnable {
 
         int cantidad  = (int)(prefs.getFloat("cantidad", 1.0f)*4);
         birds = new Bird[cantidad];
-
+        random = new Random();
         for (int i = 0;i < cantidad;i++) {
 
             Bird bird = new Bird(getResources(), prefs.getFloat("dificultad", 1.0f));
@@ -99,7 +99,7 @@ public class GameView extends SurfaceView implements Runnable {
 
         }
 
-        random = new Random();
+
 
     }
 
@@ -175,6 +175,19 @@ public class GameView extends SurfaceView implements Runnable {
         for (Bird bird : birds) {
 
             bird.x -= bird.speed*prefs.getFloat("velocidad", 1.0f);
+            //bird.y +=random.nextInt(20 +20 + 1) -20;
+
+            if (bird.isMovingUp){
+                bird.y +=10;
+            }else{
+                bird.y -= 10;
+            }
+            if (bird.y <0){
+                bird.isMovingUp = true;
+            }
+            if (bird.y+bird.height > screenY){
+                bird.isMovingUp = false;
+            }
 
             if (bird.x + bird.width < 0) {
 

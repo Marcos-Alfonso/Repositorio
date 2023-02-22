@@ -8,10 +8,13 @@ import android.graphics.Rect;
 import static com.heyletscode.ihavetofly.GameView.screenRatioX;
 import static com.heyletscode.ihavetofly.GameView.screenRatioY;
 
+import java.util.Random;
+
 public class Bird {
 
     public int speed = 20;
     public boolean wasShot = true;
+    public boolean isMovingUp;
     int x = 0, y, width, height, birdCounter = 1;
     Bitmap bird1, bird2, bird3, bird4;
 
@@ -37,6 +40,9 @@ public class Bird {
         bird4 = Bitmap.createScaledBitmap(bird4, width, height, false);
 
         y = -height;
+
+        Random r = new Random();
+        isMovingUp = r.nextBoolean();
     }
 
     Bitmap getBird () {
