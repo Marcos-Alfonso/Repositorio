@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,10 @@ namespace informes2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            ReportParameter p = new ReportParameter("pProvincia", textBox1.Text);
+            reportViewer1.LocalReport.SetParameters(p);
+            this.reportViewer1.RefreshReport();
+
         }
     }
 }
