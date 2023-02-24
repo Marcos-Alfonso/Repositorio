@@ -17,15 +17,19 @@ namespace EjercicioListados
         {
             InitializeComponent();
         }
+        public Form2(String vendedor)
+        {
+            InitializeComponent();
+            ReportParameter rp = new ReportParameter("pVendedor", vendedor);
+            reportViewer1.LocalReport.SetParameters(rp);
+            this.reportViewer1.RefreshReport();
+        }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'inmobiliariaDataSet.inmuebles' Puede moverla o quitarla según sea necesario.
+            this.inmueblesTableAdapter.Fill(this.inmobiliariaDataSet.inmuebles);
 
-            /*
-            ReportParameter rp = new ReportParameter("pVendedor", "");
-            reportViewer1.LocalReport.SetParameters(rp);
-            */
-            this.inmueblesTableAdapter1.Fill(this.inmobiliariaDataSet1.inmuebles);
             this.reportViewer1.RefreshReport();
         }
     }

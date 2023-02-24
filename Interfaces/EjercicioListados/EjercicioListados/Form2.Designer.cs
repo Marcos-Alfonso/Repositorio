@@ -30,49 +30,53 @@ namespace EjercicioListados
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.inmueblesTableAdapter1 = new EjercicioListados.inmobiliariaDataSetTableAdapters.inmueblesTableAdapter();
-            this.inmobiliariaDataSet1 = new EjercicioListados.inmobiliariaDataSet();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.inmobiliariaDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.inmobiliariaDataSet = new EjercicioListados.inmobiliariaDataSet();
+            this.inmueblesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inmueblesTableAdapter = new EjercicioListados.inmobiliariaDataSetTableAdapters.inmueblesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.inmobiliariaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inmueblesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.inmueblesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "EjercicioListados.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(557, 361);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // inmueblesTableAdapter1
+            // inmobiliariaDataSet
             // 
-            this.inmueblesTableAdapter1.ClearBeforeFill = true;
+            this.inmobiliariaDataSet.DataSetName = "inmobiliariaDataSet";
+            this.inmobiliariaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // inmobiliariaDataSet1
+            // inmueblesBindingSource
             // 
-            this.inmobiliariaDataSet1.DataSetName = "inmobiliariaDataSet";
-            this.inmobiliariaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.inmueblesBindingSource.DataMember = "inmuebles";
+            this.inmueblesBindingSource.DataSource = this.inmobiliariaDataSet;
             // 
-            // bindingSource1
+            // inmueblesTableAdapter
             // 
-            this.bindingSource1.DataMember = "inmuebles";
-            this.bindingSource1.DataSource = this.inmobiliariaDataSet1;
+            this.inmueblesTableAdapter.ClearBeforeFill = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 361);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.inmobiliariaDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inmobiliariaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inmueblesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -80,8 +84,8 @@ namespace EjercicioListados
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private inmobiliariaDataSetTableAdapters.inmueblesTableAdapter inmueblesTableAdapter1;
-        private inmobiliariaDataSet inmobiliariaDataSet1;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource inmueblesBindingSource;
+        private inmobiliariaDataSet inmobiliariaDataSet;
+        private inmobiliariaDataSetTableAdapters.inmueblesTableAdapter inmueblesTableAdapter;
     }
 }
