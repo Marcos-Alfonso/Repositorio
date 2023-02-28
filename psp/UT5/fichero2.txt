@@ -1,0 +1,13 @@
+Cifrado simétrico: Cifrado simétrico:
+– Resumen: Se cifra y desc Resumen: Se cifra y descifra con la misma clave ifra con la misma clave
+– Actualmente se usan algoritmos Actualmente se usan algoritmos matemáticos mucho más complejos ( matemáticos mucho más complejos (DES, 3DES, DES, 3DES,
+AEDES, BlowFish…) AEDES, BlowFish…)
+– En un cifrado muy rápido de realizar para un ordenador (incluso En un cifrado muy rápido de realizar para un ordenador (incluso hay hardware hay hardware
+específico para ello) específico para ello)
+– El punto crítico es que para desc El punto crítico es que para descifrar el mensaje se necesita co ifrar el mensaje se necesita conocer la clave: nocer la clave:
+• ¿Cómo intercambiamos la clave de ¿Cómo intercambiamos la clave de cifrado de forma segura por Int cifrado de forma segura por Internet? Æ En la II En la II Guerra Mundial los alemanes ten Guerra Mundial los alemanes tenían que llevar consigo la máquina de cifrado quina de cifrado “enigma”
+• ¿Cómo gestionamos una clave ún ¿Cómo gestionamos una clave única para cada ciudadano? ica para cada ciudadano? Æ la clave privada no es una la clave privada no es una
+contrase contraseña, sino una a, sino una “ristra” enorme de n enorme de números y letras meros y letras…
+• El cifrado simétrico no es la so El cifrado simétrico no es la solución para Internet y para múlt lución para Internet y para múltiples usuarios iples usuarios
+(ciudadanos) (ciudadanos)
+– Aunque este cifrado es usado ampliamente en la Administración El Aunque este cifrado es usado ampliamente en la Ad
