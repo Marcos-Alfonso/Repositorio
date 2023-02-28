@@ -112,7 +112,7 @@ public class ClienteFTP {
                 System.out.print(tabByIndex(index)+fichero.getName());
                 if (!fichero.isFile()) {
                     System.out.print("[carpeta]\n");
-                    printArchivos(ftp.listFiles(d+fichero.getName()), d+fichero.getName(), index+1);
+                    //printArchivos(ftp.listFiles(d+"/"+fichero.getName()), d+fichero.getName(), index+1);
                 }else {
                     System.out.print("\n");
                 }
