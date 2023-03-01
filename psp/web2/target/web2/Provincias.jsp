@@ -24,7 +24,6 @@
     </thead>
     <tbody>
     <%
-
         try {
             Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/provincias", "root", "root");
             Statement statement = c.createStatement();
@@ -42,8 +41,6 @@
     } catch (SQLException e) {
         e.printStackTrace();
     }
-
-
     %>
     </tbody>
 </table>
