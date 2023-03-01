@@ -11,7 +11,7 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html");
-    request.setAttribute("servlet", this);
+    
         PrintWriter pr = response.getWriter();
         try {
             Connection  c= DriverManager.getConnection("jdbc:mysql://localhost:3306/provincias","root","root");
