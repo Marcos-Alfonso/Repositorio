@@ -15,7 +15,7 @@
 <body>
 <h1>Povincias Españolas</h1>
 <p>Marcos Alfonso García</p>
-<table style='border: 1px solid;'>
+<table>
     <thead>
     <tr>
         <th>Código Provincia</th>

@@ -30,7 +30,7 @@ public class Servlet extends HttpServlet {
             pr.println("<body>");
             pr.println("<h1>Povincias Españolas</h1>");
             pr.println("<p>Marcos Alfonso García</p>");
-            pr.println("<table style='border: 1px solid;'>");
+            pr.println("<table>");
             pr.println("<thead><tr><th>Código Provincia</th><th>Provincia</th></tr></thead>");
             pr.println("<tbody>");
             for (int i = 0; i < listaProvincias.size(); i++) {
