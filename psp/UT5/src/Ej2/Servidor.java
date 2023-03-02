@@ -156,6 +156,7 @@ public class Servidor {
 	private static void enviarFichero(File fichero) throws Exception {
 
 		try {
+			System.out.println(HashTool.getHash(fichero));
 			InputStream lector = new FileInputStream(fichero);
 			byte[] contenido = leerNBytes(lector, Integer.MAX_VALUE);
 

@@ -237,6 +237,11 @@ public class Cliente {
 				escritor.write(informacion);
 			}
 			System.out.println("Fichero copiado con éxito.");
+			try {
+				System.out.println(HashTool.getHash(fichero));
+			} catch (NoSuchAlgorithmException e) {
+				throw new RuntimeException(e);
+			}
 		} else if (correcto) {
 			System.out.println("Error 4: El fichero de destino ya existe.");
 		}
