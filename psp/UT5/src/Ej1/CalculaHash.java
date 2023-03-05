@@ -18,7 +18,8 @@ public class CalculaHash {
                 System.out.println(path + " no es un fichero.");
                 continue;
             }
-            try (FileInputStream fis = new FileInputStream(file)) {
+            try {
+                FileInputStream fis = new FileInputStream(file);
                 byte[] buffer = new byte[1024];
                 MessageDigest mdSha1 = MessageDigest.getInstance("SHA-1");
                 MessageDigest mdSha256 = MessageDigest.getInstance("SHA-256");

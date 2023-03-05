@@ -1,0 +1,8 @@
+La criptografíM nació como la ciencia de ocultar La criptografía nació como la ciencia de ocultar mensajes,sea mensajes,sea, cifrarlos para que sólo el receptor pueda acceder a ellos cifrarlos para que sólo el receptor pueda acceder a ellos
+• Su origen es militar (Julio César escribió sobre ello, en la II Su origen es militar (Julio César escribió sobre ello, en la II
+Guerra Mundial se usó ampliamente, etc.), para enviar mensajes Guerra Mundial se usó ampliamente, etc.), para enviar mensajes y órdenes sin que el enemigo lo supiera aunque interceptara el y órdenes sin que el enemigo lo supiera aunque interceptara el
+mensaje (o al mensajero) mensaje (o al mensajero)
+• En la última parte del s. XX, varios avances permitieron aplicar En la última parte del s. XX, varios avances permitieron aplicar
+técnicas de cifrado para un nuevo propósito: técnicas de cifrado para un nuevo propósito:
+– autenticar el origen de un me autenticar el origen de un mensaje, o lo que es lo mismo, nsaje, o lo que es lo mismo, firmar un
+mensaje, de modo que pudiéramos estar seguros de quién lo mandab mensaje, de modo que pudiéramos estar seguros de quién lo m
