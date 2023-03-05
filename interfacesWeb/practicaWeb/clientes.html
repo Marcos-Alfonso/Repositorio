@@ -249,6 +249,12 @@ var span = document.getElementsByClassName("close")[0];
  }
 btn.onclick = function() {
   modal.style.display = "block";
+  document.getElementById('inputNombre').value = "";
+  document.getElementById('inputApellidos').value= "";
+  document.getElementById('inputTelefono').value= "";
+  document.getElementById("inputLocalidad").value=  "";
+  document.getElementById("inputCodPostal").value=  "";
+  document.getElementById('inputTipo').value= "Particular";
   crearUsuario.onclick = function(){
     insertaUsuario();
   }
