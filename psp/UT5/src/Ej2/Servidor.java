@@ -48,14 +48,17 @@ public class Servidor {
 
 	private static void atenderCliente() throws IOException {
 		try  {
-			//mod
+			/*mod
 			SSLServerSocketFactory sslServerSocketFactory =
 					(SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
 			SSLServerSocket sslServerSocket =
 					(SSLServerSocket) sslServerSocketFactory.createServerSocket(PUERTO);
 
 			Socket socketCliente = sslServerSocket.accept();
-			//mod
+			*/
+			ServerSocket socket = new ServerSocket(PUERTO);
+			Socket socketCliente = socket.accept();
+
 			obtenerStreams(socketCliente);
 
 			char operacion = ' ';
@@ -156,6 +159,7 @@ public class Servidor {
 	private static void enviarFichero(File fichero) throws Exception {
 
 		try {
+			salida.writeUTF(HashTool.getHash(fichero));
 			System.out.println(HashTool.getHash(fichero));
 			InputStream lector = new FileInputStream(fichero);
 			byte[] contenido = leerNBytes(lector, Integer.MAX_VALUE);

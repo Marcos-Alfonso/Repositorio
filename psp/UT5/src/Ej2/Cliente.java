@@ -2,12 +2,9 @@
 
 package Ej2;
 
-import javax.net.ssl.*;
 import java.io.*;
 import java.net.Socket;
-import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
-import java.util.*;
 
 public class Cliente {
 
@@ -26,14 +23,16 @@ public class Cliente {
 	public static void main(String[] args) {
 
 		try {
-			//Socket socket = new Socket(IP, PUERTO); mod
+			Socket socket = new Socket(IP, PUERTO);
+			/* mod
 			SSLContext sslContext = SSLContext.getInstance("SSL");
 			sslContext.init(null, null, null);
 
 			SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
 
 			SSLSocket socket = (SSLSocket) sslSocketFactory.createSocket(IP, PUERTO);
-			//mod
+			*/
+
 			System.out.println("- Cliente de descarga de ficheros -");
 			System.out.println("Introduce:" +
 					"   -G: Trae el fichero" +
@@ -52,10 +51,8 @@ public class Cliente {
 			entrada.close();
 			salida.close();
 			teclado.close();
-		} catch (IOException | NoSuchAlgorithmException e) {
+		} catch (IOException e) {
 			System.out.println("No se ha podido establecer la conexión.");
-		} catch (KeyManagementException e) {
-			throw new RuntimeException(e);
 		}
 	}
 
@@ -134,16 +131,21 @@ public class Cliente {
 
 
 	private static void resultados(char operador) throws IOException {
-
+		String hash = "";
+		if (operador == 'G') {
+			hash = entrada.readUTF();
+		}
 		byte resultado = entrada.readByte();
 		long longitud = entrada.readLong();
-		byte[] informacion = leerNBytes((int) longitud);
+
+		//byte[] informacion = leerNBytes((int) longitud);
+		byte[] informacion = entrada.readNBytes((int) longitud);
 
 		if (resultado != 0) {
 
 			System.out.println("Error " + resultado + ": " + new String(informacion));
 		} else if (operador == 'G') {
-			copiarArchivo(informacion);
+			copiarArchivo(informacion, hash);
 		} else {
 			System.out.println(new String(informacion));
 		}
@@ -151,76 +153,8 @@ public class Cliente {
 		System.out.println();
 
 	}
-	
-	/**
-	 * Lee una cantidad de bytes de reader. Copiado de la librer�a de java 9.
-	 * 
-	 * @param len
-	 * @return
-	 * @throws IOException
-	 */
-	public static byte[] leerNBytes(int len) throws IOException {
-        if (len < 0) {
-            throw new IllegalArgumentException("len < 0");
-        }
 
-        List<byte[]> bufs = null;
-        byte[] result = null;
-        int total = 0;
-        int remaining = len;
-        int n;
-        do {
-            byte[] buf = new byte[Math.min(remaining, 8192)];
-            int nread = 0;
-
-            // read to EOF which may read more or less than buffer size
-            while ((n = entrada.read(buf, nread,
-                    Math.min(buf.length - nread, remaining))) > 0) {
-                nread += n;
-                remaining -= n;
-            }
-
-            if (nread > 0) {
-                if (Integer.MAX_VALUE - 8 - total < nread) {
-                    throw new OutOfMemoryError("Required array size too large");
-                }
-                total += nread;
-                if (result == null) {
-                    result = buf;
-                } else {
-                    if (bufs == null) {
-                        bufs = new ArrayList<>();
-                        bufs.add(result);
-                    }
-                    bufs.add(buf);
-                }
-            }
-            // if the last call to read returned -1 or the number of bytes
-            // requested have been read then break
-        } while (n >= 0 && remaining > 0);
-
-        if (bufs == null) {
-            if (result == null) {
-                return new byte[0];
-            }
-            return result.length == total ?
-                result : Arrays.copyOf(result, total);
-        }
-
-        result = new byte[total];
-        int offset = 0;
-        remaining = total;
-        for (byte[] b : bufs) {
-            int count = Math.min(b.length, remaining);
-            System.arraycopy(b, 0, result, offset, count);
-            offset += count;
-            remaining -= count;
-        }
-
-        return result;
-    }
-
-	private static void copiarArchivo(byte[] informacion) throws IOException {
+	private static void copiarArchivo(byte[] informacion, String hash) throws IOException {
 
 		File fichero = new File(nuevoNombre);
 		boolean creado = false;
@@ -238,7 +172,9 @@ public class Cliente {
 			}
 			System.out.println("Fichero copiado con éxito.");
 			try {
-				System.out.println(HashTool.getHash(fichero));
+				System.out.println("Hash del fichero creado: "+HashTool.getHash(fichero)
+				+"Hash del fichero del servidor: "+hash);
+				if (HashTool.getHash(fichero).equals(hash)) System.out.println("El fichero es identico al del servidor.");
 			} catch (NoSuchAlgorithmException e) {
 				throw new RuntimeException(e);
 			}
