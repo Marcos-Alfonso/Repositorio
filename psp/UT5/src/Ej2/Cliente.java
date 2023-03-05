@@ -150,8 +150,6 @@ public class Cliente {
 			System.out.println(new String(informacion));
 		}
 
-		System.out.println();
-
 	}
 
 	private static void copiarArchivo(byte[] informacion, String hash) throws IOException {
@@ -172,9 +170,9 @@ public class Cliente {
 			}
 			System.out.println("Fichero copiado con éxito.");
 			try {
-				System.out.println("Hash del fichero creado: "+HashTool.getHash(fichero)
-				+"Hash del fichero del servidor: "+hash);
+				System.out.println("Hash del fichero creado:\t\t"+HashTool.getHash(fichero) +"\nHash del fichero del servidor:\t"+hash);
 				if (HashTool.getHash(fichero).equals(hash)) System.out.println("El fichero es identico al del servidor.");
+				else System.out.println("Códigos Hash no coinciden. Error en descarga");
 			} catch (NoSuchAlgorithmException e) {
 				throw new RuntimeException(e);
 			}

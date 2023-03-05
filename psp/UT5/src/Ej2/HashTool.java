@@ -17,13 +17,16 @@ public class HashTool {
             md.update(dataBytes, 0, bytesRead);
         }
 
-        byte[] hashBytes = md.digest();
-        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < hashBytes.length; i++) {
-            sb.append(Integer.toString((hashBytes[i] & 0xff) + 0x100, 16).substring(1));
+        StringBuilder hexString = new StringBuilder();
+        for (byte b : md.digest()) {
+            String hex = Integer.toHexString(0xff & b);
+            if (hex.length() == 1) hexString.append('0');
+            hexString.append(hex);
         }
         fis.close();
-        return sb.toString();
+        return hexString.toString();
+
+
     }
 }
