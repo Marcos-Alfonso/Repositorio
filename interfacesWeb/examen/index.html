@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-md-1 ">
                             <label for="Total">Total</label>
-                            <input type="text" class="form-control"
+                            <input type="text" class="form-control" value="0"
                                 id="Total" required readonly>
                         </div>
                         <div class="col-md-1 ">
@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header">Detalles</div>
+            <div class="card-header" style="display: block;">Detalles <button class="btn-primary" id="botonAgrega">Añadir</button></div>
             <div class="card-body">
                 <form>
                     <div class="row">
@@ -128,14 +128,26 @@
                             <input type="text" class="form-control"
                                 id="descuento" required>
                         </div>
-                        <div class="col-md-2 ">
-                            <label for="subtotal">Subtotal</label>
-                            <input type="text" class="form-control"
-                                id="subtotal" required>
-                        </div>
                     </div>
+
                 </form>
 
+
+                <table class="table" id="tablaDetalles">
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Descuento</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -143,7 +155,40 @@
 
 
 
+
         <script>
+            btnAdd = document.getElementById("botonAgrega");
+            btnAdd.onclick = function() {
+                cod = document.getElementById('cod').value;
+                desc = document.getElementById('desc').value;
+                cantidad = document.getElementById('cantidad').value;
+                precio = document.getElementById("precio").value;
+                descuento = document.getElementById("descuento").value;
+                
+                subtotal = (parseInt(cantidad)*parseFloat(precio))
+                var table = document.getElementById("tablaDetalles");
+
+                var row = table.insertRow(1);
+
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                var cell6 = row.insertCell(5);
+                cell1.innerHTML = cod;
+                cell2.innerHTML = desc;
+                cell3.innerHTML = cantidad;
+                cell4.innerHTML = precio;
+                cell5.innerHTML = descuento;
+                cell6.innerHTML = subtotal;
+                document.getElementById('Total').value =parseFloat(document.getElementById('Total').value)+subtotal;
+
+            }
+
+
+
+
             let personas = {
             "001": "Juan Pérez López",
             "002": "Antonio Garcia Rodríguez",
