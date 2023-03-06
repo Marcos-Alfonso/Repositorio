@@ -13,7 +13,6 @@ public class registroUsuarios {
     private static final String NOMBRE = "Marcos";
     private static final String APELLIDO = "Alfonso";
     public static void main(String[] args) {
-
         char c = 'A';
         for (int i = 0; i < 20; i++) {
             try {
@@ -22,7 +21,6 @@ public class registroUsuarios {
                 System.err.println("Error al registrar usuario: "+NOMBRE+APELLIDO+" "+c);
             }
         }
-
     }
 
     private static void resgistraUsuario(char c) throws IOException {
