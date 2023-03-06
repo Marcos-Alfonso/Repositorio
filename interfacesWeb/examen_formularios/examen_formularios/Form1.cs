@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Examen_Tercer
+namespace examen_formularios
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void verFormularioPblacionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 f = new Form2();
-            f.Show();
         }
     }
 }

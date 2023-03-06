@@ -1,0 +1,6 @@
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Examen_Tercer\Examen_Tercer\obj\Debug\Examen_Tercer.csproj.AssemblyReference.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Examen_Tercer\Examen_Tercer\obj\Debug\Examen_Tercer.Form1.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Examen_Tercer\Examen_Tercer\obj\Debug\Examen_Tercer.Form2.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Examen_Tercer\Examen_Tercer\obj\Debug\Examen_Tercer.Properties.Resources.resources
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Examen_Tercer\Examen_Tercer\obj\Debug\Examen_Tercer.csproj.GenerateResource.cache
+C:\Users\manana\Documents\GitHub\Repositorio\Interfaces\Examen_Tercer\Examen_Tercer\obj\Debug\Examen_Tercer.csproj.CoreCompileInputs.cache
