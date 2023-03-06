@@ -73,3 +73,5 @@ C:\Users\manana\Documents\GitHub\Repositorio\interfacesWeb\examen_formularios\ex
 C:\Users\manana\Documents\GitHub\Repositorio\interfacesWeb\examen_formularios\examen_formularios\obj\Debug\RdlCompile.cache
 C:\Users\manana\Documents\GitHub\Repositorio\interfacesWeb\examen_formularios\examen_formularios\obj\Debug\RdlCompile.compiled
 C:\Users\manana\Documents\GitHub\Repositorio\interfacesWeb\examen_formularios\examen_formularios\obj\Debug\examen_formularios.csproj.CopyComplete
+C:\Users\manana\Documents\GitHub\Repositorio\interfacesWeb\examen_formularios\examen_formularios\obj\Debug\examen_formularios.Form4.resources
+C:\Users\manana\Documents\GitHub\Repositorio\interfacesWeb\examen_formularios\examen_formularios\obj\Debug\examen_formularios.Form5.resources
