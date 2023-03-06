@@ -16,5 +16,16 @@ namespace examen_formularios
         {
             InitializeComponent();
         }
+
+        private void verFormulariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void verFormulariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Show();
+        }
     }
 }
