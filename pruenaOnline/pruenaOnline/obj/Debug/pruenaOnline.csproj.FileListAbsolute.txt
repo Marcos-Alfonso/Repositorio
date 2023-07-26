@@ -1,0 +1,12 @@
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\bin\Debug\pruenaOnline.exe.config
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\bin\Debug\pruenaOnline.exe
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\bin\Debug\pruenaOnline.pdb
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\bin\Debug\MySql.Data.dll
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.csproj.AssemblyReference.cache
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.Form1.resources
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.Properties.Resources.resources
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.csproj.GenerateResource.cache
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.csproj.CoreCompileInputs.cache
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.csproj.CopyComplete
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.exe
+E:\Repositorio\Repositorio\pruenaOnline\pruenaOnline\obj\Debug\pruenaOnline.pdb
